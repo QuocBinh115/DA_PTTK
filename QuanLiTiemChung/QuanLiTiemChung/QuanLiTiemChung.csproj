@@ -64,10 +64,55 @@
     <Compile Include="frmLogin.Designer.cs">
       <DependentUpon>frmLogin.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmTT2_ChiaDotThanhToan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmTT2_ChiaDotThanhToan.Designer.cs">
+      <DependentUpon>frmTT2_ChiaDotThanhToan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmTT1_Main.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmTT1_Main.Designer.cs">
+      <DependentUpon>frmTT1_Main.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmTT3_LapHoaDon.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmTT3_LapHoaDon.Designer.cs">
+      <DependentUpon>frmTT3_LapHoaDon.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmTT4_ChinhSuaThongTin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmTT4_ChinhSuaThongTin.Designer.cs">
+      <DependentUpon>frmTT4_ChinhSuaThongTin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmTT5_TaoPhieuHen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmTT5_TaoPhieuHen.Designer.cs">
+      <DependentUpon>frmTT5_TaoPhieuHen.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="frmDangKyTiemChung.resx">
       <DependentUpon>frmDangKyTiemChung.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmTT1_Main.resx">
+      <DependentUpon>frmTT1_Main.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmTT2_ChiaDotThanhToan.resx">
+      <DependentUpon>frmTT2_ChiaDotThanhToan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmTT3_LapHoaDon.resx">
+      <DependentUpon>frmTT3_LapHoaDon.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmTT4_ChinhSuaThongTin.resx">
+      <DependentUpon>frmTT4_ChinhSuaThongTin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmTT5_TaoPhieuHen.resx">
+      <DependentUpon>frmTT5_TaoPhieuHen.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
