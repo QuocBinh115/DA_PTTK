@@ -15,6 +15,8 @@ namespace QuanLiTiemChung
         public frmTT1_Main()
         {
             InitializeComponent();
+            //this.Text = String.Empty;
+            //this.ControlBox = false;
         }
     }
 }
