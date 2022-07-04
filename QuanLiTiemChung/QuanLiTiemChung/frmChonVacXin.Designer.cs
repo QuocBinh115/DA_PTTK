@@ -1,7 +1,7 @@
 ﻿
 namespace QuanLiTiemChung
 {
-    partial class frmDangKyVacXin
+    partial class frmChonVacXin
     {
         /// <summary>
         /// Required designer variable.
@@ -85,7 +85,7 @@ namespace QuanLiTiemChung
             this.btnThem.UseVisualStyleBackColor = true;
             this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
             // 
-            // frmDangKyVacXin
+            // frmChonVacXin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -95,8 +95,8 @@ namespace QuanLiTiemChung
             this.Controls.Add(this.gv_DSChon);
             this.Controls.Add(this.lstDSVacXin);
             this.Controls.Add(this.gv_ChiTietGoi);
-            this.Name = "frmDangKyVacXin";
-            this.Text = "frmDangKyVacXin";
+            this.Name = "frmChonVacXin";
+            this.Text = "Chọn vắc-xin";
             this.Load += new System.EventHandler(this.frmDangKyVacXin_Load);
             ((System.ComponentModel.ISupportInitialize)(this.gv_ChiTietGoi)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gv_DSChon)).EndInit();
