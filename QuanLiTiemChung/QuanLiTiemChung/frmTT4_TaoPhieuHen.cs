@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace QuanLiTiemChung
 {
-    public partial class frmTT5_TaoPhieuHen : Form
+    public partial class frmTT4_TaoPhieuHen : Form
     {
-        public frmTT5_TaoPhieuHen()
+        public frmTT4_TaoPhieuHen()
         {
             InitializeComponent();
         }
