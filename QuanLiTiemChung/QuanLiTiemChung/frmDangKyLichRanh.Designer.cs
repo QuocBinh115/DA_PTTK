@@ -29,7 +29,7 @@ namespace QuanLiTiemChung
         /// </summary>
         private void InitializeComponent()
         {
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.gvLichRanh = new System.Windows.Forms.DataGridView();
             this.Ngay = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Ca = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label1 = new System.Windows.Forms.Label();
@@ -43,21 +43,21 @@ namespace QuanLiTiemChung
             this.btnXoaLichRanh = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gvLichRanh)).BeginInit();
             this.SuspendLayout();
             // 
-            // dataGridView1
+            // gvLichRanh
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.gvLichRanh.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.gvLichRanh.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Ngay,
             this.Ca});
-            this.dataGridView1.Location = new System.Drawing.Point(12, 421);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 62;
-            this.dataGridView1.RowTemplate.Height = 28;
-            this.dataGridView1.Size = new System.Drawing.Size(1176, 259);
-            this.dataGridView1.TabIndex = 0;
+            this.gvLichRanh.Location = new System.Drawing.Point(12, 279);
+            this.gvLichRanh.Name = "gvLichRanh";
+            this.gvLichRanh.RowHeadersWidth = 62;
+            this.gvLichRanh.RowTemplate.Height = 28;
+            this.gvLichRanh.Size = new System.Drawing.Size(1176, 401);
+            this.gvLichRanh.TabIndex = 0;
             // 
             // Ngay
             // 
@@ -86,7 +86,7 @@ namespace QuanLiTiemChung
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(142, 227);
+            this.label2.Location = new System.Drawing.Point(138, 157);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(29, 20);
             this.label2.TabIndex = 4;
@@ -94,7 +94,7 @@ namespace QuanLiTiemChung
             // 
             // btnThemLichRanh
             // 
-            this.btnThemLichRanh.Location = new System.Drawing.Point(189, 344);
+            this.btnThemLichRanh.Location = new System.Drawing.Point(189, 209);
             this.btnThemLichRanh.Name = "btnThemLichRanh";
             this.btnThemLichRanh.Size = new System.Drawing.Size(104, 38);
             this.btnThemLichRanh.TabIndex = 5;
@@ -114,7 +114,7 @@ namespace QuanLiTiemChung
             this.cbbThemCa.Items.AddRange(new object[] {
             "Sáng",
             "Chiều"});
-            this.cbbThemCa.Location = new System.Drawing.Point(189, 227);
+            this.cbbThemCa.Location = new System.Drawing.Point(189, 157);
             this.cbbThemCa.Name = "cbbThemCa";
             this.cbbThemCa.Size = new System.Drawing.Size(166, 28);
             this.cbbThemCa.TabIndex = 7;
@@ -136,7 +136,7 @@ namespace QuanLiTiemChung
             this.cbbXoaCa.Items.AddRange(new object[] {
             "Sáng",
             "Chiều"});
-            this.cbbXoaCa.Location = new System.Drawing.Point(819, 227);
+            this.cbbXoaCa.Location = new System.Drawing.Point(819, 157);
             this.cbbXoaCa.Name = "cbbXoaCa";
             this.cbbXoaCa.Size = new System.Drawing.Size(166, 28);
             this.cbbXoaCa.TabIndex = 13;
@@ -150,7 +150,7 @@ namespace QuanLiTiemChung
             // 
             // btnXoaLichRanh
             // 
-            this.btnXoaLichRanh.Location = new System.Drawing.Point(819, 344);
+            this.btnXoaLichRanh.Location = new System.Drawing.Point(819, 209);
             this.btnXoaLichRanh.Name = "btnXoaLichRanh";
             this.btnXoaLichRanh.Size = new System.Drawing.Size(104, 38);
             this.btnXoaLichRanh.TabIndex = 11;
@@ -160,7 +160,7 @@ namespace QuanLiTiemChung
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(772, 227);
+            this.label4.Location = new System.Drawing.Point(768, 157);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(29, 20);
             this.label4.TabIndex = 10;
@@ -191,10 +191,10 @@ namespace QuanLiTiemChung
             this.Controls.Add(this.btnThemLichRanh);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.gvLichRanh);
             this.Name = "frmDangKyLichRanh";
             this.Text = "DangKyLichRanh";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gvLichRanh)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -202,7 +202,7 @@ namespace QuanLiTiemChung
 
         #endregion
 
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView gvLichRanh;
         private System.Windows.Forms.DataGridViewTextBoxColumn Ngay;
         private System.Windows.Forms.DataGridViewTextBoxColumn Ca;
         private System.Windows.Forms.Label label1;
