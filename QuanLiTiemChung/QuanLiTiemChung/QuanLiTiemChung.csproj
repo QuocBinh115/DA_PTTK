@@ -106,6 +106,18 @@
     <Compile Include="frmTT5_TaoPhieuHen.Designer.cs">
       <DependentUpon>frmTT5_TaoPhieuHen.cs</DependentUpon>
     </Compile>
+    <Compile Include="frm_DatMuaVaccine.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_DatMuaVaccine.Designer.cs">
+      <DependentUpon>frm_DatMuaVaccine.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_TraCuuVaccine.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_TraCuuVaccine.Designer.cs">
+      <DependentUpon>frm_TraCuuVaccine.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="frmDangKyGiamHo.resx">
@@ -131,6 +143,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmDangKyVacXin.resx">
       <DependentUpon>frmDangKyVacXin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_DatMuaVaccine.resx">
+      <DependentUpon>frm_DatMuaVaccine.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_TraCuuVaccine.resx">
+      <DependentUpon>frm_TraCuuVaccine.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
