@@ -38,7 +38,11 @@
             this.panel_main = new System.Windows.Forms.Panel();
             this.lb_cdtt = new System.Windows.Forms.Label();
             this.panel_gv = new System.Windows.Forms.Panel();
+            this.txt_mahoadon = new System.Windows.Forms.TextBox();
             this.gv_thongtindonhang = new System.Windows.Forms.DataGridView();
+            this.txt_tongcong = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.lb_mahoadon = new System.Windows.Forms.Label();
             this.lb_thanhtoandonhang = new System.Windows.Forms.Label();
             this.panel_button = new System.Windows.Forms.Panel();
             this.cb_dtt = new System.Windows.Forms.ComboBox();
@@ -49,10 +53,6 @@
             this.txt_thanhtien = new System.Windows.Forms.TextBox();
             this.lb_thanhtien = new System.Windows.Forms.Label();
             this.bt_laphoadon = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
-            this.cb_MKH = new System.Windows.Forms.ComboBox();
-            this.txt_tongcong = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
             this.panel_toolbar.SuspendLayout();
             this.panel_User.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pic_User)).BeginInit();
@@ -80,7 +80,7 @@
             this.bt_DangXuat.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.bt_DangXuat.Font = new System.Drawing.Font("Bahnschrift", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bt_DangXuat.Location = new System.Drawing.Point(825, 4);
-            this.bt_DangXuat.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.bt_DangXuat.Margin = new System.Windows.Forms.Padding(4);
             this.bt_DangXuat.Name = "bt_DangXuat";
             this.bt_DangXuat.Size = new System.Drawing.Size(146, 37);
             this.bt_DangXuat.TabIndex = 1;
@@ -104,7 +104,7 @@
             this.panel_User.Controls.Add(this.pic_User);
             this.panel_User.Controls.Add(this.lb_User);
             this.panel_User.Location = new System.Drawing.Point(621, 4);
-            this.panel_User.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel_User.Margin = new System.Windows.Forms.Padding(4);
             this.panel_User.Name = "panel_User";
             this.panel_User.Size = new System.Drawing.Size(199, 37);
             this.panel_User.TabIndex = 3;
@@ -115,7 +115,7 @@
             this.pic_User.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pic_User.BackgroundImage")));
             this.pic_User.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.pic_User.Location = new System.Drawing.Point(0, 0);
-            this.pic_User.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pic_User.Margin = new System.Windows.Forms.Padding(4);
             this.pic_User.Name = "pic_User";
             this.pic_User.Size = new System.Drawing.Size(47, 37);
             this.pic_User.TabIndex = 1;
@@ -142,9 +142,9 @@
             this.panel_main.Controls.Add(this.lb_thanhtoandonhang);
             this.panel_main.Controls.Add(this.panel_button);
             this.panel_main.Location = new System.Drawing.Point(15, 70);
-            this.panel_main.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel_main.Margin = new System.Windows.Forms.Padding(4);
             this.panel_main.Name = "panel_main";
-            this.panel_main.Size = new System.Drawing.Size(980, 495);
+            this.panel_main.Size = new System.Drawing.Size(980, 489);
             this.panel_main.TabIndex = 3;
             // 
             // lb_cdtt
@@ -162,26 +162,67 @@
             // panel_gv
             // 
             this.panel_gv.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel_gv.Controls.Add(this.txt_mahoadon);
             this.panel_gv.Controls.Add(this.gv_thongtindonhang);
             this.panel_gv.Controls.Add(this.txt_tongcong);
             this.panel_gv.Controls.Add(this.label2);
-            this.panel_gv.Controls.Add(this.cb_MKH);
-            this.panel_gv.Controls.Add(this.label1);
+            this.panel_gv.Controls.Add(this.lb_mahoadon);
             this.panel_gv.Location = new System.Drawing.Point(8, 45);
-            this.panel_gv.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel_gv.Margin = new System.Windows.Forms.Padding(4);
             this.panel_gv.Name = "panel_gv";
             this.panel_gv.Size = new System.Drawing.Size(963, 250);
             this.panel_gv.TabIndex = 5;
+            // 
+            // txt_mahoadon
+            // 
+            this.txt_mahoadon.Location = new System.Drawing.Point(124, 12);
+            this.txt_mahoadon.Name = "txt_mahoadon";
+            this.txt_mahoadon.ReadOnly = true;
+            this.txt_mahoadon.Size = new System.Drawing.Size(257, 22);
+            this.txt_mahoadon.TabIndex = 9;
+            this.txt_mahoadon.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // gv_thongtindonhang
             // 
             this.gv_thongtindonhang.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.gv_thongtindonhang.Location = new System.Drawing.Point(4, 41);
-            this.gv_thongtindonhang.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.gv_thongtindonhang.Margin = new System.Windows.Forms.Padding(4);
             this.gv_thongtindonhang.Name = "gv_thongtindonhang";
             this.gv_thongtindonhang.RowHeadersWidth = 51;
             this.gv_thongtindonhang.Size = new System.Drawing.Size(952, 158);
             this.gv_thongtindonhang.TabIndex = 2;
+            // 
+            // txt_tongcong
+            // 
+            this.txt_tongcong.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_tongcong.Location = new System.Drawing.Point(397, 207);
+            this.txt_tongcong.Margin = new System.Windows.Forms.Padding(4);
+            this.txt_tongcong.Name = "txt_tongcong";
+            this.txt_tongcong.ReadOnly = true;
+            this.txt_tongcong.Size = new System.Drawing.Size(559, 27);
+            this.txt_tongcong.TabIndex = 8;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Bahnschrift", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(275, 207);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(111, 27);
+            this.label2.TabIndex = 7;
+            this.label2.Text = "Tổng cộng";
+            // 
+            // lb_mahoadon
+            // 
+            this.lb_mahoadon.AutoSize = true;
+            this.lb_mahoadon.Font = new System.Drawing.Font("Bahnschrift", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb_mahoadon.Location = new System.Drawing.Point(4, 10);
+            this.lb_mahoadon.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lb_mahoadon.Name = "lb_mahoadon";
+            this.lb_mahoadon.Size = new System.Drawing.Size(113, 24);
+            this.lb_mahoadon.TabIndex = 8;
+            this.lb_mahoadon.Text = "Mã hóa đơn";
             // 
             // lb_thanhtoandonhang
             // 
@@ -208,9 +249,9 @@
             this.panel_button.Controls.Add(this.lb_thanhtien);
             this.panel_button.Controls.Add(this.bt_laphoadon);
             this.panel_button.Location = new System.Drawing.Point(8, 332);
-            this.panel_button.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel_button.Margin = new System.Windows.Forms.Padding(4);
             this.panel_button.Name = "panel_button";
-            this.panel_button.Size = new System.Drawing.Size(963, 155);
+            this.panel_button.Size = new System.Drawing.Size(963, 149);
             this.panel_button.TabIndex = 0;
             // 
             // cb_dtt
@@ -218,18 +259,19 @@
             this.cb_dtt.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cb_dtt.FormattingEnabled = true;
             this.cb_dtt.Location = new System.Drawing.Point(9, 38);
-            this.cb_dtt.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cb_dtt.Margin = new System.Windows.Forms.Padding(4);
             this.cb_dtt.Name = "cb_dtt";
             this.cb_dtt.Size = new System.Drawing.Size(368, 24);
             this.cb_dtt.TabIndex = 10;
             // 
             // txt_mtt
             // 
+            this.txt_mtt.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_mtt.Location = new System.Drawing.Point(399, 38);
-            this.txt_mtt.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txt_mtt.Margin = new System.Windows.Forms.Padding(4);
             this.txt_mtt.Name = "txt_mtt";
             this.txt_mtt.ReadOnly = true;
-            this.txt_mtt.Size = new System.Drawing.Size(557, 22);
+            this.txt_mtt.Size = new System.Drawing.Size(557, 27);
             this.txt_mtt.TabIndex = 9;
             // 
             // lb_mtt
@@ -258,8 +300,8 @@
             // 
             this.bt_huy.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.bt_huy.Font = new System.Drawing.Font("Bahnschrift", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bt_huy.Location = new System.Drawing.Point(795, 102);
-            this.bt_huy.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.bt_huy.Location = new System.Drawing.Point(795, 105);
+            this.bt_huy.Margin = new System.Windows.Forms.Padding(4);
             this.bt_huy.Name = "bt_huy";
             this.bt_huy.Size = new System.Drawing.Size(163, 37);
             this.bt_huy.TabIndex = 5;
@@ -268,23 +310,24 @@
             // 
             // txt_thanhtien
             // 
+            this.txt_thanhtien.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_thanhtien.Location = new System.Drawing.Point(399, 70);
-            this.txt_thanhtien.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txt_thanhtien.Margin = new System.Windows.Forms.Padding(4);
             this.txt_thanhtien.Name = "txt_thanhtien";
             this.txt_thanhtien.ReadOnly = true;
-            this.txt_thanhtien.Size = new System.Drawing.Size(557, 22);
+            this.txt_thanhtien.Size = new System.Drawing.Size(557, 27);
             this.txt_thanhtien.TabIndex = 1;
             // 
             // lb_thanhtien
             // 
             this.lb_thanhtien.AutoSize = true;
             this.lb_thanhtien.Font = new System.Drawing.Font("Bahnschrift", 13.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb_thanhtien.Location = new System.Drawing.Point(261, 66);
+            this.lb_thanhtien.Location = new System.Drawing.Point(267, 70);
             this.lb_thanhtien.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lb_thanhtien.Name = "lb_thanhtien";
-            this.lb_thanhtien.Size = new System.Drawing.Size(130, 28);
+            this.lb_thanhtien.Size = new System.Drawing.Size(114, 27);
             this.lb_thanhtien.TabIndex = 0;
-            this.lb_thanhtien.Text = "Thành tiền: ";
+            this.lb_thanhtien.Text = "Thành tiền";
             // 
             // bt_laphoadon
             // 
@@ -293,8 +336,8 @@
             this.bt_laphoadon.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.bt_laphoadon.Font = new System.Drawing.Font("Bahnschrift", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bt_laphoadon.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.bt_laphoadon.Location = new System.Drawing.Point(594, 102);
-            this.bt_laphoadon.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.bt_laphoadon.Location = new System.Drawing.Point(594, 106);
+            this.bt_laphoadon.Margin = new System.Windows.Forms.Padding(4);
             this.bt_laphoadon.Name = "bt_laphoadon";
             this.bt_laphoadon.Size = new System.Drawing.Size(193, 37);
             this.bt_laphoadon.TabIndex = 4;
@@ -303,52 +346,14 @@
             this.bt_laphoadon.UseVisualStyleBackColor = false;
             this.bt_laphoadon.Click += new System.EventHandler(this.bt_laphoadon_Click);
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Bahnschrift", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(4, 10);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(145, 24);
-            this.label1.TabIndex = 8;
-            this.label1.Text = "Mã khách hàng";
-            // 
-            // cb_MKH
-            // 
-            this.cb_MKH.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cb_MKH.FormattingEnabled = true;
-            this.cb_MKH.Location = new System.Drawing.Point(156, 10);
-            this.cb_MKH.Name = "cb_MKH";
-            this.cb_MKH.Size = new System.Drawing.Size(221, 24);
-            this.cb_MKH.TabIndex = 9;
-            // 
-            // txt_tongcong
-            // 
-            this.txt_tongcong.Location = new System.Drawing.Point(397, 207);
-            this.txt_tongcong.Margin = new System.Windows.Forms.Padding(4);
-            this.txt_tongcong.Name = "txt_tongcong";
-            this.txt_tongcong.ReadOnly = true;
-            this.txt_tongcong.Size = new System.Drawing.Size(559, 22);
-            this.txt_tongcong.TabIndex = 8;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Bahnschrift", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(270, 207);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(111, 27);
-            this.label2.TabIndex = 7;
-            this.label2.Text = "Tổng cộng";
-            // 
             // frmTT2_ChiaDotThanhToan
             // 
+            this.AcceptButton = this.bt_laphoadon;
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
-            this.ClientSize = new System.Drawing.Size(1011, 578);
+            this.CancelButton = this.bt_huy;
+            this.ClientSize = new System.Drawing.Size(1011, 572);
             this.Controls.Add(this.panel_toolbar);
             this.Controls.Add(this.panel_main);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -395,9 +400,9 @@
         private System.Windows.Forms.ComboBox cb_dtt;
         private System.Windows.Forms.TextBox txt_mtt;
         private System.Windows.Forms.Label lb_cdtt;
-        private System.Windows.Forms.ComboBox cb_MKH;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txt_tongcong;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label lb_mahoadon;
+        private System.Windows.Forms.TextBox txt_mahoadon;
     }
 }
