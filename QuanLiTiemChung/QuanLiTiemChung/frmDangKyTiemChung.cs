@@ -23,27 +23,28 @@ namespace QuanLiTiemChung
             {
                 frmDangKyGiamHo gh = new frmDangKyGiamHo();
                 gh.Show();
-                this.Close();
+                //this.Close();
             }
             else
             {
                 frmChonVacXin ch = new frmChonVacXin();
                 ch.Show();
-                this.Close();
+                //this.Close();
 
             }
         }
 
         private void frmDangKyTiemChung_Load(object sender, EventArgs e)
         {
-            KhachHang kh = new KhachHang();
-            kh.LayThongTin("KH002");
-            txtHoTen.Text = kh.TenKH;
-            date_ngaySinh.Value = kh.NgaySinh;
-            txtDiaChi.Text = kh.DiaChi;
-            txtCMND.Text = kh.CMND;
-            txtSDT.Text = kh.SDT;
-            if (kh.GioiTinh == true)
+            //KhachHang kh = new KhachHang();
+            KhachHang.LayThongTin("KH00000000");
+
+            txtHoTen.Text = KhachHang.TenKH;
+            date_ngaySinh.Value = KhachHang.NgaySinh;
+            txtDiaChi.Text = KhachHang.DiaChi;
+            txtCMND.Text = KhachHang.CMND;
+            txtSDT.Text = KhachHang.SDT;
+            if (KhachHang.GioiTinh == true)
             { checkNam.Checked = true; }
             else
             {
