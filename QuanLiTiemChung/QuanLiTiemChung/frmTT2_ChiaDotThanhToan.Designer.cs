@@ -307,6 +307,7 @@
             this.bt_huy.TabIndex = 5;
             this.bt_huy.Text = "Hủy";
             this.bt_huy.UseVisualStyleBackColor = true;
+            this.bt_huy.Click += new System.EventHandler(this.bt_huy_Click);
             // 
             // txt_thanhtien
             // 
