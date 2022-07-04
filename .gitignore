@@ -67,7 +67,6 @@ fastlane/test_output
 
 iOSInjectionProject/
 
-
 *.dll
 bin
 obj

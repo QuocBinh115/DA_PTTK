@@ -10,16 +10,11 @@ using System.Windows.Forms;
 
 namespace QuanLiTiemChung
 {
-    public partial class frmDangKyTiemChung : Form
+    public partial class frmTT2_ChiaDotThanhToan : Form
     {
-        public frmDangKyTiemChung()
+        public frmTT2_ChiaDotThanhToan()
         {
             InitializeComponent();
-        }
-
-        private void btnDangKy_Click(object sender, EventArgs e)
-        {
-            
         }
     }
 }
