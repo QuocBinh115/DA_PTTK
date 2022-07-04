@@ -83,6 +83,27 @@ BEGIN
 	declare i_gia int;
     set i_gia = (select dongia from goitim where i_MaGT = MaGT);
     update ct_hoadon
-    set ThanhTien = i_gia*SoLuong where MaHD = i_MaHD and MaGT = i_MaHD;
+    set ThanhTien = i_gia*SoLuong where MaHD = i_MaHD and MaGT = i_MaGT;
 END; $$
 
+drop procedure if exists `sp_TongTienHD`;
+DELIMITER $$
+CREATE PROCEDURE `sp_TongTienHD` (i_MaHD varchar(10))
+BEGIN
+	declare i_TongTien int;
+    declare i_DatHang int;
+    set i_DatHang = (select TongTien from dathang where MaHD = i_MaHD);
+    set i_TongTien = (select sum(ThanhTien) from ct_hoadon where MaHD = i_MaHD);
+    update hoadon
+    set TongTien = i_TongTien where MaHD = i_MaHD;
+END; $$
+
+drop procedure if exists `sp_TongTienDH`;
+DELIMITER $$
+CREATE PROCEDURE `sp_TongTienDH` (i_MaDonDH varchar(10))
+BEGIN
+	declare i_TongTien int;
+    set i_TongTien = (select sum(ThanhTien) from ct_dondh where MaDonDH = i_MaDonDH);
+    update dathang
+    set TongTien = i_TongTien where MaDonDH = i_MaDonDH;
+END; $$
