@@ -53,7 +53,10 @@ drop procedure if exists `sp_TaoHD`;
 DELIMITER $$
 CREATE PROCEDURE `sp_TaoHD` (i_Loai varchar(50), i_MaKH char(10), i_NgayHen date, i_NguoiLap char(10))
 BEGIN
-	INSERT INTO hoadon VALUES (f_AutoMaHD(), i_Loai, i_MaKH, i_NgayHen, i_NguoiLap, NULL);
+	declare i_MaHD varchar(10);
+    set i_MaHD = f_AutoMaHD();
+	INSERT INTO hoadon VALUES (i_MaHD, i_Loai, i_MaKH, i_NgayHen, i_NguoiLap, NULL);
+    select i_MaHD;
 END; $$
 
 drop procedure if exists `sp_ThemCTHD`;
@@ -62,3 +65,24 @@ CREATE PROCEDURE `sp_ThemCTHD` (i_MaHD char(10), i_MaGT char(10), i_SoLuong int)
 BEGIN
 	INSERT INTO ct_hoadon VALUES (i_MaHD, i_MaGT, i_SoLuong, NULL);
 END; $$
+
+drop procedure if exists `sp_ThemVaccine`;
+DELIMITER $$
+CREATE PROCEDURE `sp_ThemVaccine` (i_Ten varchar(50), i_NXS varchar(50), i_HSD date)
+BEGIN
+	declare i_MaVX varchar(10);
+    set i_MaVX = f_AutoMaVX();
+	INSERT INTO hoadon VALUES (i_MaVX, i_Ten, i_NXS, i_HSD);
+    select i_MaVX;
+END; $$
+
+drop procedure if exists `sp_ThanhTienHD`;
+DELIMITER $$
+CREATE PROCEDURE `sp_ThanhTienHD` (i_MaHD varchar(10), i_MaGT varchar(10))
+BEGIN
+	declare i_gia int;
+    set i_gia = (select dongia from goitim where i_MaGT = MaGT);
+    update ct_hoadon
+    set ThanhTien = i_gia*SoLuong where MaHD = i_MaHD and MaGT = i_MaHD;
+END; $$
+
