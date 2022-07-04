@@ -19,7 +19,10 @@ namespace QuanLiTiemChung
 
         private void bt_laphoadon_Click(object sender, EventArgs e)
         {
-
+            frmTT3_LapHoaDon laphoadon = new frmTT3_LapHoaDon();
+            this.Visible = false;
+            laphoadon.ShowDialog();
+            this.Visible = true;
         }
 
         private void label1_Click(object sender, EventArgs e)

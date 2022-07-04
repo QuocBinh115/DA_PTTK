@@ -16,5 +16,26 @@ namespace QuanLiTiemChung
         {
             InitializeComponent();
         }
+
+        private void lb_thanhtoandonhang_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void bt_huy_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void bt_DangXuat_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void bt_taophieuhen_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Tạo phiếu hẹn thành công!", "Thông báo!");
+            return;
+        }
     }
 }
