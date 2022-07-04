@@ -59,5 +59,10 @@ namespace QuanLiTiemChung
             chiadotthanhtoan.ShowDialog();
             this.Visible = true;
         }
+
+        private void gv_thongtindonhang_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }
