@@ -21,5 +21,10 @@ namespace QuanLiTiemChung
         {
 
         }
+
+        private void gvLichLamViec_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }
