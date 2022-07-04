@@ -16,5 +16,25 @@ namespace QuanLiTiemChung
         {
             InitializeComponent();
         }
+
+        private void bt_laphoadon_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lb_thanhtoandonhang_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void bt_DangXuat_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }
