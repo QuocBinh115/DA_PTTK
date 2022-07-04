@@ -40,7 +40,7 @@ namespace QuanLiTiemChung
             // comboBox1
             // 
             this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(101, 160);
+            this.comboBox1.Location = new System.Drawing.Point(102, 247);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(313, 24);
             this.comboBox1.TabIndex = 0;
@@ -48,7 +48,7 @@ namespace QuanLiTiemChung
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(151, 140);
+            this.label1.Location = new System.Drawing.Point(152, 227);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(0, 17);
             this.label1.TabIndex = 1;
@@ -57,7 +57,7 @@ namespace QuanLiTiemChung
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(96, 132);
+            this.label2.Location = new System.Drawing.Point(97, 219);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(121, 25);
             this.label2.TabIndex = 2;
@@ -83,7 +83,7 @@ namespace QuanLiTiemChung
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(916, 140);
+            this.button1.Location = new System.Drawing.Point(917, 227);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(160, 44);
             this.button1.TabIndex = 5;
@@ -103,6 +103,7 @@ namespace QuanLiTiemChung
             this.Controls.Add(this.comboBox1);
             this.Name = "frm_DatMuaVaccine";
             this.Text = "frm_DatMuaVaccine";
+            this.Load += new System.EventHandler(this.frm_DatMuaVaccine_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
