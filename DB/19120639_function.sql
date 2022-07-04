@@ -1,7 +1,9 @@
+
 SET GLOBAL log_bin_trust_function_creators = 1;
-drop function if exists f_AutoMaHD;
+
+drop function if exists qltc.f_AutoMaHD;
 delimiter $$
-create function f_AutoMaHD() returns char(10)
+create function qltc.f_AutoMaHD() returns char(10)
 begin
 	declare i_MaHD varchar(10) default '00000001';
 	while exists (SELECT * FROM HoaDon WHERE MaHD = concat('HD', i_MaHD)) do

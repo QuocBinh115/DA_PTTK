@@ -41,7 +41,8 @@ namespace QuanLiTiemChung
             this.lb_ntns = new System.Windows.Forms.Label();
             this.date_ngaySinh = new System.Windows.Forms.DateTimePicker();
             this.checkIsChild = new System.Windows.Forms.CheckBox();
-            this.checkGioiTinh = new System.Windows.Forms.CheckBox();
+            this.checkNam = new System.Windows.Forms.CheckBox();
+            this.checkNu = new System.Windows.Forms.CheckBox();
             this.SuspendLayout();
             // 
             // btnDangKy
@@ -156,23 +157,35 @@ namespace QuanLiTiemChung
             this.checkIsChild.Text = "Trẻ em";
             this.checkIsChild.UseVisualStyleBackColor = true;
             // 
-            // checkGioiTinh
+            // checkNam
             // 
-            this.checkGioiTinh.AutoSize = true;
-            this.checkGioiTinh.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkGioiTinh.Location = new System.Drawing.Point(548, 182);
-            this.checkGioiTinh.Name = "checkGioiTinh";
-            this.checkGioiTinh.Size = new System.Drawing.Size(97, 28);
-            this.checkGioiTinh.TabIndex = 13;
-            this.checkGioiTinh.Text = "Giới tính";
-            this.checkGioiTinh.UseVisualStyleBackColor = true;
+            this.checkNam.AutoSize = true;
+            this.checkNam.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkNam.Location = new System.Drawing.Point(548, 182);
+            this.checkNam.Name = "checkNam";
+            this.checkNam.Size = new System.Drawing.Size(69, 28);
+            this.checkNam.TabIndex = 13;
+            this.checkNam.Text = "Nam";
+            this.checkNam.UseVisualStyleBackColor = true;
+            // 
+            // checkNu
+            // 
+            this.checkNu.AutoSize = true;
+            this.checkNu.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkNu.Location = new System.Drawing.Point(548, 216);
+            this.checkNu.Name = "checkNu";
+            this.checkNu.Size = new System.Drawing.Size(54, 28);
+            this.checkNu.TabIndex = 14;
+            this.checkNu.Text = "Nữ";
+            this.checkNu.UseVisualStyleBackColor = true;
             // 
             // frmDangKyTiemChung
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(974, 340);
-            this.Controls.Add(this.checkGioiTinh);
+            this.Controls.Add(this.checkNu);
+            this.Controls.Add(this.checkNam);
             this.Controls.Add(this.checkIsChild);
             this.Controls.Add(this.date_ngaySinh);
             this.Controls.Add(this.lb_ntns);
@@ -207,6 +220,7 @@ namespace QuanLiTiemChung
         private System.Windows.Forms.Label lb_ntns;
         private System.Windows.Forms.DateTimePicker date_ngaySinh;
         private System.Windows.Forms.CheckBox checkIsChild;
-        private System.Windows.Forms.CheckBox checkGioiTinh;
+        private System.Windows.Forms.CheckBox checkNam;
+        private System.Windows.Forms.CheckBox checkNu;
     }
 }
