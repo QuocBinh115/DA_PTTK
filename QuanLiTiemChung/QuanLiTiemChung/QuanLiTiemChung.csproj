@@ -118,7 +118,9 @@
     <Compile Include="frm_TraCuuVaccine.Designer.cs">
       <DependentUpon>frm_TraCuuVaccine.cs</DependentUpon>
     </Compile>
+
     <Compile Include="KhachHang.cs" />
+
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="frmDangKyGiamHo.resx">
