@@ -1,6 +1,6 @@
 ﻿namespace QuanLiTiemChung
 {
-    partial class frmTT5_TaoPhieuHen
+    partial class frmTT4_TaoPhieuHen
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmTT5_TaoPhieuHen));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmTT4_TaoPhieuHen));
             this.lb_diachi = new System.Windows.Forms.Label();
             this.txt_ngaysinh = new System.Windows.Forms.TextBox();
             this.lb_ngaysinh = new System.Windows.Forms.Label();

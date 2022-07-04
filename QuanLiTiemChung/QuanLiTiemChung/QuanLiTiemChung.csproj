@@ -100,17 +100,11 @@
     <Compile Include="frmTT3_LapHoaDon.Designer.cs">
       <DependentUpon>frmTT3_LapHoaDon.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmTT4_ChinhSuaThongTin.cs">
+    <Compile Include="frmTT4_TaoPhieuHen.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmTT4_ChinhSuaThongTin.Designer.cs">
-      <DependentUpon>frmTT4_ChinhSuaThongTin.cs</DependentUpon>
-    </Compile>
-    <Compile Include="frmTT5_TaoPhieuHen.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmTT5_TaoPhieuHen.Designer.cs">
-      <DependentUpon>frmTT5_TaoPhieuHen.cs</DependentUpon>
+    <Compile Include="frmTT4_TaoPhieuHen.Designer.cs">
+      <DependentUpon>frmTT4_TaoPhieuHen.cs</DependentUpon>
     </Compile>
     <Compile Include="frmXemLich.cs">
       <SubType>Form</SubType>
@@ -153,11 +147,8 @@
     <EmbeddedResource Include="frmTT3_LapHoaDon.resx">
       <DependentUpon>frmTT3_LapHoaDon.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmTT4_ChinhSuaThongTin.resx">
-      <DependentUpon>frmTT4_ChinhSuaThongTin.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="frmTT5_TaoPhieuHen.resx">
-      <DependentUpon>frmTT5_TaoPhieuHen.cs</DependentUpon>
+    <EmbeddedResource Include="frmTT4_TaoPhieuHen.resx">
+      <DependentUpon>frmTT4_TaoPhieuHen.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmChonVacXin.resx">
       <DependentUpon>frmChonVacXin.cs</DependentUpon>

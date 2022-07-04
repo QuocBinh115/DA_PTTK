@@ -34,7 +34,7 @@ namespace QuanLiTiemChung
 
         private void bt_laphoadon_Click(object sender, EventArgs e)
         {
-            frmTT5_TaoPhieuHen taophieuhen = new frmTT5_TaoPhieuHen();
+            frmTT4_TaoPhieuHen taophieuhen = new frmTT4_TaoPhieuHen();
             this.Visible = false;
             taophieuhen.ShowDialog();
             this.Visible = true;

@@ -111,5 +111,18 @@ namespace QuanLiTiemChung
             frm.Show();
             //this.Hide();
         }
+
+        private void bt_laphoadon_Click(object sender, EventArgs e)
+        {
+            frmTT1_Main thanhtoan = new frmTT1_Main();
+            this.Visible = false;
+            thanhtoan.ShowDialog();
+            this.Visible = true;
+        }
+
+        private void bt_DangXuat_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }
