@@ -31,7 +31,6 @@ namespace QuanLiTiemChung
         {
             this.checkNu = new System.Windows.Forms.CheckBox();
             this.checkNam = new System.Windows.Forms.CheckBox();
-            this.checkIsChild = new System.Windows.Forms.CheckBox();
             this.date_ngaySinh = new System.Windows.Forms.DateTimePicker();
             this.lb_ntns = new System.Windows.Forms.Label();
             this.lb_diachi = new System.Windows.Forms.Label();
@@ -66,17 +65,6 @@ namespace QuanLiTiemChung
             this.checkNam.TabIndex = 27;
             this.checkNam.Text = "Nam";
             this.checkNam.UseVisualStyleBackColor = true;
-            // 
-            // checkIsChild
-            // 
-            this.checkIsChild.AutoSize = true;
-            this.checkIsChild.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkIsChild.Location = new System.Drawing.Point(704, 177);
-            this.checkIsChild.Name = "checkIsChild";
-            this.checkIsChild.Size = new System.Drawing.Size(90, 28);
-            this.checkIsChild.TabIndex = 26;
-            this.checkIsChild.Text = "Trẻ em";
-            this.checkIsChild.UseVisualStyleBackColor = true;
             // 
             // date_ngaySinh
             // 
@@ -171,7 +159,7 @@ namespace QuanLiTiemChung
             // btnDangKy
             // 
             this.btnDangKy.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDangKy.Location = new System.Drawing.Point(740, 258);
+            this.btnDangKy.Location = new System.Drawing.Point(746, 266);
             this.btnDangKy.Name = "btnDangKy";
             this.btnDangKy.Size = new System.Drawing.Size(128, 40);
             this.btnDangKy.TabIndex = 15;
@@ -185,7 +173,6 @@ namespace QuanLiTiemChung
             this.ClientSize = new System.Drawing.Size(1010, 365);
             this.Controls.Add(this.checkNu);
             this.Controls.Add(this.checkNam);
-            this.Controls.Add(this.checkIsChild);
             this.Controls.Add(this.date_ngaySinh);
             this.Controls.Add(this.lb_ntns);
             this.Controls.Add(this.lb_diachi);
@@ -209,7 +196,6 @@ namespace QuanLiTiemChung
 
         private System.Windows.Forms.CheckBox checkNu;
         private System.Windows.Forms.CheckBox checkNam;
-        private System.Windows.Forms.CheckBox checkIsChild;
         private System.Windows.Forms.DateTimePicker date_ngaySinh;
         private System.Windows.Forms.Label lb_ntns;
         private System.Windows.Forms.Label lb_diachi;

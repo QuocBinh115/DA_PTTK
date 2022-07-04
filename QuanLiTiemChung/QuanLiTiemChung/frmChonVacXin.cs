@@ -106,10 +106,9 @@ namespace QuanLiTiemChung
 
         private void btn_ThanhToan_Click(object sender, EventArgs e)
         {
-
+            HoaDon hd = new HoaDon(data);
             frmTT1_Main frm = new frmTT1_Main();
             frm.Show();
-            //this.Hide();
         }
 
         private void bt_laphoadon_Click(object sender, EventArgs e)
