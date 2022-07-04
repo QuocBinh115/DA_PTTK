@@ -13,10 +13,10 @@ using MySql.Data.MySqlClient;
 
 namespace QuanLiTiemChung
 {
-    public partial class frmDangKyVacXin : Form
+    public partial class frmChonVacXin : Form
     {
         Dictionary<int, string> dsChon = new Dictionary<int, string>();
-        public frmDangKyVacXin()
+        public frmChonVacXin()
         {
             InitializeComponent();
         }

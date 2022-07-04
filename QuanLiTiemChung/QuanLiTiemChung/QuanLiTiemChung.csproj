@@ -64,11 +64,11 @@
     </Compile>
     <Compile Include="DBMySQLUtils.cs" />
     <Compile Include="DBUtils.cs" />
-    <Compile Include="frmDangKyVacXin.cs">
+    <Compile Include="frmChonVacXin.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmDangKyVacXin.Designer.cs">
-      <DependentUpon>frmDangKyVacXin.cs</DependentUpon>
+    <Compile Include="frmChonVacXin.Designer.cs">
+      <DependentUpon>frmChonVacXin.cs</DependentUpon>
     </Compile>
     <Compile Include="frmLogin.cs">
       <SubType>Form</SubType>
@@ -106,6 +106,18 @@
     <Compile Include="frmTT5_TaoPhieuHen.Designer.cs">
       <DependentUpon>frmTT5_TaoPhieuHen.cs</DependentUpon>
     </Compile>
+    <Compile Include="frm_DatMuaVaccine.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_DatMuaVaccine.Designer.cs">
+      <DependentUpon>frm_DatMuaVaccine.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_TraCuuVaccine.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_TraCuuVaccine.Designer.cs">
+      <DependentUpon>frm_TraCuuVaccine.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="frmDangKyGiamHo.resx">
@@ -129,8 +141,14 @@
     <EmbeddedResource Include="frmTT5_TaoPhieuHen.resx">
       <DependentUpon>frmTT5_TaoPhieuHen.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmDangKyVacXin.resx">
-      <DependentUpon>frmDangKyVacXin.cs</DependentUpon>
+    <EmbeddedResource Include="frmChonVacXin.resx">
+      <DependentUpon>frmChonVacXin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_DatMuaVaccine.resx">
+      <DependentUpon>frm_DatMuaVaccine.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_TraCuuVaccine.resx">
+      <DependentUpon>frm_TraCuuVaccine.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

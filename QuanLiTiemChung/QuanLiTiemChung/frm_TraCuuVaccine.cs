@@ -10,16 +10,11 @@ using System.Windows.Forms;
 
 namespace QuanLiTiemChung
 {
-    public partial class frmDangKyTiemChung : Form
+    public partial class frm_TraCuuVaccine : Form
     {
-        public frmDangKyTiemChung()
+        public frm_TraCuuVaccine()
         {
             InitializeComponent();
-        }
-
-        private void btnDangKy_Click(object sender, EventArgs e)
-        {
-            
         }
     }
 }
