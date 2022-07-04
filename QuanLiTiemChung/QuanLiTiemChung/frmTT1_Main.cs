@@ -31,7 +31,7 @@ namespace QuanLiTiemChung
 
         private void bt_DangXuat_Click(object sender, EventArgs e)
         {
-            this.Close();
+            Application.Exit();
         }
 
         private void bt_huy_Click(object sender, EventArgs e)
@@ -49,6 +49,15 @@ namespace QuanLiTiemChung
             frmTT3_LapHoaDon laphoadon = new frmTT3_LapHoaDon();
             this.Visible = false;
             laphoadon.ShowDialog();
+            this.Visible = true;
+        }
+
+        private void bt_chiadot_Click(object sender, EventArgs e)
+        {
+            frmTT2_ChiaDotThanhToan chiadotthanhtoan = new frmTT2_ChiaDotThanhToan();
+            this.Visible = false;
+            chiadotthanhtoan.ShowDialog();
+            this.Visible = true;
         }
     }
 }
