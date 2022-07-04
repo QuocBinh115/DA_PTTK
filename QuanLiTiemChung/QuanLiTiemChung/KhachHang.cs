@@ -11,13 +11,13 @@ namespace QuanLiTiemChung
 {
     class KhachHang
     {
-        public string MaKH;
-        public string TenKH;
-        public DateTime NgaySinh;
-        public Boolean GioiTinh;
-        public string SDT;
-        public string DiaChi;
-        public string CMND;
+        public static string MaKH ="KH00000000";
+        public static string TenKH;
+        public static DateTime NgaySinh;
+        public static Boolean GioiTinh;
+        public static string SDT;
+        public static string DiaChi;
+        public static string CMND;
 
         public void LayThongTin(string MaKH) {
             MySqlConnection conn = DBUtils.GetDBConnection();
@@ -35,13 +35,9 @@ namespace QuanLiTiemChung
                 da.SelectCommand = cmd;
                 da.Fill(dt);
                 TenKH = dt.Rows[0]["HoTenKH"].ToString();
-
                 MaKH = dt.Rows[0]["MaKH"].ToString();
-
                 NgaySinh = DateTime.ParseExact(dt.Rows[0]["niceDate"].ToString(), "dd/MM/yyyy", null);
-
-                GioiTinh = dt.Rows[0]["GioiTinh"].ToString()!="0"?true:false;
-                
+                GioiTinh = dt.Rows[0]["GioiTinh"].ToString()== "True" ? true:false;
                 SDT = dt.Rows[0]["SDT"].ToString();
                 DiaChi = dt.Rows[0]["DiaChi"].ToString();
                 CMND = dt.Rows[0]["CMND"].ToString();
