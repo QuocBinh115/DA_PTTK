@@ -23,5 +23,23 @@ namespace QuanLiTiemChung
             ch.Show();
             this.Close();
         }
+
+        private void frmDangKyGiamHo_Load(object sender, EventArgs e)
+        {
+            KhachHang.LayThongTin("KH00000000");
+
+            txtHoTen.Text = KhachHang.TenKH;
+            date_ngaySinh.Value = KhachHang.NgaySinh;
+            txtDiaChi.Text = KhachHang.DiaChi;
+            txtCMND.Text = KhachHang.CMND;
+            txtSDT.Text = KhachHang.SDT;
+            if (KhachHang.GioiTinh == true)
+            { checkNam.Checked = true; }
+            else
+            {
+                checkNu.Checked = true;
+
+            }
+        }
     }
 }
