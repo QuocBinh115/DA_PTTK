@@ -43,16 +43,17 @@ namespace QuanLiTiemChung
             this.checkIsChild = new System.Windows.Forms.CheckBox();
             this.checkNam = new System.Windows.Forms.CheckBox();
             this.checkNu = new System.Windows.Forms.CheckBox();
+            this.btn_DatVacxin = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnDangKy
             // 
             this.btnDangKy.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDangKy.Location = new System.Drawing.Point(710, 264);
+            this.btnDangKy.Location = new System.Drawing.Point(746, 274);
             this.btnDangKy.Name = "btnDangKy";
             this.btnDangKy.Size = new System.Drawing.Size(128, 40);
             this.btnDangKy.TabIndex = 0;
-            this.btnDangKy.Text = "Đăng ký";
+            this.btnDangKy.Text = "Đăng ký mua";
             this.btnDangKy.UseVisualStyleBackColor = true;
             this.btnDangKy.Click += new System.EventHandler(this.btnDangKy_Click);
             // 
@@ -179,11 +180,22 @@ namespace QuanLiTiemChung
             this.checkNu.Text = "Nữ";
             this.checkNu.UseVisualStyleBackColor = true;
             // 
+            // btn_DatVacxin
+            // 
+            this.btn_DatVacxin.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_DatVacxin.Location = new System.Drawing.Point(548, 274);
+            this.btn_DatVacxin.Name = "btn_DatVacxin";
+            this.btn_DatVacxin.Size = new System.Drawing.Size(128, 40);
+            this.btn_DatVacxin.TabIndex = 15;
+            this.btn_DatVacxin.Text = "Đặt vắc-xin";
+            this.btn_DatVacxin.UseVisualStyleBackColor = true;
+            // 
             // frmDangKyTiemChung
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(974, 340);
+            this.Controls.Add(this.btn_DatVacxin);
             this.Controls.Add(this.checkNu);
             this.Controls.Add(this.checkNam);
             this.Controls.Add(this.checkIsChild);
@@ -222,5 +234,6 @@ namespace QuanLiTiemChung
         private System.Windows.Forms.CheckBox checkIsChild;
         private System.Windows.Forms.CheckBox checkNam;
         private System.Windows.Forms.CheckBox checkNu;
+        private System.Windows.Forms.Button btn_DatVacxin;
     }
 }

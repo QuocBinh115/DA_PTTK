@@ -9,6 +9,12 @@ namespace QuanLiTiemChung
 {
     class HoaDon
     {
+        string MaHD;
+
+        public HoaDon(DataTable ctHD)
+        {
+            HoaDonDB.ThemHD("");
+        }
         public static bool TaoHoaDon(DataTable ctHD)
         {
             
