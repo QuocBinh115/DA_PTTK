@@ -18,5 +18,37 @@ namespace QuanLiTiemChung
             //this.Text = String.Empty;
             //this.ControlBox = false;
         }
+
+        private void lb_User_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pic_User_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void bt_DangXuat_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void bt_huy_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void panel_main_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void bt_laphoadon_Click(object sender, EventArgs e)
+        {
+            frmTT3_LapHoaDon laphoadon = new frmTT3_LapHoaDon();
+            this.Visible = false;
+            laphoadon.ShowDialog();
+        }
     }
 }
