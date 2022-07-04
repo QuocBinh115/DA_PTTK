@@ -16,5 +16,12 @@ namespace QuanLiTiemChung
         {
             InitializeComponent();
         }
+
+        private void btnDangKy_Click(object sender, EventArgs e)
+        {
+            frmChonVacXin ch = new frmChonVacXin();
+            ch.Show();
+            this.Close();
+        }
     }
 }

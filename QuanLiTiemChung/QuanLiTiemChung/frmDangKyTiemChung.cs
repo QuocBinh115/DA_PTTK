@@ -19,7 +19,32 @@ namespace QuanLiTiemChung
 
         private void btnDangKy_Click(object sender, EventArgs e)
         {
-            
+            if (checkIsChild.Checked)
+            {
+                frmDangKyGiamHo gh = new frmDangKyGiamHo();
+                gh.Show();
+                this.Close();
+            }
+            else
+            {
+                frmChonVacXin ch = new frmChonVacXin();
+                ch.Show();
+                this.Close();
+
+            }
+        }
+
+        private void frmDangKyTiemChung_Load(object sender, EventArgs e)
+        {
+            KhachHang kh = new KhachHang();
+            kh.LayThongTin("KH001");
+            txtHoTen.Text = kh.TenKH;
+            date_ngaySinh.Value = kh.NgaySinh;
+            txtDiaChi.Text = kh.DiaChi;
+            txtCMND.Text = kh.CMND;
+            txtSDT.Text = kh.SDT;
+            checkGioiTinh.Checked = kh.GioiTinh;
+
         }
     }
 }

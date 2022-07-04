@@ -11,20 +11,22 @@ namespace QuanLiTiemChung
 {
     class KhachHang
     {
-        public static string MaKH;
-        public static string TenKH;
-        public static DateTime NgaySinh;
-        public static string GioiTinh;
-        public static string SDT;
-        public static string DiaChi;
+        public string MaKH;
+        public string TenKH;
+        public DateTime NgaySinh;
+        public Boolean GioiTinh;
+        public string SDT;
+        public string DiaChi;
+        public string CMND;
+
         public void LayThongTin(string MaKH) {
             MySqlConnection conn = DBUtils.GetDBConnection();
             conn.Open();
             MySqlDataAdapter da = new MySqlDataAdapter();
             DataTable dt = new DataTable();
             string sql_cmd;
-            sql_cmd = "select * from KhachHang where MaKH = '" + MaKH + "';";
-            
+            sql_cmd = "select *, DATE_FORMAT(NgaySinh,'%d/%m/%Y') AS niceDate from KhachHang where MaKH = '" + MaKH + "';";
+
 
             try
             {   
@@ -33,17 +35,17 @@ namespace QuanLiTiemChung
                 da.SelectCommand = cmd;
                 da.Fill(dt);
                 TenKH = dt.Rows[0]["HoTenKH"].ToString();
-                NgaySinh = DateTime.ParseExact(dt.Rows[0]["NgaySinh"].ToString(), "M/dd/yyyy HH:mm:ss", null);
-                GioiTinh = dt.Rows[0]["GioiTinh"].ToString();
-                if( GioiTinh == "True"){
-                    GioiTinh = "Nam";
-                }
-                else
-                {
-                    GioiTinh = "Nu";
-                }
+
+                MaKH = dt.Rows[0]["MaKH"].ToString();
+
+                NgaySinh = DateTime.ParseExact(dt.Rows[0]["niceDate"].ToString(), "dd/MM/yyyy", null);
+
+                GioiTinh = dt.Rows[0]["GioiTinh"].ToString()!="0"?true:false;
+                
                 SDT = dt.Rows[0]["SDT"].ToString();
                 DiaChi = dt.Rows[0]["DiaChi"].ToString();
+                CMND = dt.Rows[0]["CMND"].ToString();
+
             }
             catch (Exception error)
             {
@@ -56,5 +58,7 @@ namespace QuanLiTiemChung
                 conn.Dispose();
             }
         }
+
+        
     }
 }

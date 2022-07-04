@@ -151,12 +151,6 @@
     <EmbeddedResource Include="frm_TraCuuVaccine.resx">
       <DependentUpon>frm_TraCuuVaccine.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frm_DatMuaVaccine.resx">
-      <DependentUpon>frm_DatMuaVaccine.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="frm_TraCuuVaccine.resx">
-      <DependentUpon>frm_TraCuuVaccine.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
