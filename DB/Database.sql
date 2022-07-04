@@ -118,7 +118,7 @@ CREATE TABLE `GoiTiem`
 (
 	`MaGT` CHAR(10) NOT NULL,
 	`TenGT` VARCHAR(50) NULL,
-	`DonGia` VARCHAR(50) NULL,
+	`DonGia` INT NULL,
 	CONSTRAINT `PK_GoiTiem` PRIMARY KEY (`MaGT` ASC)
 )
 
@@ -174,9 +174,9 @@ CREATE TABLE `LichLamViec`
 CREATE TABLE `LichRanh`
 (
 	`MaNV` CHAR(10) NOT NULL,
-	`NgayTrongTuan` VARCHAR(10) NOT NULL,
+	`Ngay` DATE NOT NULL,
 	`Ca` VARCHAR(10) NOT NULL,
-	CONSTRAINT `PK_LichRanh` PRIMARY KEY (`MaNV` ASC, `NgayTrongTuan` ASC, `Ca` ASC)
+	CONSTRAINT `PK_LichRanh` PRIMARY KEY (`MaNV` ASC, `Ngay` ASC, `Ca` ASC)
 )
 
 ;
@@ -316,6 +316,11 @@ ALTER TABLE `ChiTietHSBN`
 	FOREIGN KEY (`MaBN`, `NgayKham`) REFERENCES `HoSoBN` (`MaBN`,`NgayKham`) ON DELETE No Action ON UPDATE No Action
 ;
 
+ALTER TABLE `ChiTietHSBN` 
+ ADD CONSTRAINT `FK_ChiTietHSBN_NhanVien`
+	FOREIGN KEY (`NguoiKham`) REFERENCES `NhanVien` (`MaNV`) ON DELETE No Action ON UPDATE No Action
+;
+
 ALTER TABLE `CT_DonDH` 
  ADD CONSTRAINT `FK_CT_DonDH_DatHang`
 	FOREIGN KEY (`MaDonDH`) REFERENCES `DatHang` (`MaDonDH`) ON DELETE No Action ON UPDATE No Action
@@ -364,6 +369,11 @@ ALTER TABLE `HoaDon`
 ALTER TABLE `HoSoBN` 
  ADD CONSTRAINT `FK_HoSoBN_KhachHang`
 	FOREIGN KEY (`MaBN`) REFERENCES `KhachHang` (`MaKH`) ON DELETE No Action ON UPDATE No Action
+;
+
+ALTER TABLE `HoSoBN` 
+ ADD CONSTRAINT `FK_HoSoBN_NhanVien`
+	FOREIGN KEY (`NguoiTiem`) REFERENCES `NhanVien` (`MaNV`) ON DELETE No Action ON UPDATE No Action
 ;
 
 ALTER TABLE `LichLamViec` 

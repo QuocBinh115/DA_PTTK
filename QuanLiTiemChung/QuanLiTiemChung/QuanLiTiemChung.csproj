@@ -56,6 +56,12 @@
     <Compile Include="frmDangKyGiamHo.Designer.cs">
       <DependentUpon>frmDangKyGiamHo.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmDangKyLichRanh.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmDangKyLichRanh.Designer.cs">
+      <DependentUpon>frmDangKyLichRanh.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmDangKyTiemChung.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -106,6 +112,12 @@
     <Compile Include="frmTT5_TaoPhieuHen.Designer.cs">
       <DependentUpon>frmTT5_TaoPhieuHen.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmXemLich.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmXemLich.Designer.cs">
+      <DependentUpon>frmXemLich.cs</DependentUpon>
+    </Compile>
     <Compile Include="frm_DatMuaVaccine.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -122,6 +134,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="frmDangKyGiamHo.resx">
       <DependentUpon>frmDangKyGiamHo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmDangKyLichRanh.resx">
+      <DependentUpon>frmDangKyLichRanh.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmDangKyTiemChung.resx">
       <DependentUpon>frmDangKyTiemChung.cs</DependentUpon>
@@ -143,6 +158,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmChonVacXin.resx">
       <DependentUpon>frmChonVacXin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmXemLich.resx">
+      <DependentUpon>frmXemLich.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frm_DatMuaVaccine.resx">
       <DependentUpon>frm_DatMuaVaccine.cs</DependentUpon>
