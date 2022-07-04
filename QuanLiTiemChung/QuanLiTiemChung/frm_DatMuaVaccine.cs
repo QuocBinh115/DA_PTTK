@@ -17,5 +17,14 @@ namespace QuanLiTiemChung
             InitializeComponent();
         }
 
+        private void frm_DatMuaVaccine_Load(object sender, EventArgs e)
+        {
+            KhachHang user = new KhachHang();
+            user.LayThongTin("KH002");
+            Console.WriteLine(KhachHang.TenKH);
+            Console.WriteLine(KhachHang.DiaChi) ;
+            Console.WriteLine(KhachHang.NgaySinh);
+            Console.WriteLine(KhachHang.GioiTinh);
+        }
     }
 }
