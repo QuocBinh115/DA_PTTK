@@ -50,6 +50,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="frmDangKyGiamHo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmDangKyGiamHo.Designer.cs">
+      <DependentUpon>frmDangKyGiamHo.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmDangKyTiemChung.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -58,6 +64,12 @@
     </Compile>
     <Compile Include="DBMySQLUtils.cs" />
     <Compile Include="DBUtils.cs" />
+    <Compile Include="frmDangKyVacXin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmDangKyVacXin.Designer.cs">
+      <DependentUpon>frmDangKyVacXin.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmLogin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -96,6 +108,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="frmDangKyGiamHo.resx">
+      <DependentUpon>frmDangKyGiamHo.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmDangKyTiemChung.resx">
       <DependentUpon>frmDangKyTiemChung.cs</DependentUpon>
     </EmbeddedResource>
@@ -113,6 +128,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmTT5_TaoPhieuHen.resx">
       <DependentUpon>frmTT5_TaoPhieuHen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmDangKyVacXin.resx">
+      <DependentUpon>frmDangKyVacXin.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
