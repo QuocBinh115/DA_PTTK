@@ -117,16 +117,16 @@ namespace QuanLiTiemChung
         {
             if (gv_DSChon.DataSource is null)
             {
-                MessageBox.Show("Chọn Vắc xin nhé!");
+                MessageBox.Show("Vui lòng chọn vaccine để thanh toán!","Thông báo!");
                 return;
             }
             frmTT3_LapHoaDon thanhtoan = new frmTT3_LapHoaDon();
             thanhtoan.LoadData(data,"MH");
 
 
-            //this.Visible = false;
+            this.Visible = true;
             thanhtoan.Show();
-            //this.Visible = true;
+            this.Visible = false;
         }
 
         private void bt_DangXuat_Click(object sender, EventArgs e)
