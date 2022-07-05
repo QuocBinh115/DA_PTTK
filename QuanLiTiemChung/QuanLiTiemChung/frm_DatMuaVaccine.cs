@@ -127,5 +127,14 @@ namespace QuanLiTiemChung
             };
             this.Hide();
         }
+
+        private void DatMuaVaccine_btn_Click(object sender, EventArgs e)
+        {
+            if(list_VX_selected.Count == 0)
+            {
+                MessageBox.Show("Vui lòng chọn vaccine muốn đặt!", "Thông báo");
+                return;
+            }
+        }
     }
 }

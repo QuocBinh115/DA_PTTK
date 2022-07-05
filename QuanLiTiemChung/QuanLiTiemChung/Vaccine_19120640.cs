@@ -17,5 +17,11 @@ namespace QuanLiTiemChung
         {
             return Vaccine_DB_19120640.getAllvaccine();
         }
+
+        public string ThemVaccinemoi()
+        {
+            MaVX = Vaccine_DB_19120640.ThemVaccine(TenVX, NSX, HSD);
+            return MaVX;
+        }
     }
 }

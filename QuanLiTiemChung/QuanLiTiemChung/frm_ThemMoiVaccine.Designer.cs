@@ -108,6 +108,7 @@ namespace QuanLiTiemChung
             // 
             // HSD_input
             // 
+            this.HSD_input.CustomFormat = "";
             this.HSD_input.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.HSD_input.Location = new System.Drawing.Point(274, 249);
             this.HSD_input.Name = "HSD_input";
@@ -122,6 +123,7 @@ namespace QuanLiTiemChung
             this.ThemVaccine_btn.TabIndex = 13;
             this.ThemVaccine_btn.Text = "Thêm";
             this.ThemVaccine_btn.UseVisualStyleBackColor = true;
+            this.ThemVaccine_btn.Click += new System.EventHandler(this.ThemVaccine_btn_Click);
             // 
             // frm_ThemMoiVaccine
             // 

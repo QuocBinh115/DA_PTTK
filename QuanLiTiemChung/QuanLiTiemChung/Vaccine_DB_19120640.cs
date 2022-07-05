@@ -47,5 +47,41 @@ namespace QuanLiTiemChung
             }
             return list_VX;
         }
+        public static string ThemVaccine(string TenVX, string NSX, DateTime HSD)
+        {
+            MySqlConnection conn = DBUtils.GetDBConnection();
+            conn.Open();
+            MySqlDataAdapter da = new MySqlDataAdapter();
+            DataTable dt = new DataTable();
+            string sql_cmd;
+            sql_cmd = "sp_ThemVaccine";
+            string result = "";
+
+            try
+            {
+                MySqlCommand cmd = new MySqlCommand(sql_cmd, conn);
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.Add("i_Ten", MySqlDbType.VarChar, 10).Value = TenVX;
+                cmd.Parameters.Add("i_NXS", MySqlDbType.VarChar, 10).Value = NSX;
+                cmd.Parameters.Add("i_HSD", MySqlDbType.VarChar, 10).Value = HSD.ToString("yyyy-MM-dd");
+                cmd.ExecuteNonQuery();
+                da.SelectCommand = cmd;
+                da.Fill(dt);
+                result =  dt.Rows[0][0].ToString();
+
+
+            }
+            catch (Exception error)
+            {
+                Console.WriteLine("Error: " + error);
+                Console.WriteLine(error.StackTrace);
+            }
+            finally
+            {
+                conn.Close();
+                conn.Dispose();
+            }
+            return result;
+        }
     }
 }
