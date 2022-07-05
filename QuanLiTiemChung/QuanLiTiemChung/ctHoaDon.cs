@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Data;
 
 namespace QuanLiTiemChung
 {
@@ -12,6 +13,10 @@ namespace QuanLiTiemChung
         {
 
             return true;
+        }
+        public static DataTable LayCTHoaDon(string MaHD)
+        {
+            return ctHoaDonDB.XemCTHoaDon(MaHD);
         }
     }
 }

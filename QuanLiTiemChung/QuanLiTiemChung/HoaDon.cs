@@ -20,5 +20,9 @@ namespace QuanLiTiemChung
             
             return true;
         }
+        public static DataTable LayDSHoaDon()
+        {
+            return HoaDonDB.DocDSHoaDon();
+        }
     }
 }
