@@ -164,3 +164,17 @@ BEGIN
         set i = i+1;
 	end while;
 END; $$
+
+drop procedure if exists `sp_TaoHSBN`;
+DELIMITER $$
+CREATE PROCEDURE `sp_TaoHSBN` (i_MaBN char(10), i_Ngay date, i_NguoiTiem varchar(10))
+BEGIN
+	INSERT INTO hosobn VALUES (i_MaBN, i_NgayKham, i_NguoiTiem);
+END; $$
+
+drop procedure if exists `sp_ThemCTHSBN`;
+DELIMITER $$
+CREATE PROCEDURE `sp_ThemCTHSBN` (i_MaBN char(10), i_NgayKham date, i_NguoiKham varchar(10), i_STT int, i_MoTa varchar(50))
+BEGIN
+	INSERT INTO chitiethsbn VALUES (i_MaBN, i_NgayKham, i_STT, i_NguoiKham, i_MoTa);
+END; $$
