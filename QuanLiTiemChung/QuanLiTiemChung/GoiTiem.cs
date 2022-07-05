@@ -21,6 +21,10 @@ namespace QuanLiTiemChung
         {
             return GoiTiemDB.LayTTGoiTiem(MaGT);
         }
+        public static bool KiemtraTTGoiTiem(string MaGT,int SoLuong)
+        {
+            return GoiTiemDB.KiemtraGoiTiem(MaGT, SoLuong);
+        }
 
     }
 }
