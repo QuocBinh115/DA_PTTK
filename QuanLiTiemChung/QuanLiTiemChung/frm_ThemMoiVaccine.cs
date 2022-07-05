@@ -10,11 +10,22 @@ using System.Windows.Forms;
 
 namespace QuanLiTiemChung
 {
-    public partial class Form1 : Form
+    public partial class frm_ThemMoiVaccine : Form
     {
-        public Form1()
+        public frm_ThemMoiVaccine()
         {
             InitializeComponent();
+        }
+
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
