@@ -10,14 +10,25 @@ namespace QuanLiTiemChung
     class HoaDon
     {
         string MaHD;
+        DataTable ctHD;
+        string LoaiHD;
 
-        public HoaDon(DataTable ctHD)
+        public HoaDon(DataTable input,string type)
         {
-            HoaDonDB.ThemHD("");
+            LoaiHD = type;
+            ctHD = input;
+  
         }
-        public static bool TaoHoaDon(DataTable ctHD)
+        public bool TaoHoaDon(DataTable ctHD)
         {
-            
+            if (LoaiHD == "MH")
+            {
+
+            }
+            else
+            {
+
+            }
             return true;
         }
         public static DataTable LayDSHoaDon()

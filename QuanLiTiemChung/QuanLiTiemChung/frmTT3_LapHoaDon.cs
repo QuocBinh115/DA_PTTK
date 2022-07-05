@@ -38,6 +38,7 @@ namespace QuanLiTiemChung
             //this.Visible = false;
             taophieuhen.Show();
             //this.Visible = true;
+            HoaDon hd = new HoaDon((DataTable)gv_dsGoiTiem.DataSource, "MH");
         }
 
         private void lb_thanhtien_Click(object sender, EventArgs e)
