@@ -9,6 +9,8 @@ namespace QuanLiTiemChung
 {
     class NhanVien
     {
+        public static string MaNV="NV00000000";
+
         public static DataTable XemLichRanh()
         {
             return NhanVienDB.LayLichRanh();

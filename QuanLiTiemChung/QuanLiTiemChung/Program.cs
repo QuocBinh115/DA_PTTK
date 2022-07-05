@@ -32,7 +32,7 @@ namespace QuanLiTiemChung
             Console.Read();
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmXemLich());
+            Application.Run(new frmDangKyLichRanh());
             
         }
 

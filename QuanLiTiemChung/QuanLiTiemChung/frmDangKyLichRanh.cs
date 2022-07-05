@@ -17,9 +17,22 @@ namespace QuanLiTiemChung
             InitializeComponent();
         }
 
-        private void label1_Click(object sender, EventArgs e)
+        private void btnThemLichRanh_Click(object sender, EventArgs e)
         {
+            DateTime Ngay = (DateTime)dtpThemNgay.Value;
+            string Ca = cbbThemCa.SelectedItem.ToString();
+            LichRanh l = new LichRanh(Ngay, Ca);
+            if (!l.TaoLichRanh())
+            {
+                MessageBox.Show("Lịch đã tồn tại");
+                return;
+            };
+            gvLichRanh.DataSource = LichRanh.XemLichRanh();
+        }
 
+        private void frmDangKyLichRanh_Load(object sender, EventArgs e)
+        {
+            gvLichRanh.DataSource = LichRanh.XemLichRanh();
         }
     }
 }
