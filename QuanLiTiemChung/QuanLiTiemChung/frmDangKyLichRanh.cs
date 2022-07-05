@@ -34,5 +34,15 @@ namespace QuanLiTiemChung
         {
             gvLichRanh.DataSource = LichRanh.XemLichRanh();
         }
+
+        private void bt_huy_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void bt_DangXuat_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }
