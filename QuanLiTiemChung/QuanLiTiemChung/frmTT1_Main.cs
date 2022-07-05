@@ -64,5 +64,23 @@ namespace QuanLiTiemChung
         {
 
         }
+
+        private void frmTT1_Main_Load(object sender, EventArgs e)
+        {
+            cb_MHD.DataSource = HoaDon.LayDSHoaDon();
+            cb_MHD.DisplayMember = "MaHD";
+            cb_MHD.ValueMember = "MaHD";
+            XemCTHoaDon();
+        }
+
+        private void cb_MHD_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            XemCTHoaDon();
+        }
+        private void XemCTHoaDon()
+        {
+            string MaHD = cb_MHD.SelectedValue.ToString();
+            gv_thongtindonhang.DataSource = ctHoaDon.LayCTHoaDon(MaHD);
+        }
     }
 }

@@ -35,14 +35,28 @@ namespace QuanLiTiemChung
         private void bt_laphoadon_Click(object sender, EventArgs e)
         {
             frmTT4_TaoPhieuHen taophieuhen = new frmTT4_TaoPhieuHen();
-            this.Visible = false;
-            taophieuhen.ShowDialog();
-            this.Visible = true;
+            //this.Visible = false;
+            taophieuhen.Show();
+            //this.Visible = true;
         }
 
         private void lb_thanhtien_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void frmTT3_LapHoaDon_Load(object sender, EventArgs e)
+        {
+
+        }
+        public void LoadData(DataTable data)
+        {
+            gv_dsGoiTiem.DataSource = data;
+            txt_diachi.Text = KhachHang.DiaChi;
+            txt_ma.Text = KhachHang.MaKH;
+            date_ntns.Value = KhachHang.NgaySinh;
+            txt_ten.Text = KhachHang.TenKH;
+            txt_sdt.Text = KhachHang.SDT;
         }
     }
 }

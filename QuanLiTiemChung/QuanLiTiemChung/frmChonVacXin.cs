@@ -24,6 +24,7 @@ namespace QuanLiTiemChung
 
         private void frmDangKyVacXin_Load(object sender, EventArgs e)
         {
+            KhachHang.LayThongTin("KH00000000");
 
             lstDSGoiTiem.DataSource = GoiTiem.DocDSGoiTiem();
             lstDSGoiTiem.ValueMember = "MaGT";
@@ -113,10 +114,13 @@ namespace QuanLiTiemChung
 
         private void bt_laphoadon_Click(object sender, EventArgs e)
         {
-            frmTT1_Main thanhtoan = new frmTT1_Main();
-            this.Visible = false;
-            thanhtoan.ShowDialog();
-            this.Visible = true;
+            frmTT3_LapHoaDon thanhtoan = new frmTT3_LapHoaDon();
+            thanhtoan.LoadData(data);
+
+
+            //this.Visible = false;
+            thanhtoan.Show();
+            //this.Visible = true;
         }
 
         private void bt_DangXuat_Click(object sender, EventArgs e)
