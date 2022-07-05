@@ -132,6 +132,8 @@
     <Compile Include="HoaDonDB.cs" />
     <Compile Include="KhachHang.cs" />
     <Compile Include="KhachHangDB.cs" />
+    <Compile Include="NhanVien.cs" />
+    <Compile Include="NhanVienDB.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="frmDangKyGiamHo.resx">
