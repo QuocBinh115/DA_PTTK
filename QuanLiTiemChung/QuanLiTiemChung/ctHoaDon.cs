@@ -9,6 +9,12 @@ namespace QuanLiTiemChung
 {
     class ctHoaDon
     {
+        DataRow ct;
+
+        public ctHoaDon(DataRow d)
+        {
+            ct = d;
+        }
         public static bool kiemTraCTHD()
         {
 
@@ -17,6 +23,12 @@ namespace QuanLiTiemChung
         public static DataTable LayCTHoaDon(string MaHD)
         {
             return ctHoaDonDB.XemCTHoaDon(MaHD);
+        }
+        public bool TaoCTHoaDon(string MaHD)
+        {
+            string MaGT =ct["GoiVacXin"].ToString();
+            int SoLuong =Int32.Parse(ct["SoLuong"].ToString());
+            return ctHoaDonDB.ThemCTHD( MaHD,  MaGT,  SoLuong);
         }
     }
 }

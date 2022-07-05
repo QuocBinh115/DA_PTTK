@@ -12,6 +12,8 @@ namespace QuanLiTiemChung
 {
     public partial class frmTT3_LapHoaDon : Form
     {
+        DataTable ChiTietHD;
+        string LoaiHD;
         public frmTT3_LapHoaDon()
         {
             InitializeComponent();
@@ -34,11 +36,12 @@ namespace QuanLiTiemChung
 
         private void bt_laphoadon_Click(object sender, EventArgs e)
         {
-            frmTT4_TaoPhieuHen taophieuhen = new frmTT4_TaoPhieuHen();
+            //frmTT4_TaoPhieuHen taophieuhen = new frmTT4_TaoPhieuHen();
             //this.Visible = false;
-            taophieuhen.Show();
+            //taophieuhen.Show();
             //this.Visible = true;
-            HoaDon hd = new HoaDon((DataTable)gv_dsGoiTiem.DataSource, "MH");
+            HoaDon hd = new HoaDon(ChiTietHD, LoaiHD);
+            hd.TaoHoaDon(DateTime.Today);
         }
 
         private void lb_thanhtien_Click(object sender, EventArgs e)
@@ -50,9 +53,11 @@ namespace QuanLiTiemChung
         {
 
         }
-        public void LoadData(DataTable data)
+        public void LoadData(DataTable data,string type)
         {
-            gv_dsGoiTiem.DataSource = data;
+            ChiTietHD = data;
+            gv_dsGoiTiem.DataSource = ChiTietHD;
+            LoaiHD = type;
             txt_diachi.Text = KhachHang.DiaChi;
             txt_ma.Text = KhachHang.MaKH;
             date_ntns.Value = KhachHang.NgaySinh;
