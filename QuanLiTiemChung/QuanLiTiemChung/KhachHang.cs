@@ -9,17 +9,22 @@ using System.Data;
 
 namespace QuanLiTiemChung
 {
+
     class KhachHang
     {
-        public static string MaKH;
-        public static string TenKH;
-        public static DateTime NgaySinh;
-        public static bool GioiTinh;
-        public static string SDT;
-        public static string DiaChi;
-        public static string CMND;
+        public string MaKH;
+        public string TenKH;
+        public DateTime NgaySinh;
+        public bool GioiTinh;
+        public string SDT;
+        public string DiaChi;
+        public string CMND;
 
-        public static bool LayThongTin(string MaKH) {
+        public KhachHang(string Ma)
+        {
+            MaKH = Ma;
+        }
+        public bool LayThongTin() {
             return KhachHangDB.DocTTKhachHang(MaKH);
         }
         public static bool KiemtraThongTin(string CMND,string SDT)
@@ -36,5 +41,10 @@ namespace QuanLiTiemChung
             }
             return flag;
         }
+    }
+    static class User
+    {
+        public static KhachHang current = new KhachHang("KH00000000");
+
     }
 }
