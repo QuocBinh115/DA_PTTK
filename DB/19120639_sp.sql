@@ -44,12 +44,12 @@ END; $$
 
 drop procedure if exists `sp_TaoHD`;
 DELIMITER $$
-CREATE PROCEDURE `sp_TaoHD` (i_Loai varchar(50), i_MaKH char(10), i_NgayHen date, i_NguoiLap char(10))
+CREATE PROCEDURE qltc.`sp_TaoHD` (i_Loai varchar(50), i_MaKH char(10), i_NgayHen date, i_NguoiLap char(10))
 BEGIN
 	declare i_MaHD varchar(10);
     set i_MaHD = f_AutoMaHD();
 	INSERT INTO hoadon VALUES (i_MaHD, i_Loai, i_MaKH, i_NgayHen, i_NguoiLap, NULL);
-    select i_MaHD;
+    select i_MaHD MaHD from dual;
 END; $$
 
 drop procedure if exists `sp_ThemCTHD`;
