@@ -21,13 +21,6 @@ BEGIN
 	INSERT INTO LICHRANH VALUES (i_MaNV, i_Ngay, i_Ca);
 END; $$
 
-drop procedure if exists `sp_XoaLichRanh`;
-DELIMITER $$
-CREATE PROCEDURE `sp_XoaLichRanh` (i_MaNV char(10), i_Ngay date, i_Ca varchar(10))
-BEGIN
-    DELETE FROM LICHRANH WHERE MaNV=i_MaNV AND Ngay=i_Ngay AND Ca=i_Ca;
-END; $$
-
 drop procedure if exists `sp_XemHoaDon`;
 DELIMITER $$
 CREATE PROCEDURE `sp_XemHoaDon` ()
@@ -84,7 +77,7 @@ CREATE PROCEDURE `sp_ThanhTienHD` (
     out i_ThanhTien int)
 BEGIN
 	declare i_Gia int;
-    set i_Gia = (select dongia from goitiem where MaGT = i_MaGT);
+    set i_Gia = (select ifnull(dongia,0) from goitiem where MaGT = i_MaGT);
     set i_ThanhTien = i_SoLuong * i_Gia;
 END; $$
 
@@ -94,10 +87,10 @@ CREATE PROCEDURE `sp_TongTienHD` (i_MaHD varchar(10))
 BEGIN
 	declare i_TongTien int;
     declare i_DatHang int;
-    set i_DatHang = (select sum(TongTien) from dathang where MaHD = i_MaHD);
-    set i_TongTien = (select sum(ThanhTien) from ct_hoadon where MaHD = i_MaHD);
+    set i_DatHang = (select ifnull(sum(TongTien),0) from dathang where MaHD = i_MaHD);
+    set i_TongTien = (select ifnull(sum(ThanhTien),0) from ct_hoadon where MaHD = i_MaHD);
     update hoadon
-    set TongTien = i_TongTien where MaHD = i_MaHD;
+    set TongTien = i_TongTien + i_DatHang where MaHD = i_MaHD;
 END; $$
 
 drop procedure if exists `sp_TongTienDH`;
@@ -105,7 +98,7 @@ DELIMITER $$
 CREATE PROCEDURE `sp_TongTienDH` (i_MaDonDH varchar(10))
 BEGIN
 	declare i_TongTien int;
-    set i_TongTien = (select sum(ThanhTien) from ct_dondh where MaDonDH = i_MaDonDH);
+    set i_TongTien = (select ifnull(sum(ThanhTien),0) from ct_dondh where MaDonDH = i_MaDonDH);
     update dathang
     set TongTien = i_TongTien where MaDonDH = i_MaDonDH;
 END; $$
@@ -117,4 +110,21 @@ BEGIN
 	select if(SoLuongTon > i_SoLuong, TRUE, FALSE) 
 	from vaccine 
     where MaVX in (select MaVX from ct_goitiem where MaGT = i_MaGT);
+END; $$
+
+drop procedure if exists `sp_DatHang`;
+DELIMITER $$
+CREATE PROCEDURE `sp_DatHang` (i_MaHD varchar(50))
+BEGIN
+	declare i_MaDonDH varchar(10);
+    set i_MaDonDH = f_AutoMaDonDH();
+	INSERT INTO hoadon VALUES (i_MaDonDH, i_MaHD, NULL, FALSE);
+    select i_MaDonDH;
+END; $$
+
+drop procedure if exists `sp_ThemCTDatHang`;
+DELIMITER $$
+CREATE PROCEDURE `sp_ThemCTDatHang` (i_MaDonDH varchar(10), i_MaVX varchar(10), i_SoLuong int, i_ThanhTien int)
+BEGIN
+	INSERT INTO ct_dondh VALUES (i_MaDonDH, i_MaVX, i_SoLuong, i_ThanhTien);
 END; $$
