@@ -31,13 +31,13 @@ namespace QuanLiTiemChung
                 {
                     return false;
                 }
-                KhachHang.MaKH = dt.Rows[0]["MaKH"].ToString();
-                KhachHang.TenKH = dt.Rows[0]["HoTenKH"].ToString();
-                KhachHang.NgaySinh = DateTime.ParseExact(dt.Rows[0]["niceDate"].ToString(), "dd/MM/yyyy", null);
-                KhachHang.GioiTinh = dt.Rows[0]["GioiTinh"].ToString() == "True" ? true : false;
-                KhachHang.SDT = dt.Rows[0]["SDT"].ToString();
-                KhachHang.DiaChi = dt.Rows[0]["DiaChi"].ToString();
-                KhachHang.CMND = dt.Rows[0]["CMND"].ToString();
+                User.current.MaKH = dt.Rows[0]["MaKH"].ToString();
+                User.current.TenKH = dt.Rows[0]["HoTenKH"].ToString();
+                User.current.NgaySinh = DateTime.ParseExact(dt.Rows[0]["niceDate"].ToString(), "dd/MM/yyyy", null);
+                User.current.GioiTinh = dt.Rows[0]["GioiTinh"].ToString() == "True" ? true : false;
+                User.current.SDT = dt.Rows[0]["SDT"].ToString();
+                User.current.DiaChi = dt.Rows[0]["DiaChi"].ToString();
+                User.current.CMND = dt.Rows[0]["CMND"].ToString();
 
             }
             catch (Exception error)

@@ -9,9 +9,9 @@ using MySql.Data.MySqlClient;
 
 namespace QuanLiTiemChung
 {
-    class HoaDonDB
+    class NhanVienDB
     {
-        public static string ThemHD(DateTime NgayHen)
+        public static DataTable LayLichRanh()
         {
             MySqlConnection conn = DBUtils.GetDBConnection();
             conn.Open();
@@ -20,14 +20,8 @@ namespace QuanLiTiemChung
 
             try
             {
-                
-                MySqlCommand cmd = new MySqlCommand("sp_TaoHD", conn);
+                MySqlCommand cmd = new MySqlCommand("sp_XemLichLamViec", conn);
                 cmd.CommandType = CommandType.StoredProcedure;
-                cmd.Parameters.Add("i_Loai", MySqlDbType.VarChar, 10).Value = "MH";
-                cmd.Parameters.Add("i_MaKH", MySqlDbType.VarChar, 10).Value = User.current.MaKH;
-                cmd.Parameters.Add("i_NgayHen", MySqlDbType.Date, 10).Value = NgayHen;
-                cmd.Parameters.Add("i_NguoiLap", MySqlDbType.VarChar, 10).Value = "NV00000001";
-
                 //cmd.ExecuteNonQuery();
                 da.SelectCommand = cmd;
                 da.Fill(dt);
@@ -42,9 +36,11 @@ namespace QuanLiTiemChung
                 conn.Close();
                 conn.Dispose();
             }
-            return dt.Rows[0]["MaHD"].ToString();
+            return dt;
+
         }
-        public static string ThemDH(DateTime NgayHen)
+
+        public static DataTable LayLichRanh(string MaNV)
         {
             MySqlConnection conn = DBUtils.GetDBConnection();
             conn.Open();
@@ -53,42 +49,9 @@ namespace QuanLiTiemChung
 
             try
             {
-                MySqlCommand cmd = new MySqlCommand("sp_TaoHD", conn);
-                cmd.CommandType = CommandType.StoredProcedure;
-                cmd.Parameters.Add("i_Loai", MySqlDbType.VarChar, 10).Value = "DH";
-
-                cmd.Parameters.Add("i_MaKH", MySqlDbType.VarChar, 10).Value = User.current.MaKH;
-                cmd.Parameters.Add("i_NgayHen", MySqlDbType.Date, 10).Value = NgayHen;
-                cmd.Parameters.Add("i_NguoiLap", MySqlDbType.VarChar, 10).Value = "NV00000000";
-
-                cmd.ExecuteNonQuery();
-                da.SelectCommand = cmd;
-                da.Fill(dt);
-            }
-            catch (Exception error)
-            {
-                Console.WriteLine("Error: " + error);
-                Console.WriteLine(error.StackTrace);
-            }
-            finally
-            {
-                conn.Close();
-                conn.Dispose();
-            }
-            return "";
-        }
-        public static DataTable DocDSHoaDon()
-        {
-            MySqlConnection conn = DBUtils.GetDBConnection();
-            conn.Open();
-            MySqlDataAdapter da = new MySqlDataAdapter();
-            DataTable dt = new DataTable();
-
-            try
-            {
-                MySqlCommand cmd = new MySqlCommand("sp_XemHoaDon", conn);
-                cmd.CommandType = CommandType.StoredProcedure;
-                cmd.ExecuteNonQuery();
+                MySqlCommand cmd = new MySqlCommand("SELECT * FROM LICHLAMVIEC WHERE MaNV='" +MaNV+"';", conn);
+                //cmd.CommandType = CommandType.StoredProcedure;
+                //cmd.ExecuteNonQuery();
                 da.SelectCommand = cmd;
                 da.Fill(dt);
             }
@@ -103,6 +66,35 @@ namespace QuanLiTiemChung
                 conn.Dispose();
             }
             return dt;
+
         }
+        public static DataTable LayDSNV()
+        {
+            MySqlConnection conn = DBUtils.GetDBConnection();
+            conn.Open();
+            MySqlDataAdapter da = new MySqlDataAdapter();
+            DataTable dt = new DataTable();
+
+            try
+            {
+                MySqlCommand cmd = new MySqlCommand("select MaNV from NhanVien order by MaNV", conn);
+                //cmd.ExecuteNonQuery();
+                da.SelectCommand = cmd;
+                da.Fill(dt);
+            }
+            catch (Exception error)
+            {
+                Console.WriteLine("Error: " + error);
+                Console.WriteLine(error.StackTrace);
+            }
+            finally
+            {
+                conn.Close();
+                conn.Dispose();
+            }
+            return dt;
+
+        }
+
     }
 }
