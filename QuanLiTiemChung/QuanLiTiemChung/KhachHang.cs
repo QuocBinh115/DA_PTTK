@@ -22,5 +22,19 @@ namespace QuanLiTiemChung
         public static bool LayThongTin(string MaKH) {
             return KhachHangDB.DocTTKhachHang(MaKH);
         }
+        public static bool KiemtraThongTin(string CMND,string SDT)
+        {
+            bool flag = true;
+            //Console.WriteLine(CMND.Length +"x"+ SDT.Length);
+            if(CMND.Length!=9 && CMND.Length != 12)
+            {
+                flag = false;
+            }
+            if (SDT.Length != 10 )
+            {
+                flag = false;
+            }
+            return flag;
+        }
     }
 }

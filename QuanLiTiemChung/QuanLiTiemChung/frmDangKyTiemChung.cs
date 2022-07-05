@@ -19,6 +19,11 @@ namespace QuanLiTiemChung
 
         private void btnDangKy_Click(object sender, EventArgs e)
         {
+            if(!KhachHang.KiemtraThongTin(txtCMND.Text, txtSDT.Text))
+            {
+                MessageBox.Show("Vui lòng kiểm tra lại thông tin");
+                return;
+            }
             if (checkIsChild.Checked)
             {
                 frmDangKyGiamHo gh = new frmDangKyGiamHo();
@@ -63,6 +68,11 @@ namespace QuanLiTiemChung
         private void bt_huy_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void btn_DatVacxin_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
