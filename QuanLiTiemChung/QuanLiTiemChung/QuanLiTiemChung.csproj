@@ -50,6 +50,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ctHoaDon.cs" />
+    <Compile Include="ctHoaDonDB.cs" />
     <Compile Include="frmDangKyGiamHo.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -124,9 +126,12 @@
     <Compile Include="frm_TraCuuVaccine.Designer.cs">
       <DependentUpon>frm_TraCuuVaccine.cs</DependentUpon>
     </Compile>
-
+    <Compile Include="GoiTiem.cs" />
+    <Compile Include="GoiTiemDB.cs" />
+    <Compile Include="HoaDon.cs" />
+    <Compile Include="HoaDonDB.cs" />
     <Compile Include="KhachHang.cs" />
-
+    <Compile Include="KhachHangDB.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="frmDangKyGiamHo.resx">
@@ -155,12 +160,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmXemLich.resx">
       <DependentUpon>frmXemLich.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="frm_DatMuaVaccine.resx">
-      <DependentUpon>frm_DatMuaVaccine.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="frm_TraCuuVaccine.resx">
-      <DependentUpon>frm_TraCuuVaccine.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frm_DatMuaVaccine.resx">
       <DependentUpon>frm_DatMuaVaccine.cs</DependentUpon>
