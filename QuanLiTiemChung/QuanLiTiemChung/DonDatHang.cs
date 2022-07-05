@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace QuanLiTiemChung
 {
-    class DoDatHang
+    class DonDatHang
     {
+
     }
 }
