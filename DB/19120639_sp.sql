@@ -21,13 +21,6 @@ BEGIN
 	INSERT INTO LICHRANH VALUES (i_MaNV, i_Ngay, i_Ca);
 END; $$
 
-drop procedure if exists `sp_XoaLichRanh`;
-DELIMITER $$
-CREATE PROCEDURE `sp_XoaLichRanh` (i_MaNV char(10), i_Ngay date, i_Ca varchar(10))
-BEGIN
-    DELETE FROM LICHRANH WHERE MaNV=i_MaNV AND Ngay=i_Ngay AND Ca=i_Ca;
-END; $$
-
 drop procedure if exists `sp_XemHoaDon`;
 DELIMITER $$
 CREATE PROCEDURE `sp_XemHoaDon` ()
@@ -78,12 +71,14 @@ END; $$
 
 drop procedure if exists `sp_ThanhTienHD`;
 DELIMITER $$
-CREATE PROCEDURE `sp_ThanhTienHD` (i_MaHD varchar(10), i_MaGT varchar(10))
+CREATE PROCEDURE `sp_ThanhTienHD` (
+	i_MaGT varchar(10),
+    i_SoLuong int, 
+    out i_ThanhTien int)
 BEGIN
-	declare i_gia int;
-    set i_gia = (select dongia from goitim where i_MaGT = MaGT);
-    update ct_hoadon
-    set ThanhTien = i_gia*SoLuong where MaHD = i_MaHD and MaGT = i_MaGT;
+	declare i_Gia int;
+    set i_Gia = (select ifnull(dongia,0) from goitiem where MaGT = i_MaGT);
+    set i_ThanhTien = i_SoLuong * i_Gia;
 END; $$
 
 drop procedure if exists `sp_TongTienHD`;
@@ -92,10 +87,10 @@ CREATE PROCEDURE `sp_TongTienHD` (i_MaHD varchar(10))
 BEGIN
 	declare i_TongTien int;
     declare i_DatHang int;
-    set i_DatHang = (select TongTien from dathang where MaHD = i_MaHD);
-    set i_TongTien = (select sum(ThanhTien) from ct_hoadon where MaHD = i_MaHD);
+    set i_DatHang = (select ifnull(sum(TongTien),0) from dathang where MaHD = i_MaHD);
+    set i_TongTien = (select ifnull(sum(ThanhTien),0) from ct_hoadon where MaHD = i_MaHD);
     update hoadon
-    set TongTien = i_TongTien where MaHD = i_MaHD;
+    set TongTien = i_TongTien + i_DatHang where MaHD = i_MaHD;
 END; $$
 
 drop procedure if exists `sp_TongTienDH`;
@@ -103,7 +98,61 @@ DELIMITER $$
 CREATE PROCEDURE `sp_TongTienDH` (i_MaDonDH varchar(10))
 BEGIN
 	declare i_TongTien int;
-    set i_TongTien = (select sum(ThanhTien) from ct_dondh where MaDonDH = i_MaDonDH);
+    set i_TongTien = (select ifnull(sum(ThanhTien),0) from ct_dondh where MaDonDH = i_MaDonDH);
     update dathang
     set TongTien = i_TongTien where MaDonDH = i_MaDonDH;
+END; $$
+
+drop procedure if exists `sp_CheckGoiTiem`;
+DELIMITER $$
+CREATE PROCEDURE `sp_CheckGoiTiem` (i_MaGT varchar(10), i_SoLuong int)
+BEGIN
+	
+    
+    select if(SoMui*i_SoLuong < SoLuongTon,true,false) as sl
+    from ct_goitiem c left join vaccine v on c.MaVX=v.MaVX
+    where MaGT = i_MaGT;
+    
+    
+END; $$
+
+
+drop procedure if exists `sp_DatHang`;
+DELIMITER $$
+CREATE PROCEDURE `sp_DatHang` (i_MaHD varchar(50))
+BEGIN
+	declare i_MaDonDH varchar(10);
+    set i_MaDonDH = f_AutoMaDonDH();
+	INSERT INTO hoadon VALUES (i_MaDonDH, i_MaHD, NULL, FALSE);
+    select i_MaDonDH;
+END; $$
+
+drop procedure if exists `sp_ThemCTDatHang`;
+DELIMITER $$
+CREATE PROCEDURE `sp_ThemCTDatHang` (i_MaDonDH varchar(10), i_MaVX varchar(10), i_SoLuong int, i_ThanhTien int)
+BEGIN
+	INSERT INTO ct_dondh VALUES (i_MaDonDH, i_MaVX, i_SoLuong, i_ThanhTien);
+END; $$
+
+drop procedure if exists `sp_XepLich`;
+DELIMITER $$
+CREATE PROCEDURE `sp_XepLich` ()
+BEGIN
+	declare n int;
+    declare i int;
+    declare i_Ngay date;
+    declare i_Ca varchar(10);
+    set n = (select count(*) from lichlamviec);
+    set i = 0;
+	while i < n do
+		if (select MaNV from lichlamviec limit i,1) is null then
+			set i_Ngay = (select Ngay from lichlamviec limit i,1);
+            set i_Ca = (select Ca from lichlamviec limit i,1);
+			if exists (select * from lichranh where Ngay = i_Ngay and Ca = i_Ca) then
+				update lichlamviec
+                set MaNV = (select MaNV from lichranh where Ngay = i_Ngay and Ca = i_Ca)
+                where Ngay = i_Ngay and Ca = i_Ca;
+			end if;
+		end if;
+	end while;
 END; $$

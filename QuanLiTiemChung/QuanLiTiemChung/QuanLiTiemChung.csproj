@@ -52,12 +52,6 @@
   <ItemGroup>
     <Compile Include="ctHoaDon.cs" />
     <Compile Include="ctHoaDonDB.cs" />
-    <Compile Include="Form1.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
-    </Compile>
     <Compile Include="frmDangKyGiamHo.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -129,8 +123,8 @@
     <Compile Include="frm_ThemMoiVaccine.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frm_ThemMoiVaccine.Designer.cs" >
-    <DependentUpon>frm_ThemMoiVaccine.cs</DependentUpon>
+    <Compile Include="frm_ThemMoiVaccine.Designer.cs">
+      <DependentUpon>frm_ThemMoiVaccine.cs</DependentUpon>
     </Compile>
     <Compile Include="frm_TraCuuVaccine.cs">
       <SubType>Form</SubType>
@@ -146,6 +140,10 @@
     <Compile Include="HoaDon_DB_19120640.cs" />
     <Compile Include="KhachHang.cs" />
     <Compile Include="KhachHangDB.cs" />
+    <Compile Include="LichRanh.cs" />
+    <Compile Include="LichRanhDB.cs" />
+    <Compile Include="NhanVien.cs" />
+    <Compile Include="NhanVienDB.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Vaccine_19120640.cs" />
@@ -182,6 +180,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frm_DatMuaVaccine.resx">
       <DependentUpon>frm_DatMuaVaccine.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_ThemMoiVaccine.resx">
+      <DependentUpon>frm_ThemMoiVaccine.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frm_TraCuuVaccine.resx">
       <DependentUpon>frm_TraCuuVaccine.cs</DependentUpon>

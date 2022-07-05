@@ -9,9 +9,9 @@ using MySql.Data.MySqlClient;
 
 namespace QuanLiTiemChung
 {
-    class GoiTiemDB
+    class NhanVienDB
     {
-        public static DataTable LayDSGoiTiem()
+        public static DataTable LayLichRanh()
         {
             MySqlConnection conn = DBUtils.GetDBConnection();
             conn.Open();
@@ -20,9 +20,9 @@ namespace QuanLiTiemChung
 
             try
             {
-                MySqlCommand cmd = new MySqlCommand("sp_XemDSGoiTiem", conn);
+                MySqlCommand cmd = new MySqlCommand("sp_XemLichLamViec", conn);
                 cmd.CommandType = CommandType.StoredProcedure;
-                cmd.ExecuteNonQuery();
+                //cmd.ExecuteNonQuery();
                 da.SelectCommand = cmd;
                 da.Fill(dt);
             }
@@ -40,7 +40,7 @@ namespace QuanLiTiemChung
 
         }
 
-        public static DataTable LayTTGoiTiem(string MaGT)
+        public static DataTable LayLichRanh(string MaNV)
         {
             MySqlConnection conn = DBUtils.GetDBConnection();
             conn.Open();
@@ -49,10 +49,9 @@ namespace QuanLiTiemChung
 
             try
             {
-                MySqlCommand cmd = new MySqlCommand("sp_XemCTGoiTiem", conn);
-                cmd.CommandType = CommandType.StoredProcedure;
-                cmd.Parameters.Add("i_MaGT", MySqlDbType.VarChar, 10).Value = MaGT;
-                cmd.ExecuteNonQuery();
+                MySqlCommand cmd = new MySqlCommand("SELECT * FROM LICHLAMVIEC WHERE MaNV='" +MaNV+"';", conn);
+                //cmd.CommandType = CommandType.StoredProcedure;
+                //cmd.ExecuteNonQuery();
                 da.SelectCommand = cmd;
                 da.Fill(dt);
             }
@@ -65,55 +64,37 @@ namespace QuanLiTiemChung
             {
                 conn.Close();
                 conn.Dispose();
+            }
+            return dt;
 
+        }
+        public static DataTable LayDSNV()
+        {
+            MySqlConnection conn = DBUtils.GetDBConnection();
+            conn.Open();
+            MySqlDataAdapter da = new MySqlDataAdapter();
+            DataTable dt = new DataTable();
+
+            try
+            {
+                MySqlCommand cmd = new MySqlCommand("select MaNV from NhanVien order by MaNV", conn);
+                //cmd.ExecuteNonQuery();
+                da.SelectCommand = cmd;
+                da.Fill(dt);
+            }
+            catch (Exception error)
+            {
+                Console.WriteLine("Error: " + error);
+                Console.WriteLine(error.StackTrace);
+            }
+            finally
+            {
+                conn.Close();
+                conn.Dispose();
             }
             return dt;
 
         }
 
-        public static bool KiemtraGoiTiem(string MaGT,int SoLuong)
-        {
-            MySqlConnection conn = DBUtils.GetDBConnection();
-            conn.Open();
-            MySqlDataAdapter da = new MySqlDataAdapter();
-            DataTable dt = new DataTable();
-            bool flag = true;
-            try
-            {
-                MySqlCommand cmd = new MySqlCommand("sp_CheckGoiTiem", conn);
-                cmd.CommandType = CommandType.StoredProcedure;
-                cmd.Parameters.Add("i_MaGT", MySqlDbType.VarChar, 10).Value = MaGT;
-                cmd.Parameters.Add("i_SoLuong", MySqlDbType.VarChar, 10).Value = SoLuong;
-
-                cmd.ExecuteNonQuery();
-                da.SelectCommand = cmd;
-                da.Fill(dt);
-                foreach (DataRow row in dt.Rows)
-                {
-                    int len = row.ItemArray.Length;
-                    for (int i = 0; i < len; i++)
-                    {
-                        if (row["sl"].ToString() != "1")
-                        {
-                            flag = false;
-                        }
-                    }
-                }
-            }
-            catch (Exception error)
-            {
-                Console.WriteLine("Error: " + error);
-                Console.WriteLine(error.StackTrace);
-                flag = false;
-            }
-            finally
-            {
-                conn.Close();
-                conn.Dispose();
-
-            }
-            return flag;
-
-        }
     }
 }
