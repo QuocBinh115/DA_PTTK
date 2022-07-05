@@ -17,14 +17,20 @@ namespace QuanLiTiemChung
             InitializeComponent();
         }
 
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private void frmXemLich_Load(object sender, EventArgs e)
         {
-
+            cb_MaNV.DataSource = NhanVien.XemDSNV();
+            cb_MaNV.DisplayMember = "MaNV";
+            cb_MaNV.ValueMember = "MaNV";
+            gvLichLamViec.DataSource = NhanVien.XemLichRanh();
         }
 
-        private void gvLichLamViec_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private void cb_MaNV_SelectedIndexChanged(object sender, EventArgs e)
         {
+            //Console.WriteLine(cb_MaNV.SelectedValue.ToString());
 
+            gvLichLamViec.DataSource = NhanVien.XemLichRanh(cb_MaNV.SelectedValue.ToString());
+            //gvLichLamViec.DataSource = NhanVien.XemLichRanh("' or True; #");
         }
     }
 }
