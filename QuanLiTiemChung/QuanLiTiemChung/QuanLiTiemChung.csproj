@@ -50,8 +50,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ctDonDatDang.cs" />
+    <Compile Include="ctDonDatHang_DB.cs" />
     <Compile Include="ctHoaDon.cs" />
     <Compile Include="ctHoaDonDB.cs" />
+    <Compile Include="DoDatHang.cs" />
+    <Compile Include="DonDatHang_DB.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
