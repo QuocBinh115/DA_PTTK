@@ -26,7 +26,10 @@ namespace QuanLiTiemChung
 
         private void bt_huy_Click(object sender, EventArgs e)
         {
-            this.Close();
+            frmChonVacXin chonVacXin = new frmChonVacXin();
+            this.Visible = true;
+            chonVacXin.Show();
+            this.Visible = false;
         }
 
         private void bt_DangXuat_Click(object sender, EventArgs e)

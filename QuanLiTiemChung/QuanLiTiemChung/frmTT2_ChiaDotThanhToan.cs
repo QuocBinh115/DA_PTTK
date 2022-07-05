@@ -43,6 +43,10 @@ namespace QuanLiTiemChung
         private void bt_huy_Click(object sender, EventArgs e)
         {
             this.Close();
+            frmTT3_LapHoaDon laphoadon = new frmTT3_LapHoaDon();
+            this.Visible = false;
+            laphoadon.ShowDialog();
+            this.Visible = true;
         }
     }
 }
