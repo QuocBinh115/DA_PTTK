@@ -42,6 +42,10 @@ namespace QuanLiTiemChung
             newVX.NSX = NSX;
             newVX.HSD = HSD;
             newVX.ThemVaccinemoi();
+            MessageBox.Show("Thêm vaccine thành công!", "Thông báo");
+            this.Controls.Clear();
+            this.InitializeComponent();
+
         }
     }
 }

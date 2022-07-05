@@ -47,7 +47,7 @@ namespace QuanLiTiemChung
             // 
             this.FormName_label.AutoSize = true;
             this.FormName_label.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.FormName_label.Location = new System.Drawing.Point(412, 37);
+            this.FormName_label.Location = new System.Drawing.Point(357, 37);
             this.FormName_label.Name = "FormName_label";
             this.FormName_label.Size = new System.Drawing.Size(449, 39);
             this.FormName_label.TabIndex = 3;
