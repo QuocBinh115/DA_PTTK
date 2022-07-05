@@ -128,3 +128,26 @@ CREATE PROCEDURE `sp_ThemCTDatHang` (i_MaDonDH varchar(10), i_MaVX varchar(10), 
 BEGIN
 	INSERT INTO ct_dondh VALUES (i_MaDonDH, i_MaVX, i_SoLuong, i_ThanhTien);
 END; $$
+
+drop procedure if exists `sp_XepLich`;
+DELIMITER $$
+CREATE PROCEDURE `sp_XepLich` ()
+BEGIN
+	declare n int;
+    declare i int;
+    declare i_Ngay date;
+    declare i_Ca varchar(10);
+    set n = (select count(*) from lichlamviec);
+    set i = 0;
+	while i < n do
+		if (select MaNV from lichlamviec limit i,1) is null then
+			set i_Ngay = (select Ngay from lichlamviec limit i,1);
+            set i_Ca = (select Ca from lichlamviec limit i,1);
+			if exists (select * from lichranh where Ngay = i_Ngay and Ca = i_Ca) then
+				update lichlamviec
+                set MaNV = (select MaNV from lichranh where Ngay = i_Ngay and Ca = i_Ca)
+                where Ngay = i_Ngay and Ca = i_Ca;
+			end if;
+		end if;
+	end while;
+END; $$
