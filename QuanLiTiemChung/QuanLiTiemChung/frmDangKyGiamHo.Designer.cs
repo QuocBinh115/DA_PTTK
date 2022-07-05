@@ -29,7 +29,9 @@ namespace QuanLiTiemChung
         /// </summary>
         private void InitializeComponent()
         {
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.checkNu = new System.Windows.Forms.CheckBox();
+            this.checkNam = new System.Windows.Forms.CheckBox();
+            this.date_ngaySinh = new System.Windows.Forms.DateTimePicker();
             this.lb_ntns = new System.Windows.Forms.Label();
             this.lb_diachi = new System.Windows.Forms.Label();
             this.txtDiaChi = new System.Windows.Forms.TextBox();
@@ -42,103 +44,125 @@ namespace QuanLiTiemChung
             this.btnDangKy = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // dateTimePicker1
+            // checkNu
             // 
-            this.dateTimePicker1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateTimePicker1.Location = new System.Drawing.Point(191, 168);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(200, 29);
-            this.dateTimePicker1.TabIndex = 23;
+            this.checkNu.AutoSize = true;
+            this.checkNu.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkNu.Location = new System.Drawing.Point(578, 210);
+            this.checkNu.Name = "checkNu";
+            this.checkNu.Size = new System.Drawing.Size(54, 28);
+            this.checkNu.TabIndex = 28;
+            this.checkNu.Text = "Nữ";
+            this.checkNu.UseVisualStyleBackColor = true;
+            // 
+            // checkNam
+            // 
+            this.checkNam.AutoSize = true;
+            this.checkNam.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkNam.Location = new System.Drawing.Point(578, 176);
+            this.checkNam.Name = "checkNam";
+            this.checkNam.Size = new System.Drawing.Size(69, 28);
+            this.checkNam.TabIndex = 27;
+            this.checkNam.Text = "Nam";
+            this.checkNam.UseVisualStyleBackColor = true;
+            // 
+            // date_ngaySinh
+            // 
+            this.date_ngaySinh.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.date_ngaySinh.Location = new System.Drawing.Point(212, 129);
+            this.date_ngaySinh.Name = "date_ngaySinh";
+            this.date_ngaySinh.Size = new System.Drawing.Size(317, 29);
+            this.date_ngaySinh.TabIndex = 25;
             // 
             // lb_ntns
             // 
             this.lb_ntns.AutoSize = true;
             this.lb_ntns.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb_ntns.Location = new System.Drawing.Point(43, 168);
+            this.lb_ntns.Location = new System.Drawing.Point(64, 129);
             this.lb_ntns.Name = "lb_ntns";
             this.lb_ntns.Size = new System.Drawing.Size(94, 24);
-            this.lb_ntns.TabIndex = 22;
+            this.lb_ntns.TabIndex = 24;
             this.lb_ntns.Text = "Ngày sinh";
             // 
             // lb_diachi
             // 
             this.lb_diachi.AutoSize = true;
             this.lb_diachi.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb_diachi.Location = new System.Drawing.Point(43, 219);
+            this.lb_diachi.Location = new System.Drawing.Point(64, 180);
             this.lb_diachi.Name = "lb_diachi";
             this.lb_diachi.Size = new System.Drawing.Size(67, 24);
-            this.lb_diachi.TabIndex = 21;
+            this.lb_diachi.TabIndex = 23;
             this.lb_diachi.Text = "Địa chỉ";
             // 
             // txtDiaChi
             // 
             this.txtDiaChi.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtDiaChi.Location = new System.Drawing.Point(191, 216);
+            this.txtDiaChi.Location = new System.Drawing.Point(212, 177);
             this.txtDiaChi.Name = "txtDiaChi";
-            this.txtDiaChi.Size = new System.Drawing.Size(200, 29);
-            this.txtDiaChi.TabIndex = 20;
+            this.txtDiaChi.Size = new System.Drawing.Size(317, 29);
+            this.txtDiaChi.TabIndex = 22;
             // 
             // lb_sdt
             // 
             this.lb_sdt.AutoSize = true;
             this.lb_sdt.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb_sdt.Location = new System.Drawing.Point(428, 133);
+            this.lb_sdt.Location = new System.Drawing.Point(574, 91);
             this.lb_sdt.Name = "lb_sdt";
             this.lb_sdt.Size = new System.Drawing.Size(121, 24);
-            this.lb_sdt.TabIndex = 19;
+            this.lb_sdt.TabIndex = 21;
             this.lb_sdt.Text = "Số điện thoại";
             // 
             // txtSDT
             // 
             this.txtSDT.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSDT.Location = new System.Drawing.Point(558, 133);
+            this.txtSDT.Location = new System.Drawing.Point(704, 91);
             this.txtSDT.Name = "txtSDT";
             this.txtSDT.Size = new System.Drawing.Size(200, 29);
-            this.txtSDT.TabIndex = 18;
+            this.txtSDT.TabIndex = 20;
             // 
             // lb_cmnd
             // 
             this.lb_cmnd.AutoSize = true;
             this.lb_cmnd.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb_cmnd.Location = new System.Drawing.Point(428, 173);
+            this.lb_cmnd.Location = new System.Drawing.Point(574, 131);
             this.lb_cmnd.Name = "lb_cmnd";
             this.lb_cmnd.Size = new System.Drawing.Size(66, 24);
-            this.lb_cmnd.TabIndex = 17;
+            this.lb_cmnd.TabIndex = 19;
             this.lb_cmnd.Text = "CMND";
             // 
             // txtCMND
             // 
             this.txtCMND.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCMND.Location = new System.Drawing.Point(558, 173);
+            this.txtCMND.Location = new System.Drawing.Point(704, 131);
             this.txtCMND.Name = "txtCMND";
             this.txtCMND.Size = new System.Drawing.Size(200, 29);
-            this.txtCMND.TabIndex = 16;
+            this.txtCMND.TabIndex = 18;
             // 
             // lb_name
             // 
             this.lb_name.AutoSize = true;
             this.lb_name.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb_name.Location = new System.Drawing.Point(43, 128);
+            this.lb_name.Location = new System.Drawing.Point(64, 89);
             this.lb_name.Name = "lb_name";
             this.lb_name.Size = new System.Drawing.Size(148, 24);
-            this.lb_name.TabIndex = 15;
+            this.lb_name.TabIndex = 17;
             this.lb_name.Text = "Tên khách hàng";
             // 
             // txtHoTen
             // 
             this.txtHoTen.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtHoTen.Location = new System.Drawing.Point(191, 125);
+            this.txtHoTen.Location = new System.Drawing.Point(212, 86);
             this.txtHoTen.Name = "txtHoTen";
-            this.txtHoTen.Size = new System.Drawing.Size(200, 29);
-            this.txtHoTen.TabIndex = 14;
+            this.txtHoTen.Size = new System.Drawing.Size(317, 29);
+            this.txtHoTen.TabIndex = 16;
             // 
             // btnDangKy
             // 
             this.btnDangKy.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDangKy.Location = new System.Drawing.Point(630, 286);
+            this.btnDangKy.Location = new System.Drawing.Point(746, 266);
             this.btnDangKy.Name = "btnDangKy";
             this.btnDangKy.Size = new System.Drawing.Size(128, 40);
-            this.btnDangKy.TabIndex = 13;
+            this.btnDangKy.TabIndex = 15;
             this.btnDangKy.Text = "Đăng ký";
             this.btnDangKy.UseVisualStyleBackColor = true;
             // 
@@ -146,8 +170,10 @@ namespace QuanLiTiemChung
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.dateTimePicker1);
+            this.ClientSize = new System.Drawing.Size(1010, 365);
+            this.Controls.Add(this.checkNu);
+            this.Controls.Add(this.checkNam);
+            this.Controls.Add(this.date_ngaySinh);
             this.Controls.Add(this.lb_ntns);
             this.Controls.Add(this.lb_diachi);
             this.Controls.Add(this.txtDiaChi);
@@ -160,13 +186,17 @@ namespace QuanLiTiemChung
             this.Controls.Add(this.btnDangKy);
             this.Name = "frmDangKyGiamHo";
             this.Text = "frmDangKyGiamHo";
+            this.Load += new System.EventHandler(this.frmDangKyGiamHo_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+
+        private System.Windows.Forms.CheckBox checkNu;
+        private System.Windows.Forms.CheckBox checkNam;
+        private System.Windows.Forms.DateTimePicker date_ngaySinh;
         private System.Windows.Forms.Label lb_ntns;
         private System.Windows.Forms.Label lb_diachi;
         private System.Windows.Forms.TextBox txtDiaChi;

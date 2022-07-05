@@ -10,11 +10,21 @@ using System.Windows.Forms;
 
 namespace QuanLiTiemChung
 {
-    public partial class frmTT5_TaoPhieuHen : Form
+    public partial class frmXemLich : Form
     {
-        public frmTT5_TaoPhieuHen()
+        public frmXemLich()
         {
             InitializeComponent();
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void gvLichLamViec_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }

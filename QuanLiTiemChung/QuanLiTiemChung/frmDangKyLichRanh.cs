@@ -10,16 +10,16 @@ using System.Windows.Forms;
 
 namespace QuanLiTiemChung
 {
-    public partial class frm_DatMuaVaccine : Form
+    public partial class frmDangKyLichRanh : Form
     {
-        public frm_DatMuaVaccine()
+        public frmDangKyLichRanh()
         {
             InitializeComponent();
         }
 
-        private void frm_DatMuaVaccine_Load(object sender, EventArgs e)
+        private void label1_Click(object sender, EventArgs e)
         {
-            
+
         }
     }
 }

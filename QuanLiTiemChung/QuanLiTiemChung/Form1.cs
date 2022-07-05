@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace QuanLiTiemChung
 {
-    public partial class frmTT4_ChinhSuaThongTin : Form
+    public partial class Form1 : Form
     {
-        public frmTT4_ChinhSuaThongTin()
+        public Form1()
         {
             InitializeComponent();
         }

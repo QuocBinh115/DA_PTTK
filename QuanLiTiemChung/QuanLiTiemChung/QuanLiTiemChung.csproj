@@ -50,11 +50,19 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ctHoaDon.cs" />
+    <Compile Include="ctHoaDonDB.cs" />
     <Compile Include="frmDangKyGiamHo.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmDangKyGiamHo.Designer.cs">
       <DependentUpon>frmDangKyGiamHo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmDangKyLichRanh.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmDangKyLichRanh.Designer.cs">
+      <DependentUpon>frmDangKyLichRanh.cs</DependentUpon>
     </Compile>
     <Compile Include="frmDangKyTiemChung.cs">
       <SubType>Form</SubType>
@@ -94,17 +102,17 @@
     <Compile Include="frmTT3_LapHoaDon.Designer.cs">
       <DependentUpon>frmTT3_LapHoaDon.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmTT4_ChinhSuaThongTin.cs">
+    <Compile Include="frmTT4_TaoPhieuHen.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmTT4_ChinhSuaThongTin.Designer.cs">
-      <DependentUpon>frmTT4_ChinhSuaThongTin.cs</DependentUpon>
+    <Compile Include="frmTT4_TaoPhieuHen.Designer.cs">
+      <DependentUpon>frmTT4_TaoPhieuHen.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmTT5_TaoPhieuHen.cs">
+    <Compile Include="frmXemLich.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmTT5_TaoPhieuHen.Designer.cs">
-      <DependentUpon>frmTT5_TaoPhieuHen.cs</DependentUpon>
+    <Compile Include="frmXemLich.Designer.cs">
+      <DependentUpon>frmXemLich.cs</DependentUpon>
     </Compile>
     <Compile Include="frm_DatMuaVaccine.cs">
       <SubType>Form</SubType>
@@ -118,10 +126,19 @@
     <Compile Include="frm_TraCuuVaccine.Designer.cs">
       <DependentUpon>frm_TraCuuVaccine.cs</DependentUpon>
     </Compile>
+    <Compile Include="GoiTiem.cs" />
+    <Compile Include="GoiTiemDB.cs" />
+    <Compile Include="HoaDon.cs" />
+    <Compile Include="HoaDonDB.cs" />
+    <Compile Include="KhachHang.cs" />
+    <Compile Include="KhachHangDB.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="frmDangKyGiamHo.resx">
       <DependentUpon>frmDangKyGiamHo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmDangKyLichRanh.resx">
+      <DependentUpon>frmDangKyLichRanh.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmDangKyTiemChung.resx">
       <DependentUpon>frmDangKyTiemChung.cs</DependentUpon>
@@ -135,14 +152,14 @@
     <EmbeddedResource Include="frmTT3_LapHoaDon.resx">
       <DependentUpon>frmTT3_LapHoaDon.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmTT4_ChinhSuaThongTin.resx">
-      <DependentUpon>frmTT4_ChinhSuaThongTin.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="frmTT5_TaoPhieuHen.resx">
-      <DependentUpon>frmTT5_TaoPhieuHen.cs</DependentUpon>
+    <EmbeddedResource Include="frmTT4_TaoPhieuHen.resx">
+      <DependentUpon>frmTT4_TaoPhieuHen.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmChonVacXin.resx">
       <DependentUpon>frmChonVacXin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmXemLich.resx">
+      <DependentUpon>frmXemLich.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frm_DatMuaVaccine.resx">
       <DependentUpon>frm_DatMuaVaccine.cs</DependentUpon>
