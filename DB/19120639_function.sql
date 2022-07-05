@@ -1,6 +1,6 @@
 
 SET GLOBAL log_bin_trust_function_creators = 1;
-
+use qltc;
 drop function if exists qltc.f_AutoMaHD;
 delimiter $$
 create function qltc.f_AutoMaHD() returns char(10)

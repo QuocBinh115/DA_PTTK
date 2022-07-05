@@ -107,10 +107,15 @@ drop procedure if exists `sp_CheckGoiTiem`;
 DELIMITER $$
 CREATE PROCEDURE `sp_CheckGoiTiem` (i_MaGT varchar(10), i_SoLuong int)
 BEGIN
-	select if(SoLuongTon > i_SoLuong, TRUE, FALSE) 
-	from vaccine 
-    where MaVX in (select MaVX from ct_goitiem where MaGT = i_MaGT);
+	
+    
+    select if(SoMui*i_SoLuong < SoLuongTon,true,false) as sl
+    from ct_goitiem c left join vaccine v on c.MaVX=v.MaVX
+    where MaGT = i_MaGT;
+    
+    
 END; $$
+
 
 drop procedure if exists `sp_DatHang`;
 DELIMITER $$

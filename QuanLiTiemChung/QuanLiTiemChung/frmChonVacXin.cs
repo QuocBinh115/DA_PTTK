@@ -53,9 +53,10 @@ namespace QuanLiTiemChung
 
         private void btnXoa_Click(object sender, EventArgs e)
         {
-            if(gv_DSChon.DataSource is null)
+            int len = data.Rows.Count;
+            if ( len<1)
             {
-                MessageBox.Show("Có gì đâu mà xóa");
+                MessageBox.Show("Không có gì để xóa");
                 return;
             }
             
@@ -79,16 +80,30 @@ namespace QuanLiTiemChung
             string MaGT = obj["MaGT"].ToString();
             string TenGT = obj["TenGT"].ToString();
             string DonGia = obj["DonGia"].ToString();
+            
 
             DataRow row = data.Rows.Find(MaGT);
 
             if (row==null)
             {
                 object[] o = { data.Rows.Count + 1, MaGT, TenGT, 1, DonGia };
+                if (!GoiTiem.KiemtraTTGoiTiem(MaGT, 1))
+                {
+                    MessageBox.Show("Chọn gói khác nhé!");
+                    return;
+                }
                 data.Rows.Add(o);
             }
             else
             {
+                int SoLuong = Int32.Parse(row["SoLuong"].ToString()) + 1;
+                
+                if (!GoiTiem.KiemtraTTGoiTiem(MaGT, SoLuong))
+                {
+                    MessageBox.Show("Chọn gói khác nhé!");
+                    return;
+                }
+
                 row["SoLuong"] = Int32.Parse(row["SoLuong"].ToString())+1;
 
             }
@@ -115,11 +130,13 @@ namespace QuanLiTiemChung
 
         private void bt_laphoadon_Click(object sender, EventArgs e)
         {
-            if (gv_DSChon.DataSource is null)
+            int len = data.Rows.Count;
+            if (len < 1)
             {
-                MessageBox.Show("Chọn Vắc xin nhé!");
+                MessageBox.Show("Không có gì để xóa");
                 return;
             }
+
             frmTT3_LapHoaDon thanhtoan = new frmTT3_LapHoaDon();
             thanhtoan.LoadData(data,"MH");
 
