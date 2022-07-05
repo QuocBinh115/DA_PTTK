@@ -107,6 +107,7 @@ namespace QuanLiTiemChung
 
         private void btn_ThanhToan_Click(object sender, EventArgs e)
         {
+            
             HoaDon hd = new HoaDon(data,"MH");
             frmTT1_Main frm = new frmTT1_Main();
             frm.Show();
@@ -114,8 +115,13 @@ namespace QuanLiTiemChung
 
         private void bt_laphoadon_Click(object sender, EventArgs e)
         {
+            if (gv_DSChon.DataSource is null)
+            {
+                MessageBox.Show("Chọn Vắc xin nhé!");
+                return;
+            }
             frmTT3_LapHoaDon thanhtoan = new frmTT3_LapHoaDon();
-            thanhtoan.LoadData(data);
+            thanhtoan.LoadData(data,"MH");
 
 
             //this.Visible = false;
