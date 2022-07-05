@@ -229,6 +229,7 @@ CREATE TABLE `Vaccine`
 	`TenVX` VARCHAR(50) NULL,
     `NhaSX` VARCHAR(50) NULL,
 	`HanSuDung` DATE NULL,
+    `SoLuongTon` INT NULL,
 	CONSTRAINT `PK_Vaccine` PRIMARY KEY (`MaVX` ASC)
 )
 

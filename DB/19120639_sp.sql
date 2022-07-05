@@ -78,12 +78,14 @@ END; $$
 
 drop procedure if exists `sp_ThanhTienHD`;
 DELIMITER $$
-CREATE PROCEDURE `sp_ThanhTienHD` (i_MaHD varchar(10), i_MaGT varchar(10))
+CREATE PROCEDURE `sp_ThanhTienHD` (
+	i_MaGT varchar(10),
+    i_SoLuong int, 
+    out i_ThanhTien int)
 BEGIN
-	declare i_gia int;
-    set i_gia = (select dongia from goitim where i_MaGT = MaGT);
-    update ct_hoadon
-    set ThanhTien = i_gia*SoLuong where MaHD = i_MaHD and MaGT = i_MaGT;
+	declare i_Gia int;
+    set i_Gia = (select dongia from goitiem where MaGT = i_MaGT);
+    set i_ThanhTien = i_SoLuong * i_Gia;
 END; $$
 
 drop procedure if exists `sp_TongTienHD`;
@@ -92,7 +94,7 @@ CREATE PROCEDURE `sp_TongTienHD` (i_MaHD varchar(10))
 BEGIN
 	declare i_TongTien int;
     declare i_DatHang int;
-    set i_DatHang = (select TongTien from dathang where MaHD = i_MaHD);
+    set i_DatHang = (select sum(TongTien) from dathang where MaHD = i_MaHD);
     set i_TongTien = (select sum(ThanhTien) from ct_hoadon where MaHD = i_MaHD);
     update hoadon
     set TongTien = i_TongTien where MaHD = i_MaHD;
@@ -106,4 +108,13 @@ BEGIN
     set i_TongTien = (select sum(ThanhTien) from ct_dondh where MaDonDH = i_MaDonDH);
     update dathang
     set TongTien = i_TongTien where MaDonDH = i_MaDonDH;
+END; $$
+
+drop procedure if exists `sp_CheckGoiTiem`;
+DELIMITER $$
+CREATE PROCEDURE `sp_CheckGoiTiem` (i_MaGT varchar(10), i_SoLuong int)
+BEGIN
+	select if(SoLuongTon > i_SoLuong, TRUE, FALSE) 
+	from vaccine 
+    where MaVX in (select MaVX from ct_goitiem where MaGT = i_MaGT);
 END; $$
