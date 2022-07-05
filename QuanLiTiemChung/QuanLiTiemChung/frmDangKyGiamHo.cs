@@ -26,14 +26,14 @@ namespace QuanLiTiemChung
 
         private void frmDangKyGiamHo_Load(object sender, EventArgs e)
         {
-            KhachHang.LayThongTin("KH00000000");
+            User.current.LayThongTin();
 
-            txtHoTen.Text = KhachHang.TenKH;
-            date_ngaySinh.Value = KhachHang.NgaySinh;
-            txtDiaChi.Text = KhachHang.DiaChi;
-            txtCMND.Text = KhachHang.CMND;
-            txtSDT.Text = KhachHang.SDT;
-            if (KhachHang.GioiTinh == true)
+            txtHoTen.Text = User.current.TenKH;
+            date_ngaySinh.Value = User.current.NgaySinh;
+            txtDiaChi.Text = User.current.DiaChi;
+            txtCMND.Text = User.current.CMND;
+            txtSDT.Text = User.current.SDT;
+            if (User.current.GioiTinh == true)
             { checkNam.Checked = true; }
             else
             {

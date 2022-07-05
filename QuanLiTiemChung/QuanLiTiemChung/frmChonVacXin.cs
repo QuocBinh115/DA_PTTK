@@ -24,7 +24,7 @@ namespace QuanLiTiemChung
 
         private void frmDangKyVacXin_Load(object sender, EventArgs e)
         {
-            KhachHang.LayThongTin("KH00000000");
+            User.current.LayThongTin();
 
             lstDSGoiTiem.DataSource = GoiTiem.DocDSGoiTiem();
             lstDSGoiTiem.ValueMember = "MaGT";
