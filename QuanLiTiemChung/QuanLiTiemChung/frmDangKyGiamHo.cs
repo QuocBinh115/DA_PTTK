@@ -41,5 +41,15 @@ namespace QuanLiTiemChung
 
             }
         }
+
+        private void bt_DangXuat_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void bt_huy_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }
