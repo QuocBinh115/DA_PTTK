@@ -65,7 +65,7 @@ CREATE PROCEDURE `sp_ThemVaccine` (i_Ten varchar(50), i_NXS varchar(50), i_HSD d
 BEGIN
 	declare i_MaVX varchar(10);
     set i_MaVX = f_AutoMaVX();
-	INSERT INTO hoadon VALUES (i_MaVX, i_Ten, i_NXS, i_HSD);
+	INSERT INTO vaccine VALUES (i_MaVX, i_Ten, i_NXS, i_HSD);
     select i_MaVX;
 END; $$
 
@@ -130,7 +130,7 @@ CREATE PROCEDURE `sp_DatHang` (i_MaHD varchar(50))
 BEGIN
 	declare i_MaDonDH varchar(10);
     set i_MaDonDH = f_AutoMaDonDH();
-	INSERT INTO hoadon VALUES (i_MaDonDH, i_MaHD, NULL, FALSE);
+	INSERT INTO dathang VALUES (i_MaDonDH, i_MaHD, NULL, FALSE);
     select i_MaDonDH;
 END; $$
 
