@@ -71,13 +71,12 @@ namespace QuanLiTiemChung
 
         }
 
-        public static bool KiemtraGoiTiem(string MaGT,int SoLuong)
+        public static DataTable KiemtraGoiTiem(string MaGT,int SoLuong)
         {
             MySqlConnection conn = DBUtils.GetDBConnection();
             conn.Open();
             MySqlDataAdapter da = new MySqlDataAdapter();
             DataTable dt = new DataTable();
-            bool flag = true;
             try
             {
                 MySqlCommand cmd = new MySqlCommand("sp_CheckGoiTiem", conn);
@@ -88,23 +87,12 @@ namespace QuanLiTiemChung
                 cmd.ExecuteNonQuery();
                 da.SelectCommand = cmd;
                 da.Fill(dt);
-                foreach (DataRow row in dt.Rows)
-                {
-                    int len = row.ItemArray.Length;
-                    for (int i = 0; i < len; i++)
-                    {
-                        if (row["sl"].ToString() != "1")
-                        {
-                            flag = false;
-                        }
-                    }
-                }
+                
             }
             catch (Exception error)
             {
                 Console.WriteLine("Error: " + error);
                 Console.WriteLine(error.StackTrace);
-                flag = false;
             }
             finally
             {
@@ -112,7 +100,7 @@ namespace QuanLiTiemChung
                 conn.Dispose();
 
             }
-            return flag;
+            return dt;
 
         }
     }

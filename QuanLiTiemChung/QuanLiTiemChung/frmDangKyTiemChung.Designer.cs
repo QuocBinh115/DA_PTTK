@@ -55,25 +55,25 @@ namespace QuanLiTiemChung
             this.panel_button = new System.Windows.Forms.Panel();
             this.bt_DangXuat = new System.Windows.Forms.Button();
             this.panel_main = new System.Windows.Forms.Panel();
-            this.panel_toolbar = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.panel_toolbar = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.pic_User)).BeginInit();
             this.panel_User.SuspendLayout();
             this.panel_button.SuspendLayout();
             this.panel_main.SuspendLayout();
-            this.panel_toolbar.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
+            this.panel_toolbar.SuspendLayout();
             this.SuspendLayout();
             // 
             // btnDangKy
             // 
             this.btnDangKy.Font = new System.Drawing.Font("Bahnschrift", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDangKy.Location = new System.Drawing.Point(398, 5);
-            this.btnDangKy.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.btnDangKy.Margin = new System.Windows.Forms.Padding(6);
             this.btnDangKy.Name = "btnDangKy";
             this.btnDangKy.Size = new System.Drawing.Size(193, 37);
             this.btnDangKy.TabIndex = 0;
@@ -85,9 +85,9 @@ namespace QuanLiTiemChung
             // 
             this.txtHoTen.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtHoTen.Location = new System.Drawing.Point(10, 36);
-            this.txtHoTen.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.txtHoTen.Margin = new System.Windows.Forms.Padding(6);
             this.txtHoTen.Name = "txtHoTen";
-            this.txtHoTen.Size = new System.Drawing.Size(647, 27);
+            this.txtHoTen.Size = new System.Drawing.Size(647, 23);
             this.txtHoTen.TabIndex = 1;
             // 
             // lb_name
@@ -97,7 +97,7 @@ namespace QuanLiTiemChung
             this.lb_name.Location = new System.Drawing.Point(6, 6);
             this.lb_name.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.lb_name.Name = "lb_name";
-            this.lb_name.Size = new System.Drawing.Size(149, 24);
+            this.lb_name.Size = new System.Drawing.Size(121, 19);
             this.lb_name.TabIndex = 2;
             this.lb_name.Text = "Tên khách hàng";
             // 
@@ -105,9 +105,9 @@ namespace QuanLiTiemChung
             // 
             this.txtCMND.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCMND.Location = new System.Drawing.Point(573, 162);
-            this.txtCMND.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.txtCMND.Margin = new System.Windows.Forms.Padding(6);
             this.txtCMND.Name = "txtCMND";
-            this.txtCMND.Size = new System.Drawing.Size(382, 27);
+            this.txtCMND.Size = new System.Drawing.Size(382, 23);
             this.txtCMND.TabIndex = 3;
             // 
             // lb_cmnd
@@ -117,7 +117,7 @@ namespace QuanLiTiemChung
             this.lb_cmnd.Location = new System.Drawing.Point(569, 132);
             this.lb_cmnd.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.lb_cmnd.Name = "lb_cmnd";
-            this.lb_cmnd.Size = new System.Drawing.Size(65, 24);
+            this.lb_cmnd.Size = new System.Drawing.Size(53, 19);
             this.lb_cmnd.TabIndex = 4;
             this.lb_cmnd.Text = "CMND";
             // 
@@ -125,9 +125,9 @@ namespace QuanLiTiemChung
             // 
             this.txtSDT.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtSDT.Location = new System.Drawing.Point(573, 99);
-            this.txtSDT.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.txtSDT.Margin = new System.Windows.Forms.Padding(6);
             this.txtSDT.Name = "txtSDT";
-            this.txtSDT.Size = new System.Drawing.Size(382, 27);
+            this.txtSDT.Size = new System.Drawing.Size(382, 23);
             this.txtSDT.TabIndex = 5;
             // 
             // lb_sdt
@@ -137,7 +137,7 @@ namespace QuanLiTiemChung
             this.lb_sdt.Location = new System.Drawing.Point(569, 69);
             this.lb_sdt.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.lb_sdt.Name = "lb_sdt";
-            this.lb_sdt.Size = new System.Drawing.Size(126, 24);
+            this.lb_sdt.Size = new System.Drawing.Size(103, 19);
             this.lb_sdt.TabIndex = 6;
             this.lb_sdt.Text = "Số điện thoại";
             // 
@@ -145,9 +145,9 @@ namespace QuanLiTiemChung
             // 
             this.txtDiaChi.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtDiaChi.Location = new System.Drawing.Point(10, 162);
-            this.txtDiaChi.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.txtDiaChi.Margin = new System.Windows.Forms.Padding(6);
             this.txtDiaChi.Name = "txtDiaChi";
-            this.txtDiaChi.Size = new System.Drawing.Size(538, 27);
+            this.txtDiaChi.Size = new System.Drawing.Size(538, 23);
             this.txtDiaChi.TabIndex = 7;
             // 
             // lb_diachi
@@ -157,7 +157,7 @@ namespace QuanLiTiemChung
             this.lb_diachi.Location = new System.Drawing.Point(6, 132);
             this.lb_diachi.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.lb_diachi.Name = "lb_diachi";
-            this.lb_diachi.Size = new System.Drawing.Size(71, 24);
+            this.lb_diachi.Size = new System.Drawing.Size(58, 19);
             this.lb_diachi.TabIndex = 8;
             this.lb_diachi.Text = "Địa chỉ";
             // 
@@ -168,7 +168,7 @@ namespace QuanLiTiemChung
             this.lb_ntns.Location = new System.Drawing.Point(6, 69);
             this.lb_ntns.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.lb_ntns.Name = "lb_ntns";
-            this.lb_ntns.Size = new System.Drawing.Size(98, 24);
+            this.lb_ntns.Size = new System.Drawing.Size(80, 19);
             this.lb_ntns.TabIndex = 10;
             this.lb_ntns.Text = "Ngày sinh";
             // 
@@ -176,9 +176,9 @@ namespace QuanLiTiemChung
             // 
             this.date_ngaySinh.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.date_ngaySinh.Location = new System.Drawing.Point(10, 99);
-            this.date_ngaySinh.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.date_ngaySinh.Margin = new System.Windows.Forms.Padding(6);
             this.date_ngaySinh.Name = "date_ngaySinh";
-            this.date_ngaySinh.Size = new System.Drawing.Size(538, 27);
+            this.date_ngaySinh.Size = new System.Drawing.Size(538, 23);
             this.date_ngaySinh.TabIndex = 11;
             // 
             // checkIsChild
@@ -186,9 +186,9 @@ namespace QuanLiTiemChung
             this.checkIsChild.AutoSize = true;
             this.checkIsChild.Font = new System.Drawing.Font("Bahnschrift", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.checkIsChild.Location = new System.Drawing.Point(854, 36);
-            this.checkIsChild.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.checkIsChild.Margin = new System.Windows.Forms.Padding(6);
             this.checkIsChild.Name = "checkIsChild";
-            this.checkIsChild.Size = new System.Drawing.Size(94, 28);
+            this.checkIsChild.Size = new System.Drawing.Size(78, 23);
             this.checkIsChild.TabIndex = 12;
             this.checkIsChild.Text = "Trẻ em";
             this.checkIsChild.UseVisualStyleBackColor = true;
@@ -198,9 +198,9 @@ namespace QuanLiTiemChung
             this.checkNam.AutoSize = true;
             this.checkNam.Font = new System.Drawing.Font("Bahnschrift", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.checkNam.Location = new System.Drawing.Point(698, 36);
-            this.checkNam.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.checkNam.Margin = new System.Windows.Forms.Padding(6);
             this.checkNam.Name = "checkNam";
-            this.checkNam.Size = new System.Drawing.Size(74, 28);
+            this.checkNam.Size = new System.Drawing.Size(62, 23);
             this.checkNam.TabIndex = 13;
             this.checkNam.Text = "Nam";
             this.checkNam.UseVisualStyleBackColor = true;
@@ -210,9 +210,9 @@ namespace QuanLiTiemChung
             this.checkNu.AutoSize = true;
             this.checkNu.Font = new System.Drawing.Font("Bahnschrift", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.checkNu.Location = new System.Drawing.Point(784, 36);
-            this.checkNu.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.checkNu.Margin = new System.Windows.Forms.Padding(6);
             this.checkNu.Name = "checkNu";
-            this.checkNu.Size = new System.Drawing.Size(58, 28);
+            this.checkNu.Size = new System.Drawing.Size(49, 23);
             this.checkNu.TabIndex = 14;
             this.checkNu.Text = "Nữ";
             this.checkNu.UseVisualStyleBackColor = true;
@@ -221,12 +221,13 @@ namespace QuanLiTiemChung
             // 
             this.btn_DatVacxin.Font = new System.Drawing.Font("Bahnschrift", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_DatVacxin.Location = new System.Drawing.Point(603, 5);
-            this.btn_DatVacxin.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.btn_DatVacxin.Margin = new System.Windows.Forms.Padding(6);
             this.btn_DatVacxin.Name = "btn_DatVacxin";
             this.btn_DatVacxin.Size = new System.Drawing.Size(193, 37);
             this.btn_DatVacxin.TabIndex = 15;
             this.btn_DatVacxin.Text = "Đặt vắc-xin";
             this.btn_DatVacxin.UseVisualStyleBackColor = true;
+            this.btn_DatVacxin.Click += new System.EventHandler(this.btn_DatVacxin_Click);
             // 
             // bt_huy
             // 
@@ -273,7 +274,7 @@ namespace QuanLiTiemChung
             this.lb_User.ForeColor = System.Drawing.SystemColors.ControlText;
             this.lb_User.Location = new System.Drawing.Point(53, 6);
             this.lb_User.Name = "lb_User";
-            this.lb_User.Size = new System.Drawing.Size(103, 24);
+            this.lb_User.Size = new System.Drawing.Size(84, 19);
             this.lb_User.TabIndex = 2;
             this.lb_User.Text = "Username";
             // 
@@ -284,7 +285,7 @@ namespace QuanLiTiemChung
             this.lb_Title.ForeColor = System.Drawing.SystemColors.ControlText;
             this.lb_Title.Location = new System.Drawing.Point(3, 7);
             this.lb_Title.Name = "lb_Title";
-            this.lb_Title.Size = new System.Drawing.Size(369, 29);
+            this.lb_Title.Size = new System.Drawing.Size(288, 23);
             this.lb_Title.TabIndex = 1;
             this.lb_Title.Text = "HỆ THỐNG TIÊM CHỦNG AN BÌNH";
             // 
@@ -305,7 +306,7 @@ namespace QuanLiTiemChung
             this.lb_thanhtoandonhang.ForeColor = System.Drawing.SystemColors.ControlText;
             this.lb_thanhtoandonhang.Location = new System.Drawing.Point(214, 11);
             this.lb_thanhtoandonhang.Name = "lb_thanhtoandonhang";
-            this.lb_thanhtoandonhang.Size = new System.Drawing.Size(639, 41);
+            this.lb_thanhtoandonhang.Size = new System.Drawing.Size(507, 33);
             this.lb_thanhtoandonhang.TabIndex = 4;
             this.lb_thanhtoandonhang.Text = "PHIẾU ĐĂNG KÝ THÔNG TIN TIÊM CHỦNG";
             // 
@@ -348,19 +349,6 @@ namespace QuanLiTiemChung
             this.panel_main.Size = new System.Drawing.Size(986, 362);
             this.panel_main.TabIndex = 17;
             // 
-            // panel_toolbar
-            // 
-            this.panel_toolbar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(247)))), ((int)(((byte)(247)))));
-            this.panel_toolbar.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.panel_toolbar.Controls.Add(this.bt_DangXuat);
-            this.panel_toolbar.Controls.Add(this.lb_Title);
-            this.panel_toolbar.Controls.Add(this.panel_User);
-            this.panel_toolbar.Location = new System.Drawing.Point(12, 11);
-            this.panel_toolbar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.panel_toolbar.Name = "panel_toolbar";
-            this.panel_toolbar.Size = new System.Drawing.Size(987, 48);
-            this.panel_toolbar.TabIndex = 16;
-            // 
             // panel1
             // 
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
@@ -371,17 +359,6 @@ namespace QuanLiTiemChung
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(975, 242);
             this.panel1.TabIndex = 9;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Bahnschrift", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(4, 4);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(239, 24);
-            this.label1.TabIndex = 8;
-            this.label1.Text = "THÔNG TIN KHÁCH HÀNG";
             // 
             // panel2
             // 
@@ -413,13 +390,37 @@ namespace QuanLiTiemChung
             this.label2.Location = new System.Drawing.Point(694, 6);
             this.label2.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(83, 24);
+            this.label2.Size = new System.Drawing.Size(67, 19);
             this.label2.TabIndex = 12;
             this.label2.Text = "Giới tính";
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Bahnschrift", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(4, 4);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(188, 19);
+            this.label1.TabIndex = 8;
+            this.label1.Text = "THÔNG TIN KHÁCH HÀNG";
+            // 
+            // panel_toolbar
+            // 
+            this.panel_toolbar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(247)))), ((int)(((byte)(247)))));
+            this.panel_toolbar.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panel_toolbar.Controls.Add(this.bt_DangXuat);
+            this.panel_toolbar.Controls.Add(this.lb_Title);
+            this.panel_toolbar.Controls.Add(this.panel_User);
+            this.panel_toolbar.Location = new System.Drawing.Point(12, 11);
+            this.panel_toolbar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.panel_toolbar.Name = "panel_toolbar";
+            this.panel_toolbar.Size = new System.Drawing.Size(987, 48);
+            this.panel_toolbar.TabIndex = 16;
+            // 
             // frmDangKyTiemChung
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 24F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(1011, 446);
@@ -427,7 +428,7 @@ namespace QuanLiTiemChung
             this.Controls.Add(this.panel_toolbar);
             this.Font = new System.Drawing.Font("Bahnschrift", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.Margin = new System.Windows.Forms.Padding(6);
             this.Name = "frmDangKyTiemChung";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Đăng ký tiêm chủng";
@@ -438,12 +439,12 @@ namespace QuanLiTiemChung
             this.panel_button.ResumeLayout(false);
             this.panel_main.ResumeLayout(false);
             this.panel_main.PerformLayout();
-            this.panel_toolbar.ResumeLayout(false);
-            this.panel_toolbar.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            this.panel_toolbar.ResumeLayout(false);
+            this.panel_toolbar.PerformLayout();
             this.ResumeLayout(false);
 
         }

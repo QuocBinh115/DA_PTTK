@@ -48,7 +48,8 @@ namespace QuanLiTiemChung
         private void XemTTGoiTiem()
         {
             string MaGT = lstDSGoiTiem.SelectedValue.ToString();
-            gv_ChiTietGoi.DataSource = GoiTiem.DocTTGoiTiem(MaGT);
+            GoiTiem a = new GoiTiem(MaGT, 0);
+            gv_ChiTietGoi.DataSource = a.DocTTGoiTiem();
         }
 
         private void btnXoa_Click(object sender, EventArgs e)
@@ -87,7 +88,8 @@ namespace QuanLiTiemChung
             if (row==null)
             {
                 object[] o = { data.Rows.Count + 1, MaGT, TenGT, 1, DonGia };
-                if (!GoiTiem.KiemtraTTGoiTiem(MaGT, 1))
+                GoiTiem a = new GoiTiem(MaGT, 1);
+                if (!a.KiemtraTTGoiTiem())
                 {
                     MessageBox.Show("Chọn gói khác nhé!");
                     return;
@@ -97,8 +99,9 @@ namespace QuanLiTiemChung
             else
             {
                 int SoLuong = Int32.Parse(row["SoLuong"].ToString()) + 1;
-                
-                if (!GoiTiem.KiemtraTTGoiTiem(MaGT, SoLuong))
+
+                GoiTiem a = new GoiTiem(MaGT, SoLuong);
+                if (!a.KiemtraTTGoiTiem())
                 {
                     MessageBox.Show("Chọn gói khác nhé!");
                     return;
@@ -120,13 +123,6 @@ namespace QuanLiTiemChung
             gv_DSChon.DataSource = data;
         }
 
-        private void btn_ThanhToan_Click(object sender, EventArgs e)
-        {
-            
-            HoaDon hd = new HoaDon(data,"MH");
-            frmTT1_Main frm = new frmTT1_Main();
-            frm.Show();
-        }
 
         private void bt_laphoadon_Click(object sender, EventArgs e)
         {

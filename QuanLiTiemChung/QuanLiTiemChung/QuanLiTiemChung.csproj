@@ -120,6 +120,12 @@
     <Compile Include="frm_DatMuaVaccine.Designer.cs">
       <DependentUpon>frm_DatMuaVaccine.cs</DependentUpon>
     </Compile>
+    <Compile Include="frm_ThemMoiVaccine.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_ThemMoiVaccine.Designer.cs">
+      <DependentUpon>frm_ThemMoiVaccine.cs</DependentUpon>
+    </Compile>
     <Compile Include="frm_TraCuuVaccine.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -130,6 +136,8 @@
     <Compile Include="GoiTiemDB.cs" />
     <Compile Include="HoaDon.cs" />
     <Compile Include="HoaDonDB.cs" />
+    <Compile Include="HoaDon_1912640.cs" />
+    <Compile Include="HoaDon_DB_19120640.cs" />
     <Compile Include="KhachHang.cs" />
     <Compile Include="KhachHangDB.cs" />
     <Compile Include="LichRanh.cs" />
@@ -138,6 +146,8 @@
     <Compile Include="NhanVienDB.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Vaccine_19120640.cs" />
+    <Compile Include="Vaccine_DB_19120640.cs" />
     <EmbeddedResource Include="frmDangKyGiamHo.resx">
       <DependentUpon>frmDangKyGiamHo.cs</DependentUpon>
     </EmbeddedResource>
@@ -146,6 +156,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmDangKyTiemChung.resx">
       <DependentUpon>frmDangKyTiemChung.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmLogin.resx">
+      <DependentUpon>frmLogin.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmTT1_Main.resx">
       <DependentUpon>frmTT1_Main.cs</DependentUpon>
@@ -167,6 +180,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frm_DatMuaVaccine.resx">
       <DependentUpon>frm_DatMuaVaccine.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_ThemMoiVaccine.resx">
+      <DependentUpon>frm_ThemMoiVaccine.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frm_TraCuuVaccine.resx">
       <DependentUpon>frm_TraCuuVaccine.cs</DependentUpon>
