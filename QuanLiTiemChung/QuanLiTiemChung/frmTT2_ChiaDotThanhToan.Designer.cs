@@ -53,6 +53,7 @@
             this.txt_thanhtien = new System.Windows.Forms.TextBox();
             this.lb_thanhtien = new System.Windows.Forms.Label();
             this.bt_laphoadon = new System.Windows.Forms.Button();
+            this.txt = new System.Windows.Forms.TextBox();
             this.panel_toolbar.SuspendLayout();
             this.panel_User.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pic_User)).BeginInit();
@@ -240,6 +241,7 @@
             // 
             this.panel_button.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(247)))), ((int)(((byte)(247)))));
             this.panel_button.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel_button.Controls.Add(this.txt);
             this.panel_button.Controls.Add(this.cb_dtt);
             this.panel_button.Controls.Add(this.txt_mtt);
             this.panel_button.Controls.Add(this.lb_mtt);
@@ -258,11 +260,20 @@
             // 
             this.cb_dtt.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cb_dtt.FormattingEnabled = true;
+            this.cb_dtt.Items.AddRange(new object[] {
+            "1 tháng",
+            "2 tháng",
+            "3 tháng",
+            "6 tháng",
+            "9 tháng",
+            "12 tháng"});
             this.cb_dtt.Location = new System.Drawing.Point(9, 38);
             this.cb_dtt.Margin = new System.Windows.Forms.Padding(4);
             this.cb_dtt.Name = "cb_dtt";
             this.cb_dtt.Size = new System.Drawing.Size(368, 24);
             this.cb_dtt.TabIndex = 10;
+            this.cb_dtt.SelectedIndexChanged += new System.EventHandler(this.cb_dtt_SelectedIndexChanged);
+            this.cb_dtt.SelectedValueChanged += new System.EventHandler(this.cb_dtt_SelectedValueChanged);
             // 
             // txt_mtt
             // 
@@ -347,6 +358,13 @@
             this.bt_laphoadon.UseVisualStyleBackColor = false;
             this.bt_laphoadon.Click += new System.EventHandler(this.bt_laphoadon_Click);
             // 
+            // txt
+            // 
+            this.txt.Location = new System.Drawing.Point(9, 76);
+            this.txt.Name = "txt";
+            this.txt.Size = new System.Drawing.Size(100, 22);
+            this.txt.TabIndex = 11;
+            // 
             // frmTT2_ChiaDotThanhToan
             // 
             this.AcceptButton = this.bt_laphoadon;
@@ -405,5 +423,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label lb_mahoadon;
         private System.Windows.Forms.TextBox txt_mahoadon;
+        private System.Windows.Forms.TextBox txt;
     }
 }

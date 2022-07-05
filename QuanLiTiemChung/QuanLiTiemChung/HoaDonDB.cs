@@ -104,5 +104,16 @@ namespace QuanLiTiemChung
             }
             return dt;
         }
+
+        public int TinhThanhTien()
+        {
+            int sum = 0;
+
+            MySqlConnection conn = DBUtils.GetDBConnection();
+            conn.Open();
+            MySqlCommand cmd = new MySqlCommand("sp_ThanhTienHD", conn);
+
+            return sum;
+        }
     }
 }

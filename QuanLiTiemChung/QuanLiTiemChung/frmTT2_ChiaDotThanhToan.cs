@@ -44,5 +44,30 @@ namespace QuanLiTiemChung
         {
             this.Close();
         }
+
+        private void cb_dtt_SelectedValueChanged(object sender, EventArgs e)
+        {
+        }
+
+        public class DotThanhToan
+        {
+            public string Name { get; set; }
+            public int Month { get; set; }
+        }
+
+        private void cb_dtt_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            int count;
+            int tc;
+            int mtt;
+            int tt;
+            if (cb_dtt.SelectedIndex == 0) count = 2;
+            else if (cb_dtt.SelectedIndex == 1) count = 3;
+            else if (cb_dtt.SelectedIndex == 2) count = 4;
+            else if (cb_dtt.SelectedIndex == 3) count = 7;
+            else if (cb_dtt.SelectedIndex == 4) count = 10;
+            else if (cb_dtt.SelectedIndex == 5) count = 13;
+            txt_mtt.Text = 0.ToString()+"VNĐ/Tháng";
+        }
     }
 }
