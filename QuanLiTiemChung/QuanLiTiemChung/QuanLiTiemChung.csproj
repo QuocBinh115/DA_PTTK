@@ -132,6 +132,8 @@
     <Compile Include="HoaDonDB.cs" />
     <Compile Include="KhachHang.cs" />
     <Compile Include="KhachHangDB.cs" />
+    <Compile Include="LichRanh.cs" />
+    <Compile Include="LichRanhDB.cs" />
     <Compile Include="NhanVien.cs" />
     <Compile Include="NhanVienDB.cs" />
     <Compile Include="Program.cs" />
