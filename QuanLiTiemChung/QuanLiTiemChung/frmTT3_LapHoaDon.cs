@@ -57,7 +57,6 @@ namespace QuanLiTiemChung
         }
         public void LoadData(DataTable data,string type)
         {
-            
             ChiTietHD = data;
             gv_dsGoiTiem.DataSource = ChiTietHD;
             LoaiHD = type;
