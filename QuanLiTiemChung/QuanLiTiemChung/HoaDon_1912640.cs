@@ -25,7 +25,7 @@ namespace QuanLiTiemChung
         //TRẢ VỀ: mã hóa đơn đã tạo tương ứng
         public static string TaoHoaDonMoi_Cho_DonHang()
         {
-            MaHD = HoaDon_DB_19120640.TaoHoaDon(LoaiHD, MaKH, NgayHen, NguoiLap);
+            MaHD = HoaDon_DB_19120640.TaoHoaDon("Dat Hang", MaKH, NgayHen, "NV00000000");
             donDatHang.TaoDonHangMoi(MaHD);
             return MaHD;
         }

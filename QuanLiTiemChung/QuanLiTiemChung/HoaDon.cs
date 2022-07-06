@@ -34,13 +34,24 @@ namespace QuanLiTiemChung
             }
             else
             {
-                MaHD = HoaDonDB.ThemDH(NgayHen);
+                HoaDon_1912640.NgayHen = NgayHen;
+                MaHD = HoaDon_1912640.TaoHoaDonMoi_Cho_DonHang();
             }
             return true;
         }
         public static DataTable LayDSHoaDon()
         {
             return HoaDonDB.DocDSHoaDon();
+        }
+
+        public int TongTien()
+        {
+            int tongtien = 0;
+            if(LoaiHD == "DH")
+            {
+                tongtien = HoaDon_1912640.TongTien;
+            }
+            return tongtien;
         }
     }
 }
