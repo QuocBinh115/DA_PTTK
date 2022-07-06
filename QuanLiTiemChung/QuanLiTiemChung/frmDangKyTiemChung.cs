@@ -36,12 +36,12 @@ namespace QuanLiTiemChung
                 frmChonVacXin ch = new frmChonVacXin();
                 ch.Show();
                 //this.Close();
-
             }
         }
 
         private void frmDangKyTiemChung_Load(object sender, EventArgs e)
         {
+            User.current = new KhachHang("KH00000000");
             //KhachHang kh = new KhachHang();
 
             //KhachHang.LayThongTin("KH00000000");
@@ -74,7 +74,11 @@ namespace QuanLiTiemChung
 
         private void btn_DatVacxin_Click(object sender, EventArgs e)
         {
-
+            
+            frm_DatMuaVaccine frm = new frm_DatMuaVaccine();
+            this.Visible = true;
+            frm.Show();
+            this.Visible = false;
         }
     }
 }

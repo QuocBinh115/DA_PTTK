@@ -1,7 +1,7 @@
 ﻿
 namespace QuanLiTiemChung
 {
-    partial class frm_ThemMoiVaccine
+    partial class frm_DuyetDonDathang
     {
         /// <summary>
         /// Required designer variable.
@@ -29,17 +29,8 @@ namespace QuanLiTiemChung
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_ThemMoiVaccine));
-            this.TenVaccine_input = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.NSX_input = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.HSD_input = new System.Windows.Forms.DateTimePicker();
-            this.ThemVaccine_btn = new System.Windows.Forms.Button();
-            this.GiaMua_input = new System.Windows.Forms.NumericUpDown();
-            this.label5 = new System.Windows.Forms.Label();
-            this.bt_huy = new System.Windows.Forms.Button();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_DuyetDonDathang));
+            this.DuyetDH_gv = new System.Windows.Forms.DataGridView();
             this.lb_thanhtoandonhang = new System.Windows.Forms.Label();
             this.panel_main = new System.Windows.Forms.Panel();
             this.panel_gv = new System.Windows.Forms.Panel();
@@ -49,7 +40,7 @@ namespace QuanLiTiemChung
             this.lb_Title = new System.Windows.Forms.Label();
             this.panel_User = new System.Windows.Forms.Panel();
             this.panel_toolbar = new System.Windows.Forms.Panel();
-            ((System.ComponentModel.ISupportInitialize)(this.GiaMua_input)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DuyetDH_gv)).BeginInit();
             this.panel_main.SuspendLayout();
             this.panel_gv.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pic_User)).BeginInit();
@@ -57,108 +48,16 @@ namespace QuanLiTiemChung
             this.panel_toolbar.SuspendLayout();
             this.SuspendLayout();
             // 
-            // TenVaccine_input
+            // DuyetDH_gv
             // 
-            this.TenVaccine_input.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TenVaccine_input.Location = new System.Drawing.Point(7, 38);
-            this.TenVaccine_input.Name = "TenVaccine_input";
-            this.TenVaccine_input.Size = new System.Drawing.Size(526, 30);
-            this.TenVaccine_input.TabIndex = 7;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Bahnschrift", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(3, 9);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(114, 24);
-            this.label1.TabIndex = 8;
-            this.label1.Text = "Tên vaccine";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Bahnschrift", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(3, 79);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(127, 24);
-            this.label2.TabIndex = 9;
-            this.label2.Text = "Nhà sản xuất";
-            // 
-            // NSX_input
-            // 
-            this.NSX_input.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.NSX_input.Location = new System.Drawing.Point(7, 106);
-            this.NSX_input.Name = "NSX_input";
-            this.NSX_input.Size = new System.Drawing.Size(526, 30);
-            this.NSX_input.TabIndex = 10;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Bahnschrift", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(536, 9);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(122, 24);
-            this.label4.TabIndex = 11;
-            this.label4.Text = "Hạn sử dụng";
-            // 
-            // HSD_input
-            // 
-            this.HSD_input.CustomFormat = "";
-            this.HSD_input.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.HSD_input.Location = new System.Drawing.Point(540, 38);
-            this.HSD_input.Name = "HSD_input";
-            this.HSD_input.Size = new System.Drawing.Size(417, 30);
-            this.HSD_input.TabIndex = 12;
-            // 
-            // ThemVaccine_btn
-            // 
-            this.ThemVaccine_btn.Font = new System.Drawing.Font("Bahnschrift", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ThemVaccine_btn.Location = new System.Drawing.Point(631, 217);
-            this.ThemVaccine_btn.Name = "ThemVaccine_btn";
-            this.ThemVaccine_btn.Size = new System.Drawing.Size(164, 37);
-            this.ThemVaccine_btn.TabIndex = 14;
-            this.ThemVaccine_btn.Text = "Thêm";
-            this.ThemVaccine_btn.UseVisualStyleBackColor = true;
-            this.ThemVaccine_btn.Click += new System.EventHandler(this.ThemVaccine_btn_Click);
-            // 
-            // GiaMua_input
-            // 
-            this.GiaMua_input.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.GiaMua_input.Location = new System.Drawing.Point(540, 106);
-            this.GiaMua_input.Maximum = new decimal(new int[] {
-            1410065408,
-            2,
-            0,
-            0});
-            this.GiaMua_input.Name = "GiaMua_input";
-            this.GiaMua_input.Size = new System.Drawing.Size(417, 30);
-            this.GiaMua_input.TabIndex = 13;
-            this.GiaMua_input.ThousandsSeparator = true;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Bahnschrift", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(536, 79);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(146, 24);
-            this.label5.TabIndex = 15;
-            this.label5.Text = "Giá mua (VND):";
-            // 
-            // bt_huy
-            // 
-            this.bt_huy.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.bt_huy.Font = new System.Drawing.Font("Bahnschrift", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bt_huy.Location = new System.Drawing.Point(802, 217);
-            this.bt_huy.Margin = new System.Windows.Forms.Padding(4);
-            this.bt_huy.Name = "bt_huy";
-            this.bt_huy.Size = new System.Drawing.Size(164, 37);
-            this.bt_huy.TabIndex = 5;
-            this.bt_huy.Text = "Hủy";
-            this.bt_huy.UseVisualStyleBackColor = true;
+            this.DuyetDH_gv.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.DuyetDH_gv.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.DuyetDH_gv.Location = new System.Drawing.Point(3, 3);
+            this.DuyetDH_gv.Name = "DuyetDH_gv";
+            this.DuyetDH_gv.RowHeadersWidth = 51;
+            this.DuyetDH_gv.RowTemplate.Height = 24;
+            this.DuyetDH_gv.Size = new System.Drawing.Size(957, 213);
+            this.DuyetDH_gv.TabIndex = 0;
             // 
             // lb_thanhtoandonhang
             // 
@@ -167,39 +66,30 @@ namespace QuanLiTiemChung
             this.lb_thanhtoandonhang.ForeColor = System.Drawing.SystemColors.ControlText;
             this.lb_thanhtoandonhang.Location = new System.Drawing.Point(300, 11);
             this.lb_thanhtoandonhang.Name = "lb_thanhtoandonhang";
-            this.lb_thanhtoandonhang.Size = new System.Drawing.Size(324, 41);
+            this.lb_thanhtoandonhang.Size = new System.Drawing.Size(361, 41);
             this.lb_thanhtoandonhang.TabIndex = 4;
-            this.lb_thanhtoandonhang.Text = "THÊM MỚI HÓA ĐƠN";
+            this.lb_thanhtoandonhang.Text = "DUYỆT ĐƠN ĐẶT HÀNG";
             // 
             // panel_main
             // 
             this.panel_main.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(247)))), ((int)(((byte)(247)))));
             this.panel_main.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.panel_main.Controls.Add(this.bt_huy);
             this.panel_main.Controls.Add(this.panel_gv);
-            this.panel_main.Controls.Add(this.ThemVaccine_btn);
             this.panel_main.Controls.Add(this.lb_thanhtoandonhang);
             this.panel_main.Location = new System.Drawing.Point(12, 66);
             this.panel_main.Margin = new System.Windows.Forms.Padding(4);
             this.panel_main.Name = "panel_main";
-            this.panel_main.Size = new System.Drawing.Size(980, 271);
-            this.panel_main.TabIndex = 17;
+            this.panel_main.Size = new System.Drawing.Size(980, 299);
+            this.panel_main.TabIndex = 3;
             // 
             // panel_gv
             // 
             this.panel_gv.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel_gv.Controls.Add(this.TenVaccine_input);
-            this.panel_gv.Controls.Add(this.label1);
-            this.panel_gv.Controls.Add(this.GiaMua_input);
-            this.panel_gv.Controls.Add(this.label5);
-            this.panel_gv.Controls.Add(this.NSX_input);
-            this.panel_gv.Controls.Add(this.label2);
-            this.panel_gv.Controls.Add(this.label4);
-            this.panel_gv.Controls.Add(this.HSD_input);
+            this.panel_gv.Controls.Add(this.DuyetDH_gv);
             this.panel_gv.Location = new System.Drawing.Point(8, 57);
             this.panel_gv.Margin = new System.Windows.Forms.Padding(4);
             this.panel_gv.Name = "panel_gv";
-            this.panel_gv.Size = new System.Drawing.Size(965, 152);
+            this.panel_gv.Size = new System.Drawing.Size(965, 221);
             this.panel_gv.TabIndex = 6;
             // 
             // pic_User
@@ -270,25 +160,24 @@ namespace QuanLiTiemChung
             this.panel_toolbar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel_toolbar.Name = "panel_toolbar";
             this.panel_toolbar.Size = new System.Drawing.Size(980, 48);
-            this.panel_toolbar.TabIndex = 16;
+            this.panel_toolbar.TabIndex = 2;
             // 
-            // frm_ThemMoiVaccine
+            // frm_DuyetDonDathang
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
-            this.ClientSize = new System.Drawing.Size(1003, 349);
+            this.ClientSize = new System.Drawing.Size(1007, 378);
             this.Controls.Add(this.panel_main);
             this.Controls.Add(this.panel_toolbar);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Name = "frm_ThemMoiVaccine";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Thêm mới vaccine";
-            ((System.ComponentModel.ISupportInitialize)(this.GiaMua_input)).EndInit();
+            this.Name = "frm_DuyetDonDathang";
+            this.Text = "Duyệt đơn đặt hàng";
+            this.Load += new System.EventHandler(this.frm_DuyetDonDathang_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.DuyetDH_gv)).EndInit();
             this.panel_main.ResumeLayout(false);
             this.panel_main.PerformLayout();
             this.panel_gv.ResumeLayout(false);
-            this.panel_gv.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pic_User)).EndInit();
             this.panel_User.ResumeLayout(false);
             this.panel_User.PerformLayout();
@@ -299,16 +188,8 @@ namespace QuanLiTiemChung
         }
 
         #endregion
-        private System.Windows.Forms.TextBox TenVaccine_input;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox NSX_input;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.DateTimePicker HSD_input;
-        private System.Windows.Forms.Button ThemVaccine_btn;
-        private System.Windows.Forms.NumericUpDown GiaMua_input;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Button bt_huy;
+
+        private System.Windows.Forms.DataGridView DuyetDH_gv;
         private System.Windows.Forms.Label lb_thanhtoandonhang;
         private System.Windows.Forms.Panel panel_main;
         private System.Windows.Forms.Panel panel_gv;
