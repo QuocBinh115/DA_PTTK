@@ -32,7 +32,7 @@ namespace QuanLiTiemChung
             Console.Read();
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frm_DatMuaVaccine());
+            Application.Run(new frmChonVacXin());
             
         }
 

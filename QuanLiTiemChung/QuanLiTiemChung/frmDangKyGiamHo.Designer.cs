@@ -42,7 +42,7 @@ namespace QuanLiTiemChung
             this.txtCMND = new System.Windows.Forms.TextBox();
             this.lb_name = new System.Windows.Forms.Label();
             this.txtHoTen = new System.Windows.Forms.TextBox();
-            this.btnDangKy = new System.Windows.Forms.Button();
+            this.btnHoanThanh = new System.Windows.Forms.Button();
             this.lb_User = new System.Windows.Forms.Label();
             this.panel_User = new System.Windows.Forms.Panel();
             this.pic_User = new System.Windows.Forms.PictureBox();
@@ -53,6 +53,8 @@ namespace QuanLiTiemChung
             this.panel_main = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
+            this.txtQuanHe = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.panel_toolbar = new System.Windows.Forms.Panel();
@@ -69,9 +71,9 @@ namespace QuanLiTiemChung
             this.checkNu.AutoSize = true;
             this.checkNu.Font = new System.Drawing.Font("Bahnschrift", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.checkNu.Location = new System.Drawing.Point(878, 39);
-            this.checkNu.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.checkNu.Margin = new System.Windows.Forms.Padding(6);
             this.checkNu.Name = "checkNu";
-            this.checkNu.Size = new System.Drawing.Size(58, 28);
+            this.checkNu.Size = new System.Drawing.Size(49, 23);
             this.checkNu.TabIndex = 28;
             this.checkNu.Text = "Nữ";
             this.checkNu.UseVisualStyleBackColor = true;
@@ -81,9 +83,9 @@ namespace QuanLiTiemChung
             this.checkNam.AutoSize = true;
             this.checkNam.Font = new System.Drawing.Font("Bahnschrift", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.checkNam.Location = new System.Drawing.Point(792, 38);
-            this.checkNam.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.checkNam.Margin = new System.Windows.Forms.Padding(6);
             this.checkNam.Name = "checkNam";
-            this.checkNam.Size = new System.Drawing.Size(74, 28);
+            this.checkNam.Size = new System.Drawing.Size(62, 23);
             this.checkNam.TabIndex = 27;
             this.checkNam.Text = "Nam";
             this.checkNam.UseVisualStyleBackColor = true;
@@ -92,9 +94,9 @@ namespace QuanLiTiemChung
             // 
             this.date_ngaySinh.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.date_ngaySinh.Location = new System.Drawing.Point(10, 99);
-            this.date_ngaySinh.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.date_ngaySinh.Margin = new System.Windows.Forms.Padding(6);
             this.date_ngaySinh.Name = "date_ngaySinh";
-            this.date_ngaySinh.Size = new System.Drawing.Size(538, 27);
+            this.date_ngaySinh.Size = new System.Drawing.Size(364, 23);
             this.date_ngaySinh.TabIndex = 25;
             // 
             // lb_ntns
@@ -104,7 +106,7 @@ namespace QuanLiTiemChung
             this.lb_ntns.Location = new System.Drawing.Point(6, 69);
             this.lb_ntns.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.lb_ntns.Name = "lb_ntns";
-            this.lb_ntns.Size = new System.Drawing.Size(98, 24);
+            this.lb_ntns.Size = new System.Drawing.Size(80, 19);
             this.lb_ntns.TabIndex = 24;
             this.lb_ntns.Text = "Ngày sinh";
             // 
@@ -112,60 +114,60 @@ namespace QuanLiTiemChung
             // 
             this.lb_diachi.AutoSize = true;
             this.lb_diachi.Font = new System.Drawing.Font("Bahnschrift", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb_diachi.Location = new System.Drawing.Point(6, 132);
+            this.lb_diachi.Location = new System.Drawing.Point(396, 132);
             this.lb_diachi.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.lb_diachi.Name = "lb_diachi";
-            this.lb_diachi.Size = new System.Drawing.Size(71, 24);
+            this.lb_diachi.Size = new System.Drawing.Size(58, 19);
             this.lb_diachi.TabIndex = 23;
             this.lb_diachi.Text = "Địa chỉ";
             // 
             // txtDiaChi
             // 
             this.txtDiaChi.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtDiaChi.Location = new System.Drawing.Point(10, 162);
-            this.txtDiaChi.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.txtDiaChi.Location = new System.Drawing.Point(400, 162);
+            this.txtDiaChi.Margin = new System.Windows.Forms.Padding(6);
             this.txtDiaChi.Name = "txtDiaChi";
-            this.txtDiaChi.Size = new System.Drawing.Size(538, 27);
+            this.txtDiaChi.Size = new System.Drawing.Size(527, 23);
             this.txtDiaChi.TabIndex = 22;
             // 
             // lb_sdt
             // 
             this.lb_sdt.AutoSize = true;
             this.lb_sdt.Font = new System.Drawing.Font("Bahnschrift", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb_sdt.Location = new System.Drawing.Point(569, 69);
+            this.lb_sdt.Location = new System.Drawing.Point(394, 69);
             this.lb_sdt.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.lb_sdt.Name = "lb_sdt";
-            this.lb_sdt.Size = new System.Drawing.Size(126, 24);
+            this.lb_sdt.Size = new System.Drawing.Size(103, 19);
             this.lb_sdt.TabIndex = 21;
             this.lb_sdt.Text = "Số điện thoại";
             // 
             // txtSDT
             // 
             this.txtSDT.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSDT.Location = new System.Drawing.Point(573, 99);
-            this.txtSDT.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.txtSDT.Location = new System.Drawing.Point(398, 99);
+            this.txtSDT.Margin = new System.Windows.Forms.Padding(6);
             this.txtSDT.Name = "txtSDT";
-            this.txtSDT.Size = new System.Drawing.Size(382, 27);
+            this.txtSDT.Size = new System.Drawing.Size(529, 23);
             this.txtSDT.TabIndex = 20;
             // 
             // lb_cmnd
             // 
             this.lb_cmnd.AutoSize = true;
             this.lb_cmnd.Font = new System.Drawing.Font("Bahnschrift", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb_cmnd.Location = new System.Drawing.Point(569, 132);
+            this.lb_cmnd.Location = new System.Drawing.Point(6, 132);
             this.lb_cmnd.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.lb_cmnd.Name = "lb_cmnd";
-            this.lb_cmnd.Size = new System.Drawing.Size(65, 24);
+            this.lb_cmnd.Size = new System.Drawing.Size(53, 19);
             this.lb_cmnd.TabIndex = 19;
             this.lb_cmnd.Text = "CMND";
             // 
             // txtCMND
             // 
             this.txtCMND.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCMND.Location = new System.Drawing.Point(573, 162);
-            this.txtCMND.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.txtCMND.Location = new System.Drawing.Point(10, 162);
+            this.txtCMND.Margin = new System.Windows.Forms.Padding(6);
             this.txtCMND.Name = "txtCMND";
-            this.txtCMND.Size = new System.Drawing.Size(382, 27);
+            this.txtCMND.Size = new System.Drawing.Size(364, 23);
             this.txtCMND.TabIndex = 18;
             // 
             // lb_name
@@ -175,7 +177,7 @@ namespace QuanLiTiemChung
             this.lb_name.Location = new System.Drawing.Point(6, 6);
             this.lb_name.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.lb_name.Name = "lb_name";
-            this.lb_name.Size = new System.Drawing.Size(149, 24);
+            this.lb_name.Size = new System.Drawing.Size(121, 19);
             this.lb_name.TabIndex = 17;
             this.lb_name.Text = "Tên khách hàng";
             // 
@@ -183,21 +185,22 @@ namespace QuanLiTiemChung
             // 
             this.txtHoTen.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtHoTen.Location = new System.Drawing.Point(10, 36);
-            this.txtHoTen.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.txtHoTen.Margin = new System.Windows.Forms.Padding(6);
             this.txtHoTen.Name = "txtHoTen";
-            this.txtHoTen.Size = new System.Drawing.Size(666, 27);
+            this.txtHoTen.Size = new System.Drawing.Size(364, 23);
             this.txtHoTen.TabIndex = 16;
             // 
-            // btnDangKy
+            // btnHoanThanh
             // 
-            this.btnDangKy.Font = new System.Drawing.Font("Bahnschrift", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDangKy.Location = new System.Drawing.Point(612, 308);
-            this.btnDangKy.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
-            this.btnDangKy.Name = "btnDangKy";
-            this.btnDangKy.Size = new System.Drawing.Size(193, 37);
-            this.btnDangKy.TabIndex = 15;
-            this.btnDangKy.Text = "Đăng ký";
-            this.btnDangKy.UseVisualStyleBackColor = true;
+            this.btnHoanThanh.Font = new System.Drawing.Font("Bahnschrift", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnHoanThanh.Location = new System.Drawing.Point(612, 308);
+            this.btnHoanThanh.Margin = new System.Windows.Forms.Padding(6);
+            this.btnHoanThanh.Name = "btnHoanThanh";
+            this.btnHoanThanh.Size = new System.Drawing.Size(193, 37);
+            this.btnHoanThanh.TabIndex = 15;
+            this.btnHoanThanh.Text = "Hoàn thành";
+            this.btnHoanThanh.UseVisualStyleBackColor = true;
+            this.btnHoanThanh.Click += new System.EventHandler(this.btnHoanThanh_Click);
             // 
             // lb_User
             // 
@@ -207,7 +210,7 @@ namespace QuanLiTiemChung
             this.lb_User.ForeColor = System.Drawing.SystemColors.ControlText;
             this.lb_User.Location = new System.Drawing.Point(53, 6);
             this.lb_User.Name = "lb_User";
-            this.lb_User.Size = new System.Drawing.Size(103, 24);
+            this.lb_User.Size = new System.Drawing.Size(84, 19);
             this.lb_User.TabIndex = 2;
             this.lb_User.Text = "Username";
             // 
@@ -240,7 +243,7 @@ namespace QuanLiTiemChung
             this.lb_thanhtoandonhang.ForeColor = System.Drawing.SystemColors.ControlText;
             this.lb_thanhtoandonhang.Location = new System.Drawing.Point(346, 11);
             this.lb_thanhtoandonhang.Name = "lb_thanhtoandonhang";
-            this.lb_thanhtoandonhang.Size = new System.Drawing.Size(299, 41);
+            this.lb_thanhtoandonhang.Size = new System.Drawing.Size(235, 33);
             this.lb_thanhtoandonhang.TabIndex = 4;
             this.lb_thanhtoandonhang.Text = "ĐĂNG KÝ GIÁM HỘ";
             // 
@@ -277,7 +280,7 @@ namespace QuanLiTiemChung
             this.lb_Title.ForeColor = System.Drawing.SystemColors.ControlText;
             this.lb_Title.Location = new System.Drawing.Point(3, 7);
             this.lb_Title.Name = "lb_Title";
-            this.lb_Title.Size = new System.Drawing.Size(369, 29);
+            this.lb_Title.Size = new System.Drawing.Size(288, 23);
             this.lb_Title.TabIndex = 1;
             this.lb_Title.Text = "HỆ THỐNG TIÊM CHỦNG AN BÌNH";
             // 
@@ -288,7 +291,7 @@ namespace QuanLiTiemChung
             this.panel_main.Controls.Add(this.bt_huy);
             this.panel_main.Controls.Add(this.panel1);
             this.panel_main.Controls.Add(this.lb_thanhtoandonhang);
-            this.panel_main.Controls.Add(this.btnDangKy);
+            this.panel_main.Controls.Add(this.btnHoanThanh);
             this.panel_main.Location = new System.Drawing.Point(12, 66);
             this.panel_main.Margin = new System.Windows.Forms.Padding(4);
             this.panel_main.Name = "panel_main";
@@ -309,15 +312,17 @@ namespace QuanLiTiemChung
             // panel2
             // 
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panel2.Controls.Add(this.label1);
+            this.panel2.Controls.Add(this.txtQuanHe);
             this.panel2.Controls.Add(this.label2);
             this.panel2.Controls.Add(this.txtDiaChi);
             this.panel2.Controls.Add(this.checkNu);
+            this.panel2.Controls.Add(this.lb_diachi);
             this.panel2.Controls.Add(this.checkNam);
             this.panel2.Controls.Add(this.lb_sdt);
             this.panel2.Controls.Add(this.txtCMND);
             this.panel2.Controls.Add(this.lb_cmnd);
             this.panel2.Controls.Add(this.txtSDT);
-            this.panel2.Controls.Add(this.lb_diachi);
             this.panel2.Controls.Add(this.date_ngaySinh);
             this.panel2.Controls.Add(this.lb_ntns);
             this.panel2.Controls.Add(this.lb_name);
@@ -328,6 +333,26 @@ namespace QuanLiTiemChung
             this.panel2.Size = new System.Drawing.Size(965, 204);
             this.panel2.TabIndex = 7;
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Bahnschrift", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(394, 5);
+            this.label1.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(69, 19);
+            this.label1.TabIndex = 30;
+            this.label1.Text = "Quan hệ";
+            // 
+            // txtQuanHe
+            // 
+            this.txtQuanHe.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtQuanHe.Location = new System.Drawing.Point(398, 35);
+            this.txtQuanHe.Margin = new System.Windows.Forms.Padding(6);
+            this.txtQuanHe.Name = "txtQuanHe";
+            this.txtQuanHe.Size = new System.Drawing.Size(287, 23);
+            this.txtQuanHe.TabIndex = 29;
+            // 
             // label2
             // 
             this.label2.AutoSize = true;
@@ -335,7 +360,7 @@ namespace QuanLiTiemChung
             this.label2.Location = new System.Drawing.Point(697, 39);
             this.label2.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(83, 24);
+            this.label2.Size = new System.Drawing.Size(67, 19);
             this.label2.TabIndex = 12;
             this.label2.Text = "Giới tính";
             // 
@@ -346,7 +371,7 @@ namespace QuanLiTiemChung
             this.label7.Location = new System.Drawing.Point(4, 4);
             this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(239, 24);
+            this.label7.Size = new System.Drawing.Size(188, 19);
             this.label7.TabIndex = 8;
             this.label7.Text = "THÔNG TIN KHÁCH HÀNG";
             // 
@@ -365,7 +390,7 @@ namespace QuanLiTiemChung
             // 
             // frmDangKyGiamHo
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 24F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(1011, 431);
@@ -373,7 +398,7 @@ namespace QuanLiTiemChung
             this.Controls.Add(this.panel_toolbar);
             this.Font = new System.Drawing.Font("Bahnschrift", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.Margin = new System.Windows.Forms.Padding(6);
             this.Name = "frmDangKyGiamHo";
             this.Text = "Đăng ký giám hộ";
             this.Load += new System.EventHandler(this.frmDangKyGiamHo_Load);
@@ -406,7 +431,7 @@ namespace QuanLiTiemChung
         private System.Windows.Forms.TextBox txtCMND;
         private System.Windows.Forms.Label lb_name;
         private System.Windows.Forms.TextBox txtHoTen;
-        private System.Windows.Forms.Button btnDangKy;
+        private System.Windows.Forms.Button btnHoanThanh;
         private System.Windows.Forms.Label lb_User;
         private System.Windows.Forms.Panel panel_User;
         private System.Windows.Forms.PictureBox pic_User;
@@ -420,5 +445,7 @@ namespace QuanLiTiemChung
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Panel panel_toolbar;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox txtQuanHe;
     }
 }

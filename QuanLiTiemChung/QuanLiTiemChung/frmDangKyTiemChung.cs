@@ -42,6 +42,7 @@ namespace QuanLiTiemChung
 
         private void frmDangKyTiemChung_Load(object sender, EventArgs e)
         {
+            User.current = new KhachHang("KH00000000");
             //KhachHang kh = new KhachHang();
 
             //KhachHang.LayThongTin("KH00000000");
@@ -74,7 +75,8 @@ namespace QuanLiTiemChung
 
         private void btn_DatVacxin_Click(object sender, EventArgs e)
         {
-
+            frm_DatMuaVaccine frm = new frm_DatMuaVaccine();
+            frm.Show();
         }
     }
 }
