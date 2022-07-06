@@ -47,6 +47,7 @@
             this.gv_thongtindonhang = new System.Windows.Forms.DataGridView();
             this.lb_phieuhen = new System.Windows.Forms.Label();
             this.panel_button = new System.Windows.Forms.Panel();
+            this.date_ngayhen = new System.Windows.Forms.DateTimePicker();
             this.txt_thoigian = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.txt_tenvaccine = new System.Windows.Forms.TextBox();
@@ -56,7 +57,6 @@
             this.lb_ten = new System.Windows.Forms.Label();
             this.bt_huy = new System.Windows.Forms.Button();
             this.bt_taophieuhen = new System.Windows.Forms.Button();
-            this.date_ntns = new System.Windows.Forms.DateTimePicker();
             this.panel_toolbar.SuspendLayout();
             this.panel_User.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pic_User)).BeginInit();
@@ -263,7 +263,7 @@
             // 
             this.panel_button.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(247)))), ((int)(((byte)(247)))));
             this.panel_button.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel_button.Controls.Add(this.date_ntns);
+            this.panel_button.Controls.Add(this.date_ngayhen);
             this.panel_button.Controls.Add(this.txt_thoigian);
             this.panel_button.Controls.Add(this.label1);
             this.panel_button.Controls.Add(this.txt_tenvaccine);
@@ -284,6 +284,16 @@
             this.panel_button.Name = "panel_button";
             this.panel_button.Size = new System.Drawing.Size(963, 301);
             this.panel_button.TabIndex = 0;
+            // 
+            // date_ngayhen
+            // 
+            this.date_ngayhen.CalendarFont = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.date_ngayhen.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.date_ngayhen.Location = new System.Drawing.Point(477, 101);
+            this.date_ngayhen.Margin = new System.Windows.Forms.Padding(4);
+            this.date_ngayhen.Name = "date_ngayhen";
+            this.date_ngayhen.Size = new System.Drawing.Size(480, 27);
+            this.date_ngayhen.TabIndex = 22;
             // 
             // txt_thoigian
             // 
@@ -388,16 +398,6 @@
             this.bt_taophieuhen.UseVisualStyleBackColor = false;
             this.bt_taophieuhen.Click += new System.EventHandler(this.bt_taophieuhen_Click);
             // 
-            // date_ntns
-            // 
-            this.date_ntns.CalendarFont = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.date_ntns.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.date_ntns.Location = new System.Drawing.Point(477, 101);
-            this.date_ntns.Margin = new System.Windows.Forms.Padding(4);
-            this.date_ntns.Name = "date_ntns";
-            this.date_ntns.Size = new System.Drawing.Size(480, 27);
-            this.date_ntns.TabIndex = 22;
-            // 
             // frmTT4_TaoPhieuHen
             // 
             this.AcceptButton = this.bt_taophieuhen;
@@ -458,6 +458,6 @@
         private System.Windows.Forms.Label lb_ten;
         private System.Windows.Forms.Button bt_huy;
         private System.Windows.Forms.Button bt_taophieuhen;
-        private System.Windows.Forms.DateTimePicker date_ntns;
+        private System.Windows.Forms.DateTimePicker date_ngayhen;
     }
 }

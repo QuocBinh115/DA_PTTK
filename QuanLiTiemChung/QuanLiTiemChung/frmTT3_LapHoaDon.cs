@@ -42,6 +42,7 @@ namespace QuanLiTiemChung
 
             frmTT4_TaoPhieuHen taophieuhen = new frmTT4_TaoPhieuHen();
             this.Visible = true;
+            taophieuhen.LoadData(ChiTietHD, "MH");
             taophieuhen.Show();
             this.Visible = false;
         }
@@ -83,7 +84,11 @@ namespace QuanLiTiemChung
 
         private void bt_chiadottt_Click(object sender, EventArgs e)
         {
-
+            frmTT2_ChiaDotThanhToan chiaDotThanhToan = new frmTT2_ChiaDotThanhToan();
+            //this.Visible = true;
+            chiaDotThanhToan.LoadData(ChiTietHD, "MH");
+            chiaDotThanhToan.Show();
+            //this.Visible = false;
         }
     }
 }

@@ -12,6 +12,9 @@ namespace QuanLiTiemChung
 {
     public partial class frmTT2_ChiaDotThanhToan : Form
     {
+        DataTable ChiTietHD;
+        string LoaiHD;
+
         public frmTT2_ChiaDotThanhToan()
         {
             InitializeComponent();
@@ -19,10 +22,14 @@ namespace QuanLiTiemChung
 
         private void bt_laphoadon_Click(object sender, EventArgs e)
         {
-            frmTT3_LapHoaDon laphoadon = new frmTT3_LapHoaDon();
-            this.Visible = false;
-            laphoadon.ShowDialog();
+            HoaDon hd = new HoaDon(ChiTietHD, LoaiHD);
+            hd.TaoHoaDon(DateTime.Today);
+
+            frmTT4_TaoPhieuHen taophieuhen = new frmTT4_TaoPhieuHen();
             this.Visible = true;
+            taophieuhen.LoadData(ChiTietHD, "MH");
+            taophieuhen.Show();
+            this.Visible = false;
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -49,25 +56,35 @@ namespace QuanLiTiemChung
         {
         }
 
-        public class DotThanhToan
-        {
-            public string Name { get; set; }
-            public int Month { get; set; }
-        }
-
         private void cb_dtt_SelectedIndexChanged(object sender, EventArgs e)
         {
-            int count;
-            int tc;
-            int mtt;
-            int tt;
+            int count = 1;
             if (cb_dtt.SelectedIndex == 0) count = 2;
             else if (cb_dtt.SelectedIndex == 1) count = 3;
             else if (cb_dtt.SelectedIndex == 2) count = 4;
             else if (cb_dtt.SelectedIndex == 3) count = 7;
             else if (cb_dtt.SelectedIndex == 4) count = 10;
             else if (cb_dtt.SelectedIndex == 5) count = 13;
-            txt_mtt.Text = 0.ToString()+"VNĐ/Tháng";
+            
+            int tongcong = Int32.Parse(txt_tongcong.Text);
+            float mucthanhtoan = (float)tongcong / count;
+            txt_mtt.Text = mucthanhtoan.ToString() + " VNĐ/Tháng";
+            txt_thanhtien.Text = mucthanhtoan.ToString() + " VNĐ"; 
+        }
+
+        public void LoadData(DataTable data, string type)
+        {
+            ChiTietHD = data;
+            gv_thongtindonhang.DataSource = ChiTietHD;
+            LoaiHD = type;
+            int TongTien = 0;
+            foreach (DataRow row in data.Rows)
+            {
+                int SoLuong = Int32.Parse(row["SoLuong"].ToString());
+                int DonGia = Int32.Parse(row["DonGia"].ToString());
+                TongTien = TongTien + (SoLuong * DonGia);
+            }
+            txt_tongcong.Text = TongTien.ToString();
         }
     }
 }

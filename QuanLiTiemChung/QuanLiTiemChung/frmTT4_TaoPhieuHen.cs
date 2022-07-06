@@ -12,6 +12,9 @@ namespace QuanLiTiemChung
 {
     public partial class frmTT4_TaoPhieuHen : Form
     {
+        DataTable ChiTietHD;
+        string LoaiHD;
+
         public frmTT4_TaoPhieuHen()
         {
             InitializeComponent();
@@ -36,6 +39,18 @@ namespace QuanLiTiemChung
         {
             MessageBox.Show("Tạo phiếu hẹn thành công!", "Thông báo!");
             this.Close();
+        }
+
+        public void LoadData(DataTable data, string type)
+        {
+            ChiTietHD = data;
+            gv_thongtindonhang.DataSource = ChiTietHD;
+            LoaiHD = type;
+            txt_diachi.Text = User.current.DiaChi;
+            txt_ma.Text = User.current.MaKH;
+            date_ngayhen.Value = DateTime.Today;
+            txt_ten.Text = User.current.TenKH;
+            txt_sdt.Text = User.current.SDT;
         }
     }
 }

@@ -35,6 +35,7 @@
             this.bt_laphoadon = new System.Windows.Forms.Button();
             this.lb_thanhtoandonhang = new System.Windows.Forms.Label();
             this.panel_button = new System.Windows.Forms.Panel();
+            this.bt_chiadottt = new System.Windows.Forms.Button();
             this.date_ntns = new System.Windows.Forms.DateTimePicker();
             this.txt_diachi = new System.Windows.Forms.TextBox();
             this.lb_diachi = new System.Windows.Forms.Label();
@@ -55,7 +56,6 @@
             this.lb_Title = new System.Windows.Forms.Label();
             this.panel_User = new System.Windows.Forms.Panel();
             this.panel_toolbar = new System.Windows.Forms.Panel();
-            this.bt_chiadottt = new System.Windows.Forms.Button();
             this.panel_button.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gv_dsGoiTiem)).BeginInit();
             this.panel_gv.SuspendLayout();
@@ -149,6 +149,23 @@
             this.panel_button.Name = "panel_button";
             this.panel_button.Size = new System.Drawing.Size(963, 242);
             this.panel_button.TabIndex = 0;
+            // 
+            // bt_chiadottt
+            // 
+            this.bt_chiadottt.BackColor = System.Drawing.Color.White;
+            this.bt_chiadottt.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.bt_chiadottt.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.bt_chiadottt.Font = new System.Drawing.Font("Bahnschrift", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bt_chiadottt.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.bt_chiadottt.Location = new System.Drawing.Point(345, 195);
+            this.bt_chiadottt.Margin = new System.Windows.Forms.Padding(4);
+            this.bt_chiadottt.Name = "bt_chiadottt";
+            this.bt_chiadottt.Size = new System.Drawing.Size(240, 37);
+            this.bt_chiadottt.TabIndex = 19;
+            this.bt_chiadottt.Text = "Chia đợt thanh toán";
+            this.bt_chiadottt.UseMnemonic = false;
+            this.bt_chiadottt.UseVisualStyleBackColor = false;
+            this.bt_chiadottt.Click += new System.EventHandler(this.bt_chiadottt_Click);
             // 
             // date_ntns
             // 
@@ -375,23 +392,6 @@
             this.panel_toolbar.Name = "panel_toolbar";
             this.panel_toolbar.Size = new System.Drawing.Size(980, 48);
             this.panel_toolbar.TabIndex = 4;
-            // 
-            // bt_chiadottt
-            // 
-            this.bt_chiadottt.BackColor = System.Drawing.Color.White;
-            this.bt_chiadottt.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.bt_chiadottt.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.bt_chiadottt.Font = new System.Drawing.Font("Bahnschrift", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bt_chiadottt.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.bt_chiadottt.Location = new System.Drawing.Point(392, 195);
-            this.bt_chiadottt.Margin = new System.Windows.Forms.Padding(4);
-            this.bt_chiadottt.Name = "bt_chiadottt";
-            this.bt_chiadottt.Size = new System.Drawing.Size(193, 37);
-            this.bt_chiadottt.TabIndex = 19;
-            this.bt_chiadottt.Text = "Chia đợt thanh toán";
-            this.bt_chiadottt.UseMnemonic = false;
-            this.bt_chiadottt.UseVisualStyleBackColor = false;
-            this.bt_chiadottt.Click += new System.EventHandler(this.bt_chiadottt_Click);
             // 
             // frmTT3_LapHoaDon
             // 
