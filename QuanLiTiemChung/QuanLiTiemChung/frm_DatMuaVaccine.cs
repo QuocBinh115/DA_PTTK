@@ -138,15 +138,26 @@ namespace QuanLiTiemChung
             DonDatHang newdonDatHang = new DonDatHang();
             //HoaDon_1912640 newHoaDon = new HoaDon_1912640();
             //newHoaDon.TaoHoaDonMoi();
-            newdonDatHang.TaoDonHangMoi(null);
-            ctDonDatHang newCT = new ctDonDatHang();
+            //newdonDatHang.TaoDonHangMoi(newHoaDon.MaHD);
+            ctDonDatHang newCT;
             foreach (KeyValuePair<string, int> list_ctDonDH in list_VX_selected)
             {
-                newCT.MaDonDH = newdonDatHang.MaDonDH;
+                //newCT.MaDonDH = newdonDatHang.MaDonDH;
+                newCT = new ctDonDatHang();
                 newCT.MaVX = list_ctDonDH.Key;
                 newCT.Soluong = list_ctDonDH.Value;
-                newCT.ThemctDonDatHangMoi();
+                newCT.TinhThanhTien();
+                newdonDatHang.list_ctDatHang.Add(newCT);
             }
+            newdonDatHang.TinhTongTien();
+            HoaDon_1912640 newHoaDon = new HoaDon_1912640();
+            newHoaDon.MaKH = User.current.MaKH;
+            newHoaDon.LoaiHD = "DH";
+            newHoaDon.donDatHang = new DonDatHang();
+            newHoaDon.donDatHang = newdonDatHang;
+            newHoaDon.TongTien = newdonDatHang.TongTien;
+            //newHoaDon.TaoHoaDonMoi_Cho_DonHang();
+
         }
     }
 }
