@@ -14,7 +14,7 @@ namespace QuanLiTiemChung
     {
         DataTable ChiTietHD;
         string LoaiHD;
-
+        //public HoaDon_1912640 dondathang;
         public frmTT3_LapHoaDon()
         {
             InitializeComponent();
@@ -38,11 +38,12 @@ namespace QuanLiTiemChung
         private void bt_laphoadon_Click(object sender, EventArgs e)
         {
             HoaDon hd = new HoaDon(ChiTietHD, LoaiHD);
-            hd.TaoHoaDon(DateTime.Today);
+            hd.TaoHoaDon(date_ngayhen.Value);
 
             frmTT4_TaoPhieuHen taophieuhen = new frmTT4_TaoPhieuHen();
             this.Visible = true;
             taophieuhen.LoadData(ChiTietHD, "MH");
+            taophieuhen.NgayHen(date_ngayhen.Value);
             taophieuhen.Show();
             this.Visible = false;
         }
@@ -58,23 +59,39 @@ namespace QuanLiTiemChung
         }
         public void LoadData(DataTable data,string type)
         {
-            ChiTietHD = data;
-            gv_dsGoiTiem.DataSource = ChiTietHD;
-            LoaiHD = type;
-            txt_diachi.Text = User.current.DiaChi;
-            txt_ma.Text = User.current.MaKH;
-            date_ntns.Value = User.current.NgaySinh;
-            txt_ten.Text = User.current.TenKH;
-            txt_sdt.Text = User.current.SDT;
-            int TongTien = 0;
-            foreach(DataRow row in data.Rows)
+            if(type == "MH")
             {
-                int SoLuong = Int32.Parse(row["SoLuong"].ToString());
-                int DonGia = Int32.Parse(row["DonGia"].ToString());
-                TongTien = TongTien + (SoLuong * DonGia);
+                ChiTietHD = data;
+                gv_dsGoiTiem.DataSource = ChiTietHD;
+                LoaiHD = type;
+                txt_diachi.Text = User.current.DiaChi;
+                txt_ma.Text = User.current.MaKH;
+                date_ngayhen.Value = DateTime.Today;
+                txt_ten.Text = User.current.TenKH;
+                txt_sdt.Text = User.current.SDT;
+                int TongTien = 0;
+                foreach (DataRow row in data.Rows)
+                {
+                    int SoLuong = Int32.Parse(row["SoLuong"].ToString());
+                    int DonGia = Int32.Parse(row["DonGia"].ToString());
+                    TongTien = TongTien + (SoLuong * DonGia);
+                }
+                txt_thanhtien.Text = TongTien.ToString("#,0.###") + " VNĐ";
             }
-            
-            txt_thanhtien.Text = TongTien.ToString();
+            else
+            {
+                ChiTietHD = data;
+                gv_dsGoiTiem.DataSource = ChiTietHD;
+                LoaiHD = type;
+                txt_diachi.Text = User.current.DiaChi;
+                txt_ma.Text = User.current.MaKH;
+                date_ngayhen.Value = DateTime.Today;
+                txt_ten.Text = User.current.TenKH;
+                txt_sdt.Text = User.current.SDT;
+                int TongTien = HoaDon_1912640.TongTien;
+                txt_thanhtien.Text = TongTien.ToString("#,0.###") + " VNĐ";
+            }
+
         }
 
         private void gv_dsGoiTiem_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -85,10 +102,11 @@ namespace QuanLiTiemChung
         private void bt_chiadottt_Click(object sender, EventArgs e)
         {
             frmTT2_ChiaDotThanhToan chiaDotThanhToan = new frmTT2_ChiaDotThanhToan();
-            //this.Visible = true;
-            chiaDotThanhToan.LoadData(ChiTietHD, "MH");
+            this.Visible = true;
+            chiaDotThanhToan.LoadData(ChiTietHD, LoaiHD);
+            chiaDotThanhToan.LayNgayHen(date_ngayhen.Value);
             chiaDotThanhToan.Show();
-            //this.Visible = false;
+            this.Visible = false;
         }
     }
 }

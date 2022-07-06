@@ -188,6 +188,7 @@
             this.txt_tongcong.ReadOnly = true;
             this.txt_tongcong.Size = new System.Drawing.Size(559, 27);
             this.txt_tongcong.TabIndex = 8;
+            this.txt_tongcong.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label2
             // 
@@ -258,6 +259,7 @@
             this.txt_mtt.ReadOnly = true;
             this.txt_mtt.Size = new System.Drawing.Size(557, 27);
             this.txt_mtt.TabIndex = 9;
+            this.txt_mtt.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // lb_mtt
             // 
@@ -303,6 +305,7 @@
             this.txt_thanhtien.ReadOnly = true;
             this.txt_thanhtien.Size = new System.Drawing.Size(557, 27);
             this.txt_thanhtien.TabIndex = 1;
+            this.txt_thanhtien.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // lb_thanhtien
             // 
