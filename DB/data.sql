@@ -133,7 +133,7 @@ INSERT INTO trungtam(MaTT, TenTT) VALUES
 --
 INSERT INTO vaccine(MaVX, TenVX, GiaMua, HanSuDung, SoLuongTon) VALUES
 ('VX00000000', 'Vaccine 1', 12000, '2022-07-14', 271),
-('VX00000001', 'Vaccine 2', 980000, '2022-07-31', 1),
+('VX00000001', 'Vaccine 2', 980000, '2022-07-31', 5),
 ('VX00000002', 'Vaccine 3', 326000, '2022-07-01', 297),
 ('VX00000003', 'Vaccine 4', 592000, '2022-07-19', 1),
 ('VX00000004', 'Vaccine 5', 469000, '2022-07-28', 99);
