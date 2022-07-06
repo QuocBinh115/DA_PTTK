@@ -35,7 +35,7 @@ namespace QuanLiTiemChung
         private void bt_taophieuhen_Click(object sender, EventArgs e)
         {
             MessageBox.Show("Tạo phiếu hẹn thành công!", "Thông báo!");
-            return;
+            this.Close();
         }
     }
 }

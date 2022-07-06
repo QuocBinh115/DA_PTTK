@@ -14,6 +14,7 @@ namespace QuanLiTiemChung
     {
         DataTable ChiTietHD;
         string LoaiHD;
+
         public frmTT3_LapHoaDon()
         {
             InitializeComponent();
@@ -36,12 +37,13 @@ namespace QuanLiTiemChung
 
         private void bt_laphoadon_Click(object sender, EventArgs e)
         {
-            //frmTT4_TaoPhieuHen taophieuhen = new frmTT4_TaoPhieuHen();
-            //this.Visible = false;
-            //taophieuhen.Show();
-            //this.Visible = true;
             HoaDon hd = new HoaDon(ChiTietHD, LoaiHD);
             hd.TaoHoaDon(DateTime.Today);
+
+            frmTT4_TaoPhieuHen taophieuhen = new frmTT4_TaoPhieuHen();
+            this.Visible = true;
+            taophieuhen.Show();
+            this.Visible = false;
         }
 
         private void lb_thanhtien_Click(object sender, EventArgs e)
@@ -63,6 +65,16 @@ namespace QuanLiTiemChung
             date_ntns.Value = User.current.NgaySinh;
             txt_ten.Text = User.current.TenKH;
             txt_sdt.Text = User.current.SDT;
+        }
+
+        private void gv_dsGoiTiem_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void bt_chiadottt_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

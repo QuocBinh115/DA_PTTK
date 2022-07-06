@@ -61,11 +61,11 @@ END; $$
 
 drop procedure if exists `sp_ThemVaccine`;
 DELIMITER $$
-CREATE PROCEDURE `sp_ThemVaccine` (i_Ten varchar(50), i_NXS varchar(50), i_HSD date)
+CREATE PROCEDURE `sp_ThemVaccine` (i_Ten varchar(50), i_NXS varchar(50),i_giamua int, i_HSD date)
 BEGIN
 	declare i_MaVX varchar(10);
     set i_MaVX = f_AutoMaVX();
-	INSERT INTO vaccine VALUES (i_MaVX, i_Ten, i_NXS, i_HSD);
+	INSERT INTO vaccine VALUES (i_MaVX, i_Ten, i_NXS,-i_giamua, i_HSD, 0);
     select i_MaVX;
 END; $$
 
@@ -163,4 +163,18 @@ BEGIN
 		end if;
         set i = i+1;
 	end while;
+END; $$
+
+drop procedure if exists `sp_TaoHSBN`;
+DELIMITER $$
+CREATE PROCEDURE `sp_TaoHSBN` (i_MaBN char(10), i_Ngay date, i_NguoiTiem varchar(10))
+BEGIN
+	INSERT INTO hosobn VALUES (i_MaBN, i_NgayKham, i_NguoiTiem);
+END; $$
+
+drop procedure if exists `sp_ThemCTHSBN`;
+DELIMITER $$
+CREATE PROCEDURE `sp_ThemCTHSBN` (i_MaBN char(10), i_NgayKham date, i_NguoiKham varchar(10), i_STT int, i_MoTa varchar(50))
+BEGIN
+	INSERT INTO chitiethsbn VALUES (i_MaBN, i_NgayKham, i_STT, i_NguoiKham, i_MoTa);
 END; $$
