@@ -29,21 +29,22 @@ namespace QuanLiTiemChung
         /// </summary>
         private void InitializeComponent()
         {
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.DuyetDH_gv = new System.Windows.Forms.DataGridView();
             this.label3 = new System.Windows.Forms.Label();
             this.FormName_label = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DuyetDH_gv)).BeginInit();
             this.SuspendLayout();
             // 
-            // dataGridView1
+            // DuyetDH_gv
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(38, 78);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(1101, 315);
-            this.dataGridView1.TabIndex = 0;
+            this.DuyetDH_gv.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.DuyetDH_gv.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.DuyetDH_gv.Location = new System.Drawing.Point(38, 78);
+            this.DuyetDH_gv.Name = "DuyetDH_gv";
+            this.DuyetDH_gv.RowHeadersWidth = 51;
+            this.DuyetDH_gv.RowTemplate.Height = 24;
+            this.DuyetDH_gv.Size = new System.Drawing.Size(1101, 315);
+            this.DuyetDH_gv.TabIndex = 0;
             // 
             // label3
             // 
@@ -70,11 +71,11 @@ namespace QuanLiTiemChung
             this.ClientSize = new System.Drawing.Size(1191, 431);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.FormName_label);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.DuyetDH_gv);
             this.Name = "frm_DuyetDonDathang";
             this.Text = "frm_DuyetDonDathang";
             this.Load += new System.EventHandler(this.frm_DuyetDonDathang_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DuyetDH_gv)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -82,7 +83,7 @@ namespace QuanLiTiemChung
 
         #endregion
 
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView DuyetDH_gv;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label FormName_label;
     }

@@ -68,8 +68,9 @@ namespace QuanLiTiemChung
                 {
                     temp = new DonDatHang();
                     temp.MaDonDH = row["MaDonDH"].ToString();
-
-                    
+                    temp.MaHD = row["MaHD"].ToString();
+                    temp.TongTien = Int32.Parse(row["TongTien"].ToString());
+                    list_DS.Add(temp);
                 }
 
             }
@@ -84,6 +85,36 @@ namespace QuanLiTiemChung
                 conn.Dispose();
             }
             return list_DS;
+        }
+        public static void DuyetDonDH(string MaDonDH)
+        {
+           
+            MySqlConnection conn = DBUtils.GetDBConnection();
+            conn.Open();
+            MySqlDataAdapter da = new MySqlDataAdapter();
+            DataTable dt = new DataTable();
+            string sql_cmd;
+            sql_cmd = "update dathang set KiemDuyet = 1 where MaDonDH = '"+ MaDonDH+"'; ";
+
+
+            try
+            {
+                MySqlCommand cmd = new MySqlCommand(sql_cmd, conn);
+                cmd.ExecuteNonQuery();
+ 
+
+            }
+            catch (Exception error)
+            {
+                Console.WriteLine("Error: " + error);
+                Console.WriteLine(error.StackTrace);
+            }
+            finally
+            {
+                conn.Close();
+                conn.Dispose();
+            }
+
         }
     }
 }

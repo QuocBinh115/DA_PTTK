@@ -47,23 +47,24 @@ namespace QuanLiTiemChung
             // 
             this.FormName_label.AutoSize = true;
             this.FormName_label.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.FormName_label.Location = new System.Drawing.Point(357, 37);
+            this.FormName_label.Location = new System.Drawing.Point(343, 48);
             this.FormName_label.Name = "FormName_label";
             this.FormName_label.Size = new System.Drawing.Size(449, 39);
             this.FormName_label.TabIndex = 3;
             this.FormName_label.Text = "PHIẾU ĐẶT MUA VACCINE";
+            this.FormName_label.Click += new System.EventHandler(this.FormName_label_Click);
             // 
             // label3
             // 
             this.label3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.label3.Location = new System.Drawing.Point(24, 95);
+            this.label3.Location = new System.Drawing.Point(-19, 87);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(1200, 2);
             this.label3.TabIndex = 4;
             // 
             // ThemCTDH_btn
             // 
-            this.ThemCTDH_btn.Location = new System.Drawing.Point(544, 133);
+            this.ThemCTDH_btn.Location = new System.Drawing.Point(530, 135);
             this.ThemCTDH_btn.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.ThemCTDH_btn.Name = "ThemCTDH_btn";
             this.ThemCTDH_btn.Size = new System.Drawing.Size(154, 29);
@@ -77,7 +78,7 @@ namespace QuanLiTiemChung
             this.ChonVaccine_table.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.ChonVaccine_table.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.ChonVaccine_table.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.ChonVaccine_table.Location = new System.Drawing.Point(84, 191);
+            this.ChonVaccine_table.Location = new System.Drawing.Point(70, 193);
             this.ChonVaccine_table.Name = "ChonVaccine_table";
             this.ChonVaccine_table.ReadOnly = true;
             this.ChonVaccine_table.RowHeadersWidth = 51;
@@ -88,7 +89,7 @@ namespace QuanLiTiemChung
             // ChonVaccine_cbb
             // 
             this.ChonVaccine_cbb.FormattingEnabled = true;
-            this.ChonVaccine_cbb.Location = new System.Drawing.Point(84, 136);
+            this.ChonVaccine_cbb.Location = new System.Drawing.Point(70, 138);
             this.ChonVaccine_cbb.Name = "ChonVaccine_cbb";
             this.ChonVaccine_cbb.Size = new System.Drawing.Size(219, 26);
             this.ChonVaccine_cbb.TabIndex = 7;
@@ -96,7 +97,7 @@ namespace QuanLiTiemChung
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(81, 115);
+            this.label1.Location = new System.Drawing.Point(67, 117);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(102, 18);
             this.label1.TabIndex = 8;
@@ -105,7 +106,7 @@ namespace QuanLiTiemChung
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(380, 119);
+            this.label2.Location = new System.Drawing.Point(366, 121);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(71, 18);
             this.label2.TabIndex = 10;
@@ -113,14 +114,14 @@ namespace QuanLiTiemChung
             // 
             // Chon_SL_input
             // 
-            this.Chon_SL_input.Location = new System.Drawing.Point(383, 138);
+            this.Chon_SL_input.Location = new System.Drawing.Point(369, 140);
             this.Chon_SL_input.Name = "Chon_SL_input";
             this.Chon_SL_input.Size = new System.Drawing.Size(104, 24);
             this.Chon_SL_input.TabIndex = 11;
             // 
             // ThemMoiVaccine_btn
             // 
-            this.ThemMoiVaccine_btn.Location = new System.Drawing.Point(965, 136);
+            this.ThemMoiVaccine_btn.Location = new System.Drawing.Point(951, 138);
             this.ThemMoiVaccine_btn.Name = "ThemMoiVaccine_btn";
             this.ThemMoiVaccine_btn.Size = new System.Drawing.Size(185, 32);
             this.ThemMoiVaccine_btn.TabIndex = 14;
@@ -130,7 +131,7 @@ namespace QuanLiTiemChung
             // 
             // DatMuaVaccine_btn
             // 
-            this.DatMuaVaccine_btn.Location = new System.Drawing.Point(426, 469);
+            this.DatMuaVaccine_btn.Location = new System.Drawing.Point(412, 471);
             this.DatMuaVaccine_btn.Name = "DatMuaVaccine_btn";
             this.DatMuaVaccine_btn.Size = new System.Drawing.Size(259, 44);
             this.DatMuaVaccine_btn.TabIndex = 13;
@@ -142,7 +143,7 @@ namespace QuanLiTiemChung
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1365, 611);
+            this.ClientSize = new System.Drawing.Size(1164, 611);
             this.Controls.Add(this.DatMuaVaccine_btn);
             this.Controls.Add(this.ThemMoiVaccine_btn);
             this.Controls.Add(this.Chon_SL_input);

@@ -160,5 +160,10 @@ namespace QuanLiTiemChung
             DataTable dt = HoaDon_1912640.LayDatatable();
             
         }
+
+        private void FormName_label_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
