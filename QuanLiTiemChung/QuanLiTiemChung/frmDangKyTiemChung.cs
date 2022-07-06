@@ -36,7 +36,6 @@ namespace QuanLiTiemChung
                 frmChonVacXin ch = new frmChonVacXin();
                 ch.Show();
                 //this.Close();
-
             }
         }
 
@@ -75,8 +74,11 @@ namespace QuanLiTiemChung
 
         private void btn_DatVacxin_Click(object sender, EventArgs e)
         {
+            
             frm_DatMuaVaccine frm = new frm_DatMuaVaccine();
+            this.Visible = true;
             frm.Show();
+            this.Visible = false;
         }
     }
 }
