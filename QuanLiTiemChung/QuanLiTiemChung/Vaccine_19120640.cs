@@ -12,6 +12,8 @@ namespace QuanLiTiemChung
         public string TenVX;
         public string NSX;
         public DateTime HSD;
+        public int GiaMua;
+        public int SLTon;
         Vaccine_DB_19120640 vaccine_DB = new Vaccine_DB_19120640();
         public static Dictionary<string, string> Lay_thong_tin_Vaccine()
         {
@@ -20,7 +22,7 @@ namespace QuanLiTiemChung
 
         public string ThemVaccinemoi()
         {
-            MaVX = Vaccine_DB_19120640.ThemVaccine(TenVX, NSX, HSD);
+            MaVX = Vaccine_DB_19120640.ThemVaccine(TenVX, NSX, HSD, GiaMua);
             return MaVX;
         }
     }

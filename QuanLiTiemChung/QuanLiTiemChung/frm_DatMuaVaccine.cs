@@ -135,6 +135,18 @@ namespace QuanLiTiemChung
                 MessageBox.Show("Vui lòng chọn vaccine muốn đặt!", "Thông báo");
                 return;
             }
+            DonDatHang newdonDatHang = new DonDatHang();
+            //HoaDon_1912640 newHoaDon = new HoaDon_1912640();
+            //newHoaDon.TaoHoaDonMoi();
+            newdonDatHang.TaoDonHangMoi(null);
+            ctDonDatHang newCT = new ctDonDatHang();
+            foreach (KeyValuePair<string, int> list_ctDonDH in list_VX_selected)
+            {
+                newCT.MaDonDH = newdonDatHang.MaDonDH;
+                newCT.MaVX = list_ctDonDH.Key;
+                newCT.Soluong = list_ctDonDH.Value;
+                newCT.ThemctDonDatHangMoi();
+            }
         }
     }
 }

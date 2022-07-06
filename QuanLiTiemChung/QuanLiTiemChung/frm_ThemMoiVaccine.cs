@@ -32,7 +32,7 @@ namespace QuanLiTiemChung
             string ten = TenVaccine_input.Text;
             string NSX = NSX_input.Text;
             DateTime HSD = HSD_input.Value;
-            if (ten == "" || NSX == "" || HSD == null)
+            if (ten == "" || NSX == "" || HSD == null || GiaMua_input.Value == 0)
             {
                 MessageBox.Show("Vui lòng điền đầy đủ thông tin!", "Thông báo");
                 return;
@@ -41,6 +41,7 @@ namespace QuanLiTiemChung
             newVX.TenVX = ten;
             newVX.NSX = NSX;
             newVX.HSD = HSD;
+            newVX.GiaMua = Int32.Parse(GiaMua_input.Value.ToString());
             newVX.ThemVaccinemoi();
             MessageBox.Show("Thêm vaccine thành công!", "Thông báo");
             this.Controls.Clear();
