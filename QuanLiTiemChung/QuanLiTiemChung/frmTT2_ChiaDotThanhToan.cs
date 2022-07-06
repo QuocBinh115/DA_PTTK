@@ -29,7 +29,7 @@ namespace QuanLiTiemChung
 
             frmTT4_TaoPhieuHen taophieuhen = new frmTT4_TaoPhieuHen();
             this.Visible = true;
-            taophieuhen.LoadData(ChiTietHD, "MH");
+            taophieuhen.LoadData(ChiTietHD, LoaiHD);
             taophieuhen.NgayHen(NgayHen);
             taophieuhen.Show();
             this.Visible = false;

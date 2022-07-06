@@ -102,11 +102,9 @@ namespace QuanLiTiemChung
         private void bt_chiadottt_Click(object sender, EventArgs e)
         {
             frmTT2_ChiaDotThanhToan chiaDotThanhToan = new frmTT2_ChiaDotThanhToan();
-            this.Visible = true;
             chiaDotThanhToan.LoadData(ChiTietHD, LoaiHD);
             chiaDotThanhToan.LayNgayHen(date_ngayhen.Value);
             chiaDotThanhToan.Show();
-            this.Visible = false;
         }
     }
 }
