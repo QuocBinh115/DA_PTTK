@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Windows.Forms;
+using System.Data;
 
 namespace QuanLiTiemChung
 {
@@ -11,8 +12,7 @@ namespace QuanLiTiemChung
         Dictionary<string, int> list_VX_selected = new Dictionary<string, int>();
         //danh sách chưa thêm
         Dictionary<string,string> list_VX_unselected = new Dictionary<string, string>();
-
-
+        
         public frm_DatMuaVaccine()
         {
             InitializeComponent();
@@ -21,11 +21,12 @@ namespace QuanLiTiemChung
         private void frm_DatMuaVaccine_Load(object sender, EventArgs e)
         {
             //thêm header
-            ChonVaccine_table.ColumnCount = 3;
+            ChonVaccine_table.ColumnCount = 4;
             ChonVaccine_table.ColumnHeadersVisible = true;
             ChonVaccine_table.Columns[0].Name = "Số thứ tự";
             ChonVaccine_table.Columns[1].Name = "Tên Vaccine";
             ChonVaccine_table.Columns[2].Name = "Số lượng";
+            ChonVaccine_table.Columns[3].Name = "Đơn giá";
 
             //thêm cột xóa btn
             var revokeButton = new DataGridViewButtonColumn();
@@ -92,7 +93,7 @@ namespace QuanLiTiemChung
             ChonVaccine_table.Rows[index].Cells["Số thứ tự"].Value = index+1;
             ChonVaccine_table.Rows[index].Cells["Tên Vaccine"].Value = tenVX;
             ChonVaccine_table.Rows[index].Cells["Số lượng"].Value = Chon_SL_input.Value;
-
+            ChonVaccine_table.Rows[index].Cells["Đơn giá"].Value = Vaccine_DB_19120640.LayGiaVaccine(list_VX_unselected[tenVX]).ToString("#,0.###") + " vnđ";
 
             //add item selecte to list
             list_VX_selected.Add(list_VX_unselected[tenVX], decimal.ToInt32(Chon_SL_input.Value));
@@ -150,13 +151,18 @@ namespace QuanLiTiemChung
                 newdonDatHang.list_ctDatHang.Add(newCT);
             }
             newdonDatHang.TinhTongTien();
-            HoaDon_1912640 newHoaDon = new HoaDon_1912640();
-            newHoaDon.MaKH = User.current.MaKH;
-            newHoaDon.LoaiHD = "DH";
-            newHoaDon.donDatHang = new DonDatHang();
-            newHoaDon.donDatHang = newdonDatHang;
-            newHoaDon.TongTien = newdonDatHang.TongTien;
-            //newHoaDon.TaoHoaDonMoi_Cho_DonHang();
+
+            HoaDon_1912640.MaKH = User.current.MaKH;
+            HoaDon_1912640.LoaiHD = "DH";
+            HoaDon_1912640.donDatHang = new DonDatHang();
+            HoaDon_1912640.donDatHang = newdonDatHang;
+            HoaDon_1912640.TongTien = newdonDatHang.TongTien;
+            DataTable dt = HoaDon_1912640.LayDatatable();
+            
+        }
+
+        private void FormName_label_Click(object sender, EventArgs e)
+        {
 
             frmTT3_LapHoaDon lapHoaDon = new frmTT3_LapHoaDon();
             lapHoaDon.Show();
