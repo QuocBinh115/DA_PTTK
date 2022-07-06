@@ -61,11 +61,11 @@ namespace QuanLiTiemChung
             ChiTietHD = data;
             gv_dsGoiTiem.DataSource = ChiTietHD;
             LoaiHD = type;
-            txt_diachi.Text = KhachHang.DiaChi;
-            txt_ma.Text = KhachHang.MaKH;
-            date_ntns.Value = KhachHang.NgaySinh;
-            txt_ten.Text = KhachHang.TenKH;
-            txt_sdt.Text = KhachHang.SDT;
+            txt_diachi.Text = User.current.DiaChi;
+            txt_ma.Text = User.current.MaKH;
+            date_ntns.Value = User.current.NgaySinh;
+            txt_ten.Text = User.current.TenKH;
+            txt_sdt.Text = User.current.SDT;
         }
 
         private void gv_dsGoiTiem_CellContentClick(object sender, DataGridViewCellEventArgs e)

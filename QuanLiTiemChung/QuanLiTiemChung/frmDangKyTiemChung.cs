@@ -12,6 +12,7 @@ namespace QuanLiTiemChung
 {
     public partial class frmDangKyTiemChung : Form
     {
+
         public frmDangKyTiemChung()
         {
             InitializeComponent();
@@ -41,15 +42,17 @@ namespace QuanLiTiemChung
 
         private void frmDangKyTiemChung_Load(object sender, EventArgs e)
         {
+            User.current = new KhachHang("KH00000000");
             //KhachHang kh = new KhachHang();
-            KhachHang.LayThongTin("KH00000000");
 
-            txtHoTen.Text = KhachHang.TenKH;
-            date_ngaySinh.Value = KhachHang.NgaySinh;
-            txtDiaChi.Text = KhachHang.DiaChi;
-            txtCMND.Text = KhachHang.CMND;
-            txtSDT.Text = KhachHang.SDT;
-            if (KhachHang.GioiTinh == true)
+            //KhachHang.LayThongTin("KH00000000");
+            User.current.LayThongTin();
+            txtHoTen.Text = User.current.TenKH;
+            date_ngaySinh.Value = User.current.NgaySinh;
+            txtDiaChi.Text = User.current.DiaChi;
+            txtCMND.Text = User.current.CMND;
+            txtSDT.Text = User.current.SDT;
+            if (User.current.GioiTinh == true)
             { checkNam.Checked = true; }
             else
             {

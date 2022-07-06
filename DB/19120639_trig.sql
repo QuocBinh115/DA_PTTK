@@ -1,6 +1,25 @@
 use qltc;
 
 -- ThanhTienHD
+drop trigger if exists trg_ThanhTienDonDH_update;
+delimiter $$
+create trigger trg_ThanhTienDonDH_update
+before update on ct_dondh
+for each row
+begin
+	call sp_ThanhTienDonHD(new.MaVX, new.SoLuong, new.ThanhTien);
+end $$
+
+drop trigger if exists trg_ThanhTienDonDH_insert;
+delimiter $$
+create trigger trg_ThanhTienDonDH_insert
+before insert on ct_dondh
+for each row
+begin
+	call sp_ThanhTienDonHD(new.MaVX, new.SoLuong, new.ThanhTien);
+end $$
+
+-- ThanhTienHD
 drop trigger if exists trg_ThanhTienHD_update;
 delimiter $$
 create trigger trg_ThanhTienHD_update

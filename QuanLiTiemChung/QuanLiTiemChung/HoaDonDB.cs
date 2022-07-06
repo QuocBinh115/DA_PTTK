@@ -24,7 +24,7 @@ namespace QuanLiTiemChung
                 MySqlCommand cmd = new MySqlCommand("sp_TaoHD", conn);
                 cmd.CommandType = CommandType.StoredProcedure;
                 cmd.Parameters.Add("i_Loai", MySqlDbType.VarChar, 10).Value = "MH";
-                cmd.Parameters.Add("i_MaKH", MySqlDbType.VarChar, 10).Value = KhachHang.MaKH;
+                cmd.Parameters.Add("i_MaKH", MySqlDbType.VarChar, 10).Value = User.current.MaKH;
                 cmd.Parameters.Add("i_NgayHen", MySqlDbType.Date, 10).Value = NgayHen;
                 cmd.Parameters.Add("i_NguoiLap", MySqlDbType.VarChar, 10).Value = "NV00000001";
 
@@ -57,7 +57,7 @@ namespace QuanLiTiemChung
                 cmd.CommandType = CommandType.StoredProcedure;
                 cmd.Parameters.Add("i_Loai", MySqlDbType.VarChar, 10).Value = "DH";
 
-                cmd.Parameters.Add("i_MaKH", MySqlDbType.VarChar, 10).Value = KhachHang.MaKH;
+                cmd.Parameters.Add("i_MaKH", MySqlDbType.VarChar, 10).Value = User.current.MaKH;
                 cmd.Parameters.Add("i_NgayHen", MySqlDbType.Date, 10).Value = NgayHen;
                 cmd.Parameters.Add("i_NguoiLap", MySqlDbType.VarChar, 10).Value = "NV00000000";
 

@@ -65,7 +65,7 @@ CREATE PROCEDURE `sp_ThemVaccine` (i_Ten varchar(50), i_NXS varchar(50), i_HSD d
 BEGIN
 	declare i_MaVX varchar(10);
     set i_MaVX = f_AutoMaVX();
-	INSERT INTO hoadon VALUES (i_MaVX, i_Ten, i_NXS, i_HSD);
+	INSERT INTO vaccine VALUES (i_MaVX, i_Ten, i_NXS, i_HSD);
     select i_MaVX;
 END; $$
 
@@ -78,6 +78,18 @@ CREATE PROCEDURE `sp_ThanhTienHD` (
 BEGIN
 	declare i_Gia int;
     set i_Gia = (select ifnull(dongia,0) from goitiem where MaGT = i_MaGT);
+    set i_ThanhTien = i_SoLuong * i_Gia;
+END; $$
+
+drop procedure if exists `sp_ThanhTienDonHD`;
+DELIMITER $$
+CREATE PROCEDURE `sp_ThanhTienDonHD` (
+	i_MaVX varchar(10),
+    i_SoLuong int, 
+    out i_ThanhTien int)
+BEGIN
+	declare i_Gia int;
+    set i_Gia = (select ifnull(giamua,0) from vaccine where MaVX = i_MaVX);
     set i_ThanhTien = i_SoLuong * i_Gia;
 END; $$
 
@@ -107,15 +119,10 @@ drop procedure if exists `sp_CheckGoiTiem`;
 DELIMITER $$
 CREATE PROCEDURE `sp_CheckGoiTiem` (i_MaGT varchar(10), i_SoLuong int)
 BEGIN
-	
-    
-    select if(SoMui*i_SoLuong < SoLuongTon,true,false) as sl
-    from ct_goitiem c left join vaccine v on c.MaVX=v.MaVX
-    where MaGT = i_MaGT;
-    
-    
+	select if(SoLuongTon > i_SoLuong, TRUE, FALSE) 
+	from vaccine 
+    where MaVX in (select MaVX from ct_goitiem where MaGT = i_MaGT);
 END; $$
-
 
 drop procedure if exists `sp_DatHang`;
 DELIMITER $$
@@ -123,7 +130,7 @@ CREATE PROCEDURE `sp_DatHang` (i_MaHD varchar(50))
 BEGIN
 	declare i_MaDonDH varchar(10);
     set i_MaDonDH = f_AutoMaDonDH();
-	INSERT INTO hoadon VALUES (i_MaDonDH, i_MaHD, NULL, FALSE);
+	INSERT INTO dathang VALUES (i_MaDonDH, i_MaHD, NULL, FALSE);
     select i_MaDonDH;
 END; $$
 
@@ -150,9 +157,10 @@ BEGIN
             set i_Ca = (select Ca from lichlamviec limit i,1);
 			if exists (select * from lichranh where Ngay = i_Ngay and Ca = i_Ca) then
 				update lichlamviec
-                set MaNV = (select MaNV from lichranh where Ngay = i_Ngay and Ca = i_Ca)
+                set MaNV = (select MaNV from lichranh where Ngay = i_Ngay and Ca = i_Ca limit 1)
                 where Ngay = i_Ngay and Ca = i_Ca;
 			end if;
 		end if;
+        set i = i+1;
 	end while;
 END; $$
