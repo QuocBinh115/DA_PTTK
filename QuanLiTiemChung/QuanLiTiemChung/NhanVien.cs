@@ -23,5 +23,18 @@ namespace QuanLiTiemChung
         {
             return NhanVienDB.LayLichRanh(MaNV);
         }
+
+        public static string[] layMaNV()
+        {
+            DataTable data = NhanVienDB.LayDSNV();
+            string[] result = new string[data.Rows.Count];
+            Console.WriteLine(data.Rows.Count);
+            for (int i = 0; i < data.Rows.Count;i++)
+            {
+                result[i] = data.Rows[i]["MaNV"].ToString();
+                
+            }
+            return result;
+        }
     }
 }

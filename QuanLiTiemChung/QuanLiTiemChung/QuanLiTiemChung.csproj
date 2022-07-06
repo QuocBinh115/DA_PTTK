@@ -54,6 +54,8 @@
     <Compile Include="ctDonDatHang_DB.cs" />
     <Compile Include="ctHoaDon.cs" />
     <Compile Include="ctHoaDonDB.cs" />
+    <Compile Include="ctHSBN.cs" />
+    <Compile Include="ctHSBNDB.cs" />
     <Compile Include="DonDatHang.cs" />
     <Compile Include="DonDatHang_DB.cs" />
     <Compile Include="frmDangKyGiamHo.cs">
@@ -148,6 +150,12 @@
     <Compile Include="LichRanhDB.cs" />
     <Compile Include="NhanVien.cs" />
     <Compile Include="NhanVienDB.cs" />
+    <Compile Include="frmTaoPhieuKhamSangLoc.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmTaoPhieuKhamSangLoc.Designer.cs">
+      <DependentUpon>frmTaoPhieuKhamSangLoc.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Vaccine_19120640.cs" />
@@ -190,6 +198,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frm_TraCuuVaccine.resx">
       <DependentUpon>frm_TraCuuVaccine.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmTaoPhieuKhamSangLoc.resx">
+      <DependentUpon>frmTaoPhieuKhamSangLoc.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

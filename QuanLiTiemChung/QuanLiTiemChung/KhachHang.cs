@@ -24,6 +24,14 @@ namespace QuanLiTiemChung
         {
             MaKH = Ma;
         }
+        public KhachHang()
+        {
+            MaKH = "";
+            TenKH = "Không tồn tại";
+            SDT = "";
+            DiaChi = "";
+            CMND = "";
+        }
         public bool LayThongTin() {
             return KhachHangDB.DocTTKhachHang(MaKH);
         }
@@ -40,6 +48,10 @@ namespace QuanLiTiemChung
                 flag = false;
             }
             return flag;
+        }
+        public static KhachHang layKHtuCMND(string cmnd)
+        {
+            return KhachHangDB.layKHtuCMND(cmnd);
         }
     }
     static class User

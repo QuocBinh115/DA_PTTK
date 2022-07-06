@@ -53,5 +53,48 @@ namespace QuanLiTiemChung
             return true;
 
         }
+        public static KhachHang layKHtuCMND(string cmnd)
+        {
+            KhachHang result = new KhachHang();
+            MySqlConnection conn = DBUtils.GetDBConnection();
+            conn.Open();
+            MySqlDataAdapter da = new MySqlDataAdapter();
+            DataTable dt = new DataTable();
+            string sql_cmd;
+            sql_cmd = "select * from KhachHang where CMND = '" + cmnd + "';";
+
+
+            try
+            {
+                MySqlCommand cmd = new MySqlCommand(sql_cmd, conn);
+                cmd.ExecuteNonQuery();
+                da.SelectCommand = cmd;
+                da.Fill(dt);
+                if (dt.Rows.Count == 0)
+                {
+                    return result;
+                }
+                result.MaKH = dt.Rows[0]["MaKH"].ToString();
+                result.TenKH = dt.Rows[0]["HoTenKH"].ToString();
+                //result.NgaySinh = DateTime.ParseExact(dt.Rows[0]["niceDate"].ToString(), "dd/MM/yyyy", null);
+                result.GioiTinh = dt.Rows[0]["GioiTinh"].ToString() == "True" ? true : false;
+                result.SDT = dt.Rows[0]["SDT"].ToString();
+                result.DiaChi = dt.Rows[0]["DiaChi"].ToString();
+                result.CMND = dt.Rows[0]["CMND"].ToString();
+
+            }
+            catch (Exception error)
+            {
+                Console.WriteLine("Error: " + error);
+                Console.WriteLine(error.StackTrace);
+            }
+            finally
+            {
+                conn.Close();
+                conn.Dispose();
+            }
+            return result;
+
+        }
     }
 }
