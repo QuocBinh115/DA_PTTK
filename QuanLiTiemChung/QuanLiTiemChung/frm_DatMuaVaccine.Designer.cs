@@ -47,7 +47,7 @@ namespace QuanLiTiemChung
             // 
             this.FormName_label.AutoSize = true;
             this.FormName_label.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.FormName_label.Location = new System.Drawing.Point(412, 37);
+            this.FormName_label.Location = new System.Drawing.Point(357, 37);
             this.FormName_label.Name = "FormName_label";
             this.FormName_label.Size = new System.Drawing.Size(449, 39);
             this.FormName_label.TabIndex = 3;
@@ -67,7 +67,7 @@ namespace QuanLiTiemChung
             this.ThemCTDH_btn.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.ThemCTDH_btn.Name = "ThemCTDH_btn";
             this.ThemCTDH_btn.Size = new System.Drawing.Size(154, 29);
-            this.ThemCTDH_btn.TabIndex = 5;
+            this.ThemCTDH_btn.TabIndex = 12;
             this.ThemCTDH_btn.Text = "Thêm vào danh sách";
             this.ThemCTDH_btn.UseVisualStyleBackColor = true;
             this.ThemCTDH_btn.Click += new System.EventHandler(this.ThemVaccine_btn_Click);
@@ -123,7 +123,7 @@ namespace QuanLiTiemChung
             this.ThemMoiVaccine_btn.Location = new System.Drawing.Point(965, 136);
             this.ThemMoiVaccine_btn.Name = "ThemMoiVaccine_btn";
             this.ThemMoiVaccine_btn.Size = new System.Drawing.Size(185, 32);
-            this.ThemMoiVaccine_btn.TabIndex = 12;
+            this.ThemMoiVaccine_btn.TabIndex = 14;
             this.ThemMoiVaccine_btn.Text = "Thêm mới vaccine";
             this.ThemMoiVaccine_btn.UseVisualStyleBackColor = true;
             this.ThemMoiVaccine_btn.Click += new System.EventHandler(this.ThemMoiVaccine_btn_Click);
@@ -136,6 +136,7 @@ namespace QuanLiTiemChung
             this.DatMuaVaccine_btn.TabIndex = 13;
             this.DatMuaVaccine_btn.Text = "Đặt Mua";
             this.DatMuaVaccine_btn.UseVisualStyleBackColor = true;
+            this.DatMuaVaccine_btn.Click += new System.EventHandler(this.DatMuaVaccine_btn_Click);
             // 
             // frm_DatMuaVaccine
             // 

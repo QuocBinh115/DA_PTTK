@@ -7,33 +7,33 @@ using MySql.Data.MySqlClient;
 using sqlConnect;
 using System.Data;
 
-
 namespace QuanLiTiemChung
 {
-    class HoaDon_DB_19120640
+    class ctDonDatHang_DB
     {
-        public static string TaoHoaDon(string loaiHD, string MaKH, DateTime NgayHen, string NguoiLap)
+        public static void ThemctDonDatHang(string MaDH, string MaVX, int soluong, int ThanhTien)
         {
+            
             MySqlConnection conn = DBUtils.GetDBConnection();
             conn.Open();
             MySqlDataAdapter da = new MySqlDataAdapter();
             DataTable dt = new DataTable();
             string sql_cmd;
-            sql_cmd = "sp_TaoHD";
-            string result = "";
+            sql_cmd = "sp_ThemCTDatHang";
+            //string result = "";
 
             try
             {
                 MySqlCommand cmd = new MySqlCommand(sql_cmd, conn);
                 cmd.CommandType = CommandType.StoredProcedure;
-                cmd.Parameters.Add("i_Loai", MySqlDbType.VarChar, 50).Value = loaiHD;
-                cmd.Parameters.Add("i_MaKH", MySqlDbType.VarChar, 50).Value = MaKH;
-                cmd.Parameters.Add("i_NgayHen", MySqlDbType.VarChar, 50).Value = NgayHen.ToString("yyyy-MM-dd");
-                cmd.Parameters.Add("i_NguoiLap", MySqlDbType.VarChar, 50).Value = NguoiLap;
-                //cmd.ExecuteNonQuery();
+                cmd.Parameters.Add("i_MaDonDH", MySqlDbType.VarChar, 50).Value = MaDH;
+                cmd.Parameters.Add("i_MaVX", MySqlDbType.VarChar, 50).Value = MaVX;
+                cmd.Parameters.Add("i_SoLuong", MySqlDbType.Int32).Value = soluong;
+                cmd.Parameters.Add("i_ThanhTien", MySqlDbType.Int32).Value = ThanhTien;
+                cmd.ExecuteNonQuery();
                 da.SelectCommand = cmd;
-                da.Fill(dt);
-                result = dt.Rows[0][0].ToString();
+                //da.Fill(dt);
+                //result = dt.Rows[0][0].ToString();
 
 
             }
@@ -47,7 +47,8 @@ namespace QuanLiTiemChung
                 conn.Close();
                 conn.Dispose();
             }
-            return result;
+            //return result;
+            
         }
     }
 }
