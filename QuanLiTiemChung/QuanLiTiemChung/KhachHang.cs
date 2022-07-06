@@ -25,6 +25,14 @@ namespace QuanLiTiemChung
         {
             MaKH = Ma;
         }
+        public KhachHang()
+        {
+            MaKH = "";
+            TenKH = "Không tồn tại";
+            SDT = "";
+            DiaChi = "";
+            CMND = "";
+        }
         public KhachHang(string Ma,string cmt)
         {
             MaKH = Ma;
@@ -47,6 +55,10 @@ namespace QuanLiTiemChung
                 flag = false;
             }
             return flag;
+        }
+        public static KhachHang layKHtuCMND(string cmnd)
+        {
+            return KhachHangDB.layKHtuCMND(cmnd);
         }
         public bool KiemTraTonTai()
         {
