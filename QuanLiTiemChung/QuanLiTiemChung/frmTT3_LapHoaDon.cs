@@ -59,22 +59,39 @@ namespace QuanLiTiemChung
         }
         public void LoadData(DataTable data,string type)
         {
-            ChiTietHD = data;
-            gv_dsGoiTiem.DataSource = ChiTietHD;
-            LoaiHD = type;
-            txt_diachi.Text = User.current.DiaChi;
-            txt_ma.Text = User.current.MaKH;
-            date_ngayhen.Value = DateTime.Today;
-            txt_ten.Text = User.current.TenKH;
-            txt_sdt.Text = User.current.SDT;
-            int TongTien = 0;
-            foreach(DataRow row in data.Rows)
+            if(type == "MH")
             {
-                int SoLuong = Int32.Parse(row["SoLuong"].ToString());
-                int DonGia = Int32.Parse(row["DonGia"].ToString());
-                TongTien = TongTien + (SoLuong * DonGia);
+                ChiTietHD = data;
+                gv_dsGoiTiem.DataSource = ChiTietHD;
+                LoaiHD = type;
+                txt_diachi.Text = User.current.DiaChi;
+                txt_ma.Text = User.current.MaKH;
+                date_ngayhen.Value = DateTime.Today;
+                txt_ten.Text = User.current.TenKH;
+                txt_sdt.Text = User.current.SDT;
+                int TongTien = 0;
+                foreach (DataRow row in data.Rows)
+                {
+                    int SoLuong = Int32.Parse(row["SoLuong"].ToString());
+                    int DonGia = Int32.Parse(row["DonGia"].ToString());
+                    TongTien = TongTien + (SoLuong * DonGia);
+                }
+                txt_thanhtien.Text = TongTien.ToString("#,0.###") + " VNĐ";
             }
-            txt_thanhtien.Text = TongTien.ToString("#,0.###") + " VNĐ";
+            else
+            {
+                ChiTietHD = data;
+                gv_dsGoiTiem.DataSource = ChiTietHD;
+                LoaiHD = type;
+                txt_diachi.Text = User.current.DiaChi;
+                txt_ma.Text = User.current.MaKH;
+                date_ngayhen.Value = DateTime.Today;
+                txt_ten.Text = User.current.TenKH;
+                txt_sdt.Text = User.current.SDT;
+                int TongTien = HoaDon_1912640.TongTien;
+                txt_thanhtien.Text = TongTien.ToString("#,0.###") + " VNĐ";
+            }
+
         }
 
         private void gv_dsGoiTiem_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -86,12 +103,10 @@ namespace QuanLiTiemChung
         {
             frmTT2_ChiaDotThanhToan chiaDotThanhToan = new frmTT2_ChiaDotThanhToan();
             this.Visible = true;
-            chiaDotThanhToan.LoadData(ChiTietHD, "MH");
+            chiaDotThanhToan.LoadData(ChiTietHD, LoaiHD);
             chiaDotThanhToan.LayNgayHen(date_ngayhen.Value);
             chiaDotThanhToan.Show();
             this.Visible = false;
         }
-
-
     }
 }

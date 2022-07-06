@@ -76,16 +76,27 @@ namespace QuanLiTiemChung
 
         public void LoadData(DataTable data, string type)
         {
-            ChiTietHD = data;
-            gv_thongtindonhang.DataSource = ChiTietHD;
-            LoaiHD = type;
-            foreach (DataRow row in data.Rows)
+            if(type=="MH")
             {
-                int SoLuong = Int32.Parse(row["SoLuong"].ToString());
-                int DonGia = Int32.Parse(row["DonGia"].ToString());
-                TongTien = TongTien + (SoLuong * DonGia);
+                ChiTietHD = data;
+                gv_thongtindonhang.DataSource = ChiTietHD;
+                LoaiHD = type;
+                foreach (DataRow row in data.Rows)
+                {
+                    int SoLuong = Int32.Parse(row["SoLuong"].ToString());
+                    int DonGia = Int32.Parse(row["DonGia"].ToString());
+                    TongTien = TongTien + (SoLuong * DonGia);
+                }
+                txt_tongcong.Text = TongTien.ToString("#,0.###") + " VNĐ";
             }
-            txt_tongcong.Text = TongTien.ToString("#,0.###") + " VNĐ";
+            else
+            {
+                ChiTietHD = data;
+                gv_thongtindonhang.DataSource = ChiTietHD;
+                LoaiHD = type;
+                TongTien = HoaDon_1912640.TongTien;
+                txt_tongcong.Text = TongTien.ToString("#,0.###") + " VNĐ";
+            }
         }
 
         public void LayNgayHen(DateTime date)

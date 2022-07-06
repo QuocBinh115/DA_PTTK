@@ -158,7 +158,12 @@ namespace QuanLiTiemChung
             HoaDon_1912640.donDatHang = newdonDatHang;
             HoaDon_1912640.TongTien = newdonDatHang.TongTien;
             DataTable dt = HoaDon_1912640.LayDatatable();
-            
+
+            frmTT3_LapHoaDon thanhtoan = new frmTT3_LapHoaDon();
+            thanhtoan.LoadData(dt, "DH");
+            //this.Visible = false;
+            thanhtoan.Show();
+            //this.Visible = true;
         }
 
         private void FormName_label_Click(object sender, EventArgs e)
