@@ -58,8 +58,8 @@ namespace QuanLiTiemChung
             }
             catch (Exception error)
             {
-                Console.WriteLine("Error: " + error);
-                Console.WriteLine(error.StackTrace);
+                //Console.WriteLine("Error: " + error);
+                //Console.WriteLine(error.StackTrace);
             }
             finally
             {
