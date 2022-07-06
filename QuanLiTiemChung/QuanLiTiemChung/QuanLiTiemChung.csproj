@@ -90,6 +90,12 @@
     <Compile Include="frmLogin.Designer.cs">
       <DependentUpon>frmLogin.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmPhieuXacNhanTiem.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPhieuXacNhanTiem.Designer.cs">
+      <DependentUpon>frmPhieuXacNhanTiem.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmTT2_ChiaDotThanhToan.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -144,6 +150,8 @@
     <Compile Include="HoaDonDB.cs" />
     <Compile Include="HoaDon_1912640.cs" />
     <Compile Include="HoaDon_DB_19120640.cs" />
+    <Compile Include="HoSoBN.cs" />
+    <Compile Include="HoSoBNDB.cs" />
     <Compile Include="KhachHang.cs" />
     <Compile Include="KhachHangDB.cs" />
     <Compile Include="LichRanh.cs" />
@@ -171,6 +179,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmLogin.resx">
       <DependentUpon>frmLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPhieuXacNhanTiem.resx">
+      <DependentUpon>frmPhieuXacNhanTiem.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmTT1_Main.resx">
       <DependentUpon>frmTT1_Main.cs</DependentUpon>

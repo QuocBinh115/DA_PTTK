@@ -76,7 +76,7 @@ namespace QuanLiTiemChung
                 }
                 result.MaKH = dt.Rows[0]["MaKH"].ToString();
                 result.TenKH = dt.Rows[0]["HoTenKH"].ToString();
-                //result.NgaySinh = DateTime.ParseExact(dt.Rows[0]["niceDate"].ToString(), "dd/MM/yyyy", null);
+                result.NgaySinh = DateTime.Parse(dt.Rows[0]["NgaySinh"].ToString());
                 result.GioiTinh = dt.Rows[0]["GioiTinh"].ToString() == "True" ? true : false;
                 result.SDT = dt.Rows[0]["SDT"].ToString();
                 result.DiaChi = dt.Rows[0]["DiaChi"].ToString();

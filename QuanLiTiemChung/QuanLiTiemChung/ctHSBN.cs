@@ -14,11 +14,11 @@ namespace QuanLiTiemChung
         "Tiền sử rối loạn đông máu/ cầm máu", "Rồi loạn tri giác, rối loạn hành vi"};
         public static bool them(string maBn, string ngayKham, string maNv, int[] sicks)
         {
-            bool result= true;
+            bool result= false;
             foreach(int i in sicks)
             {
                 if(i != 0)
-                result = result && ctHSBNDB.them(maBn, ngayKham, maNv, i, benhs[i - 1]);
+                result = result || ctHSBNDB.them(maBn, ngayKham, maNv, i, benhs[i-1]);
             }
 
             return result;

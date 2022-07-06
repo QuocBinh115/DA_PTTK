@@ -26,7 +26,7 @@ namespace QuanLiTiemChung
                 cmd.Parameters.Add("i_MaBN", MySqlDbType.VarChar, 10).Value = maBn;
                 cmd.Parameters.Add("i_NgayKham", MySqlDbType.Date, 10).Value = DateTime.Parse(ngayKham);
                 cmd.Parameters.Add("i_NguoiKham", MySqlDbType.VarChar, 10).Value = maNv;
-                cmd.Parameters.Add("i_STT", MySqlDbType.Int64, 10).Value = Int64.Parse(stt.ToString());
+                cmd.Parameters.Add("i_STT", MySqlDbType.Int32, 10).Value = Int32.Parse(stt.ToString());
                 cmd.Parameters.Add("i_MoTa", MySqlDbType.VarChar, 10).Value = mota;
                 //cmd.ExecuteNonQuery();
                 da.SelectCommand = cmd;

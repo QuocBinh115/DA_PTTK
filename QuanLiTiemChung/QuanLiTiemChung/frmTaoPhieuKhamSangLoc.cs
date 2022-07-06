@@ -41,7 +41,8 @@ namespace QuanLiTiemChung.PhieuKhamSangLoc
                 int[] sicks = { ckbSick1.Checked?1:0, ckbSick2.Checked ? 2 : 0,
                 ckbSick3.Checked?3:0,ckbSick4.Checked?4:0,ckbSick5.Checked?5:0,ckbSick6.Checked?6:0,
                     ckbSick7.Checked?7:0,ckbSick8.Checked?8:0,ckbSick9.Checked?9:0};
-                if(ctHSBN.them(KhachHang.layKHtuCMND(txtCmnd.Text).MaKH, txtNgayTao.Text, cmboxMaNV.Text, sicks))
+                HoSoBN.them(KhachHang.layKHtuCMND(txtCmnd.Text).MaKH, txtNgayTao.Text, cmboxMaNV.Text);
+                if (ctHSBN.them(KhachHang.layKHtuCMND(txtCmnd.Text).MaKH, txtNgayTao.Text, cmboxMaNV.Text, sicks))
                 {
                     MessageBox.Show("Lưu thông tin thành công");
                 } else
