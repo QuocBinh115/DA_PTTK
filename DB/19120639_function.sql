@@ -39,3 +39,16 @@ begin
 	set i_MaDonDH = concat('DH', i_MaDonDH);
 	return i_MaDonDH;
 end $$
+
+drop function if exists qltc.f_AutoMaKH;
+delimiter $$
+create function qltc.f_AutoMaKH() returns char(10)
+begin
+	declare i_MaKH varchar(10) default '00000001';
+	while exists (SELECT * FROM KhachHang WHERE MaKH = concat('KH', i_MaKH)) do
+		SET i_MaKH = i_MaKH + 1;
+		SET i_MaKH = concat(repeat('0',8-LENGTH(convert(i_MaKH,char))), convert(i_MaKH,char));
+	end while;
+	set i_MaKH = concat('KH', i_MaKH);
+	return i_MaKH;
+end $$

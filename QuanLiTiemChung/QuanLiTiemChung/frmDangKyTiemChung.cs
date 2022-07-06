@@ -75,7 +75,8 @@ namespace QuanLiTiemChung
 
         private void btn_DatVacxin_Click(object sender, EventArgs e)
         {
-
+            frm_DatMuaVaccine frm = new frm_DatMuaVaccine();
+            frm.Show();
         }
     }
 }

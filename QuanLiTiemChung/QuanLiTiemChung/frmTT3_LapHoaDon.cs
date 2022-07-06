@@ -65,6 +65,15 @@ namespace QuanLiTiemChung
             date_ntns.Value = User.current.NgaySinh;
             txt_ten.Text = User.current.TenKH;
             txt_sdt.Text = User.current.SDT;
+            int TongTien = 0;
+            foreach(DataRow row in data.Rows)
+            {
+                int SoLuong = Int32.Parse(row["SoLuong"].ToString());
+                int DonGia = Int32.Parse(row["DonGia"].ToString());
+                TongTien = TongTien + (SoLuong * DonGia);
+            }
+            
+            txt_thanhtien.Text = TongTien.ToString();
         }
 
         private void gv_dsGoiTiem_CellContentClick(object sender, DataGridViewCellEventArgs e)
