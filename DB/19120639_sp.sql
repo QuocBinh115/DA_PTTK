@@ -61,11 +61,11 @@ END; $$
 
 drop procedure if exists `sp_ThemVaccine`;
 DELIMITER $$
-CREATE PROCEDURE `sp_ThemVaccine` (i_Ten varchar(50), i_NXS varchar(50), i_HSD date)
+CREATE PROCEDURE `sp_ThemVaccine` (i_Ten varchar(50), i_NXS varchar(50),i_giamua int, i_HSD date)
 BEGIN
 	declare i_MaVX varchar(10);
     set i_MaVX = f_AutoMaVX();
-	INSERT INTO vaccine VALUES (i_MaVX, i_Ten, i_NXS, i_HSD);
+	INSERT INTO vaccine VALUES (i_MaVX, i_Ten, i_NXS,-i_giamua, i_HSD, 0);
     select i_MaVX;
 END; $$
 
