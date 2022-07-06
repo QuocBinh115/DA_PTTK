@@ -30,7 +30,6 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmTT4_TaoPhieuHen));
             this.lb_diachi = new System.Windows.Forms.Label();
-            this.txt_ngaysinh = new System.Windows.Forms.TextBox();
             this.lb_ngaysinh = new System.Windows.Forms.Label();
             this.txt_sdt = new System.Windows.Forms.TextBox();
             this.lb_sdt = new System.Windows.Forms.Label();
@@ -48,6 +47,7 @@
             this.gv_thongtindonhang = new System.Windows.Forms.DataGridView();
             this.lb_phieuhen = new System.Windows.Forms.Label();
             this.panel_button = new System.Windows.Forms.Panel();
+            this.date_ngayhen = new System.Windows.Forms.DateTimePicker();
             this.txt_thoigian = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.txt_tenvaccine = new System.Windows.Forms.TextBox();
@@ -77,16 +77,6 @@
             this.lb_diachi.TabIndex = 16;
             this.lb_diachi.Text = "Địa chỉ";
             // 
-            // txt_ngaysinh
-            // 
-            this.txt_ngaysinh.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_ngaysinh.Location = new System.Drawing.Point(477, 101);
-            this.txt_ngaysinh.Margin = new System.Windows.Forms.Padding(4);
-            this.txt_ngaysinh.Name = "txt_ngaysinh";
-            this.txt_ngaysinh.ReadOnly = true;
-            this.txt_ngaysinh.Size = new System.Drawing.Size(480, 27);
-            this.txt_ngaysinh.TabIndex = 15;
-            // 
             // lb_ngaysinh
             // 
             this.lb_ngaysinh.AutoSize = true;
@@ -94,9 +84,9 @@
             this.lb_ngaysinh.Location = new System.Drawing.Point(473, 73);
             this.lb_ngaysinh.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lb_ngaysinh.Name = "lb_ngaysinh";
-            this.lb_ngaysinh.Size = new System.Drawing.Size(198, 24);
+            this.lb_ngaysinh.Size = new System.Drawing.Size(139, 24);
             this.lb_ngaysinh.TabIndex = 14;
-            this.lb_ngaysinh.Text = "Ngày tháng năm sinh";
+            this.lb_ngaysinh.Text = "Ngày hẹn tiêm\r\n";
             // 
             // txt_sdt
             // 
@@ -273,13 +263,13 @@
             // 
             this.panel_button.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(247)))), ((int)(((byte)(247)))));
             this.panel_button.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel_button.Controls.Add(this.date_ngayhen);
             this.panel_button.Controls.Add(this.txt_thoigian);
             this.panel_button.Controls.Add(this.label1);
             this.panel_button.Controls.Add(this.txt_tenvaccine);
             this.panel_button.Controls.Add(this.label2);
             this.panel_button.Controls.Add(this.txt_diachi);
             this.panel_button.Controls.Add(this.lb_diachi);
-            this.panel_button.Controls.Add(this.txt_ngaysinh);
             this.panel_button.Controls.Add(this.lb_ngaysinh);
             this.panel_button.Controls.Add(this.txt_sdt);
             this.panel_button.Controls.Add(this.lb_sdt);
@@ -294,6 +284,16 @@
             this.panel_button.Name = "panel_button";
             this.panel_button.Size = new System.Drawing.Size(963, 301);
             this.panel_button.TabIndex = 0;
+            // 
+            // date_ngayhen
+            // 
+            this.date_ngayhen.CalendarFont = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.date_ngayhen.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.date_ngayhen.Location = new System.Drawing.Point(477, 101);
+            this.date_ngayhen.Margin = new System.Windows.Forms.Padding(4);
+            this.date_ngayhen.Name = "date_ngayhen";
+            this.date_ngayhen.Size = new System.Drawing.Size(480, 27);
+            this.date_ngayhen.TabIndex = 22;
             // 
             // txt_thoigian
             // 
@@ -398,7 +398,7 @@
             this.bt_taophieuhen.UseVisualStyleBackColor = false;
             this.bt_taophieuhen.Click += new System.EventHandler(this.bt_taophieuhen_Click);
             // 
-            // frmTT5_TaoPhieuHen
+            // frmTT4_TaoPhieuHen
             // 
             this.AcceptButton = this.bt_taophieuhen;
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -411,7 +411,7 @@
             this.Controls.Add(this.panel_main);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.Name = "frmTT5_TaoPhieuHen";
+            this.Name = "frmTT4_TaoPhieuHen";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Tạo Phiếu Hẹn";
             this.panel_toolbar.ResumeLayout(false);
@@ -432,7 +432,6 @@
         #endregion
 
         private System.Windows.Forms.Label lb_diachi;
-        private System.Windows.Forms.TextBox txt_ngaysinh;
         private System.Windows.Forms.Label lb_ngaysinh;
         private System.Windows.Forms.TextBox txt_sdt;
         private System.Windows.Forms.Label lb_sdt;
@@ -459,5 +458,6 @@
         private System.Windows.Forms.Label lb_ten;
         private System.Windows.Forms.Button bt_huy;
         private System.Windows.Forms.Button bt_taophieuhen;
+        private System.Windows.Forms.DateTimePicker date_ngayhen;
     }
 }

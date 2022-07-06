@@ -38,7 +38,6 @@ namespace QuanLiTiemChung
             else
             {
                 checkNu.Checked = true;
-
             }
         }
 
@@ -50,6 +49,26 @@ namespace QuanLiTiemChung
         private void bt_huy_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void btnHoanThanh_Click(object sender, EventArgs e)
+        {
+            string cmnd = txtCMND.Text;
+            KhachHang GiamHo = new KhachHang("", cmnd);
+            if (!GiamHo.KiemTraTonTai())
+            {
+                GiamHo.TenKH = txtHoTen.Text;
+                GiamHo.SDT = txtSDT.Text;
+                GiamHo.NgaySinh = date_ngaySinh.Value;
+                GiamHo.quanhe = txtQuanHe.Text;
+                GiamHo.DiaChi = txtDiaChi.Text;
+                if (!GiamHo.ThemGiamHo()) {
+                    return;
+                };
+            }
+            
+            frmChonVacXin frm = new frmChonVacXin();
+            frm.Show();
         }
     }
 }

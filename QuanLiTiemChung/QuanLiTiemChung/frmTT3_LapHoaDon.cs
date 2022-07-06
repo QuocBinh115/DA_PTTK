@@ -14,6 +14,7 @@ namespace QuanLiTiemChung
     {
         DataTable ChiTietHD;
         string LoaiHD;
+
         public frmTT3_LapHoaDon()
         {
             InitializeComponent();
@@ -36,12 +37,14 @@ namespace QuanLiTiemChung
 
         private void bt_laphoadon_Click(object sender, EventArgs e)
         {
-            //frmTT4_TaoPhieuHen taophieuhen = new frmTT4_TaoPhieuHen();
-            //this.Visible = false;
-            //taophieuhen.Show();
-            //this.Visible = true;
             HoaDon hd = new HoaDon(ChiTietHD, LoaiHD);
             hd.TaoHoaDon(DateTime.Today);
+
+            frmTT4_TaoPhieuHen taophieuhen = new frmTT4_TaoPhieuHen();
+            this.Visible = true;
+            taophieuhen.LoadData(ChiTietHD, "MH");
+            taophieuhen.Show();
+            this.Visible = false;
         }
 
         private void lb_thanhtien_Click(object sender, EventArgs e)
@@ -63,6 +66,29 @@ namespace QuanLiTiemChung
             date_ntns.Value = User.current.NgaySinh;
             txt_ten.Text = User.current.TenKH;
             txt_sdt.Text = User.current.SDT;
+            int TongTien = 0;
+            foreach(DataRow row in data.Rows)
+            {
+                int SoLuong = Int32.Parse(row["SoLuong"].ToString());
+                int DonGia = Int32.Parse(row["DonGia"].ToString());
+                TongTien = TongTien + (SoLuong * DonGia);
+            }
+            
+            txt_thanhtien.Text = TongTien.ToString();
+        }
+
+        private void gv_dsGoiTiem_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void bt_chiadottt_Click(object sender, EventArgs e)
+        {
+            frmTT2_ChiaDotThanhToan chiaDotThanhToan = new frmTT2_ChiaDotThanhToan();
+            //this.Visible = true;
+            chiaDotThanhToan.LoadData(ChiTietHD, "MH");
+            chiaDotThanhToan.Show();
+            //this.Visible = false;
         }
     }
 }
