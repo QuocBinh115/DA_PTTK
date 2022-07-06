@@ -38,6 +38,9 @@ namespace QuanLiTiemChung
             this.label4 = new System.Windows.Forms.Label();
             this.HSD_input = new System.Windows.Forms.DateTimePicker();
             this.ThemVaccine_btn = new System.Windows.Forms.Button();
+            this.GiaMua_input = new System.Windows.Forms.NumericUpDown();
+            this.label5 = new System.Windows.Forms.Label();
+            ((System.ComponentModel.ISupportInitialize)(this.GiaMua_input)).BeginInit();
             this.SuspendLayout();
             // 
             // label3
@@ -100,7 +103,7 @@ namespace QuanLiTiemChung
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(269, 221);
+            this.label4.Location = new System.Drawing.Point(269, 203);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(123, 25);
             this.label4.TabIndex = 11;
@@ -108,26 +111,54 @@ namespace QuanLiTiemChung
             // 
             // HSD_input
             // 
+            this.HSD_input.CustomFormat = "";
             this.HSD_input.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.HSD_input.Location = new System.Drawing.Point(274, 249);
+            this.HSD_input.Location = new System.Drawing.Point(274, 231);
             this.HSD_input.Name = "HSD_input";
             this.HSD_input.Size = new System.Drawing.Size(594, 30);
             this.HSD_input.TabIndex = 12;
             // 
             // ThemVaccine_btn
             // 
-            this.ThemVaccine_btn.Location = new System.Drawing.Point(469, 348);
+            this.ThemVaccine_btn.Location = new System.Drawing.Point(467, 383);
             this.ThemVaccine_btn.Name = "ThemVaccine_btn";
             this.ThemVaccine_btn.Size = new System.Drawing.Size(177, 46);
-            this.ThemVaccine_btn.TabIndex = 13;
+            this.ThemVaccine_btn.TabIndex = 14;
             this.ThemVaccine_btn.Text = "Thêm";
             this.ThemVaccine_btn.UseVisualStyleBackColor = true;
+            this.ThemVaccine_btn.Click += new System.EventHandler(this.ThemVaccine_btn_Click);
+            // 
+            // GiaMua_input
+            // 
+            this.GiaMua_input.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.GiaMua_input.Location = new System.Drawing.Point(274, 312);
+            this.GiaMua_input.Maximum = new decimal(new int[] {
+            1410065408,
+            2,
+            0,
+            0});
+            this.GiaMua_input.Name = "GiaMua_input";
+            this.GiaMua_input.Size = new System.Drawing.Size(214, 30);
+            this.GiaMua_input.TabIndex = 13;
+            this.GiaMua_input.ThousandsSeparator = true;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(269, 284);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(152, 25);
+            this.label5.TabIndex = 15;
+            this.label5.Text = "Giá mua (VND):";
             // 
             // frm_ThemMoiVaccine
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1167, 450);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.GiaMua_input);
             this.Controls.Add(this.ThemVaccine_btn);
             this.Controls.Add(this.HSD_input);
             this.Controls.Add(this.label4);
@@ -139,6 +170,7 @@ namespace QuanLiTiemChung
             this.Controls.Add(this.FormName_label);
             this.Name = "frm_ThemMoiVaccine";
             this.Text = "Thêm mới vaccine";
+            ((System.ComponentModel.ISupportInitialize)(this.GiaMua_input)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -155,5 +187,7 @@ namespace QuanLiTiemChung
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.DateTimePicker HSD_input;
         private System.Windows.Forms.Button ThemVaccine_btn;
+        private System.Windows.Forms.NumericUpDown GiaMua_input;
+        private System.Windows.Forms.Label label5;
     }
 }
