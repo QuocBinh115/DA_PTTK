@@ -13,7 +13,9 @@ namespace QuanLiTiemChung
     public partial class frmTT2_ChiaDotThanhToan : Form
     {
         DataTable ChiTietHD;
+        int TongTien = 0;
         string LoaiHD;
+        DateTime NgayHen;
 
         public frmTT2_ChiaDotThanhToan()
         {
@@ -23,11 +25,12 @@ namespace QuanLiTiemChung
         private void bt_laphoadon_Click(object sender, EventArgs e)
         {
             HoaDon hd = new HoaDon(ChiTietHD, LoaiHD);
-            hd.TaoHoaDon(DateTime.Today);
+            hd.TaoHoaDon(NgayHen);
 
             frmTT4_TaoPhieuHen taophieuhen = new frmTT4_TaoPhieuHen();
             this.Visible = true;
             taophieuhen.LoadData(ChiTietHD, "MH");
+            taophieuhen.NgayHen(NgayHen);
             taophieuhen.Show();
             this.Visible = false;
         }
@@ -66,10 +69,9 @@ namespace QuanLiTiemChung
             else if (cb_dtt.SelectedIndex == 4) count = 10;
             else if (cb_dtt.SelectedIndex == 5) count = 13;
             
-            int tongcong = Int32.Parse(txt_tongcong.Text);
-            float mucthanhtoan = (float)tongcong / count;
-            txt_mtt.Text = mucthanhtoan.ToString() + " VNĐ/Tháng";
-            txt_thanhtien.Text = mucthanhtoan.ToString() + " VNĐ"; 
+            float mucthanhtoan = (float)TongTien / count;
+            txt_mtt.Text = mucthanhtoan.ToString("#,0.###") + " VNĐ/Tháng";
+            txt_thanhtien.Text = mucthanhtoan.ToString("#,0.###") + " VNĐ"; 
         }
 
         public void LoadData(DataTable data, string type)
@@ -77,14 +79,18 @@ namespace QuanLiTiemChung
             ChiTietHD = data;
             gv_thongtindonhang.DataSource = ChiTietHD;
             LoaiHD = type;
-            int TongTien = 0;
             foreach (DataRow row in data.Rows)
             {
                 int SoLuong = Int32.Parse(row["SoLuong"].ToString());
                 int DonGia = Int32.Parse(row["DonGia"].ToString());
                 TongTien = TongTien + (SoLuong * DonGia);
             }
-            txt_tongcong.Text = TongTien.ToString();
+            txt_tongcong.Text = TongTien.ToString("#,0.###") + " VNĐ";
+        }
+
+        public void LayNgayHen(DateTime date)
+        {
+            NgayHen = date;
         }
     }
 }

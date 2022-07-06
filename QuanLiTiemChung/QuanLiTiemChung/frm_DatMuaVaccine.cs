@@ -158,6 +158,8 @@ namespace QuanLiTiemChung
             newHoaDon.TongTien = newdonDatHang.TongTien;
             //newHoaDon.TaoHoaDonMoi_Cho_DonHang();
 
+            frmTT3_LapHoaDon lapHoaDon = new frmTT3_LapHoaDon();
+            lapHoaDon.Show();
         }
     }
 }

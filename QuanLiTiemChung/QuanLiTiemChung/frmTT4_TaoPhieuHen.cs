@@ -48,9 +48,14 @@ namespace QuanLiTiemChung
             LoaiHD = type;
             txt_diachi.Text = User.current.DiaChi;
             txt_ma.Text = User.current.MaKH;
-            date_ngayhen.Value = DateTime.Today;
+
             txt_ten.Text = User.current.TenKH;
             txt_sdt.Text = User.current.SDT;
+        }
+
+        public void NgayHen(DateTime date)
+        {
+            date_ngayhen.Value = date;
         }
     }
 }

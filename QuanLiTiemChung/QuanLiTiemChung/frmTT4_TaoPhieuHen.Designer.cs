@@ -48,10 +48,6 @@
             this.lb_phieuhen = new System.Windows.Forms.Label();
             this.panel_button = new System.Windows.Forms.Panel();
             this.date_ngayhen = new System.Windows.Forms.DateTimePicker();
-            this.txt_thoigian = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.txt_tenvaccine = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
             this.txt_diachi = new System.Windows.Forms.TextBox();
             this.txt_ten = new System.Windows.Forms.TextBox();
             this.lb_ten = new System.Windows.Forms.Label();
@@ -212,7 +208,7 @@
             this.panel_main.Location = new System.Drawing.Point(15, 67);
             this.panel_main.Margin = new System.Windows.Forms.Padding(4);
             this.panel_main.Name = "panel_main";
-            this.panel_main.Size = new System.Drawing.Size(980, 553);
+            this.panel_main.Size = new System.Drawing.Size(980, 496);
             this.panel_main.TabIndex = 7;
             // 
             // lb_ttKH
@@ -264,10 +260,6 @@
             this.panel_button.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(247)))), ((int)(((byte)(247)))));
             this.panel_button.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel_button.Controls.Add(this.date_ngayhen);
-            this.panel_button.Controls.Add(this.txt_thoigian);
-            this.panel_button.Controls.Add(this.label1);
-            this.panel_button.Controls.Add(this.txt_tenvaccine);
-            this.panel_button.Controls.Add(this.label2);
             this.panel_button.Controls.Add(this.txt_diachi);
             this.panel_button.Controls.Add(this.lb_diachi);
             this.panel_button.Controls.Add(this.lb_ngaysinh);
@@ -282,60 +274,19 @@
             this.panel_button.Location = new System.Drawing.Point(8, 244);
             this.panel_button.Margin = new System.Windows.Forms.Padding(4);
             this.panel_button.Name = "panel_button";
-            this.panel_button.Size = new System.Drawing.Size(963, 301);
+            this.panel_button.Size = new System.Drawing.Size(963, 241);
             this.panel_button.TabIndex = 0;
             // 
             // date_ngayhen
             // 
             this.date_ngayhen.CalendarFont = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.date_ngayhen.Cursor = System.Windows.Forms.Cursors.Default;
             this.date_ngayhen.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.date_ngayhen.Location = new System.Drawing.Point(477, 101);
             this.date_ngayhen.Margin = new System.Windows.Forms.Padding(4);
             this.date_ngayhen.Name = "date_ngayhen";
             this.date_ngayhen.Size = new System.Drawing.Size(480, 27);
             this.date_ngayhen.TabIndex = 22;
-            // 
-            // txt_thoigian
-            // 
-            this.txt_thoigian.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_thoigian.Location = new System.Drawing.Point(477, 221);
-            this.txt_thoigian.Margin = new System.Windows.Forms.Padding(4);
-            this.txt_thoigian.Name = "txt_thoigian";
-            this.txt_thoigian.ReadOnly = true;
-            this.txt_thoigian.Size = new System.Drawing.Size(480, 27);
-            this.txt_thoigian.TabIndex = 21;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Bahnschrift", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(473, 193);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(194, 24);
-            this.label1.TabIndex = 20;
-            this.label1.Text = "Thời gian tiêm chủng";
-            // 
-            // txt_tenvaccine
-            // 
-            this.txt_tenvaccine.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_tenvaccine.Location = new System.Drawing.Point(8, 221);
-            this.txt_tenvaccine.Margin = new System.Windows.Forms.Padding(4);
-            this.txt_tenvaccine.Name = "txt_tenvaccine";
-            this.txt_tenvaccine.ReadOnly = true;
-            this.txt_tenvaccine.Size = new System.Drawing.Size(455, 27);
-            this.txt_tenvaccine.TabIndex = 19;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Bahnschrift", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(4, 193);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(208, 24);
-            this.label2.TabIndex = 18;
-            this.label2.Text = "Tên vaccine được tiêm";
             // 
             // txt_diachi
             // 
@@ -372,7 +323,7 @@
             // 
             this.bt_huy.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.bt_huy.Font = new System.Drawing.Font("Bahnschrift", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bt_huy.Location = new System.Drawing.Point(794, 256);
+            this.bt_huy.Location = new System.Drawing.Point(794, 195);
             this.bt_huy.Margin = new System.Windows.Forms.Padding(4);
             this.bt_huy.Name = "bt_huy";
             this.bt_huy.Size = new System.Drawing.Size(163, 37);
@@ -388,7 +339,7 @@
             this.bt_taophieuhen.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.bt_taophieuhen.Font = new System.Drawing.Font("Bahnschrift", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bt_taophieuhen.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.bt_taophieuhen.Location = new System.Drawing.Point(593, 256);
+            this.bt_taophieuhen.Location = new System.Drawing.Point(593, 195);
             this.bt_taophieuhen.Margin = new System.Windows.Forms.Padding(4);
             this.bt_taophieuhen.Name = "bt_taophieuhen";
             this.bt_taophieuhen.Size = new System.Drawing.Size(193, 37);
@@ -406,7 +357,7 @@
             this.BackColor = System.Drawing.SystemColors.Control;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.CancelButton = this.bt_huy;
-            this.ClientSize = new System.Drawing.Size(1011, 633);
+            this.ClientSize = new System.Drawing.Size(1011, 575);
             this.Controls.Add(this.panel_toolbar);
             this.Controls.Add(this.panel_main);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -449,10 +400,6 @@
         private System.Windows.Forms.DataGridView gv_thongtindonhang;
         private System.Windows.Forms.Label lb_phieuhen;
         private System.Windows.Forms.Panel panel_button;
-        private System.Windows.Forms.TextBox txt_thoigian;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox txt_tenvaccine;
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txt_diachi;
         private System.Windows.Forms.TextBox txt_ten;
         private System.Windows.Forms.Label lb_ten;
