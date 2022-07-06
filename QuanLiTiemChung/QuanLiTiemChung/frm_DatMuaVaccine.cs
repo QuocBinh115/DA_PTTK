@@ -21,11 +21,12 @@ namespace QuanLiTiemChung
         private void frm_DatMuaVaccine_Load(object sender, EventArgs e)
         {
             //thêm header
-            ChonVaccine_table.ColumnCount = 3;
+            ChonVaccine_table.ColumnCount = 4;
             ChonVaccine_table.ColumnHeadersVisible = true;
             ChonVaccine_table.Columns[0].Name = "Số thứ tự";
             ChonVaccine_table.Columns[1].Name = "Tên Vaccine";
             ChonVaccine_table.Columns[2].Name = "Số lượng";
+            ChonVaccine_table.Columns[3].Name = "Đơn giá";
 
             //thêm cột xóa btn
             var revokeButton = new DataGridViewButtonColumn();
@@ -92,7 +93,7 @@ namespace QuanLiTiemChung
             ChonVaccine_table.Rows[index].Cells["Số thứ tự"].Value = index+1;
             ChonVaccine_table.Rows[index].Cells["Tên Vaccine"].Value = tenVX;
             ChonVaccine_table.Rows[index].Cells["Số lượng"].Value = Chon_SL_input.Value;
-
+            ChonVaccine_table.Rows[index].Cells["Đơn giá"].Value = Vaccine_DB_19120640.LayGiaVaccine(list_VX_unselected[tenVX]).ToString("#,0.###") + " vnđ";
 
             //add item selecte to list
             list_VX_selected.Add(list_VX_unselected[tenVX], decimal.ToInt32(Chon_SL_input.Value));
