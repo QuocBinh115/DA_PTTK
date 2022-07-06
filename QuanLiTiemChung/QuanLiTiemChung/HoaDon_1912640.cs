@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Data;
 
 namespace QuanLiTiemChung
 {
@@ -27,6 +28,30 @@ namespace QuanLiTiemChung
             MaHD = HoaDon_DB_19120640.TaoHoaDon(LoaiHD, MaKH, NgayHen, NguoiLap);
             donDatHang.TaoDonHangMoi(MaHD);
             return MaHD;
+        }
+
+
+        //Hàm này dùng để lấy data table từ đơn hàng
+        public static DataTable LayDatatable()
+        {
+            DataTable dt = new DataTable();
+            dt.Columns.Add("STT");
+            dt.Columns.Add("Tên Vaccine");
+            dt.Columns.Add("Số lượng");
+            dt.Columns.Add("Đơn Giá");
+            int count = 0;
+            foreach (var ctdh in donDatHang.list_ctDatHang)
+            {
+                DataRow dRow = dt.NewRow();
+                count += 1;
+                dRow[0] = count;
+                dRow[1] = Vaccine_DB_19120640.LayTenVaccine(ctdh.MaVX);
+                dRow[2] = ctdh.Soluong;
+                dRow[3] = Vaccine_DB_19120640.LayGiaVaccine(ctdh.MaVX).ToString("#,0.###") + " vnđ";
+                dt.Rows.Add(dRow);
+            }
+            return dt;
+            
         }
     }
 }

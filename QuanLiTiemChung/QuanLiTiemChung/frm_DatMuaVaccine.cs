@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Windows.Forms;
+using System.Data;
 
 namespace QuanLiTiemChung
 {
@@ -156,9 +157,8 @@ namespace QuanLiTiemChung
             HoaDon_1912640.donDatHang = new DonDatHang();
             HoaDon_1912640.donDatHang = newdonDatHang;
             HoaDon_1912640.TongTien = newdonDatHang.TongTien;
-            HoaDon_1912640.TaoHoaDonMoi_Cho_DonHang();
+            DataTable dt = HoaDon_1912640.LayDatatable();
             
-
         }
     }
 }
