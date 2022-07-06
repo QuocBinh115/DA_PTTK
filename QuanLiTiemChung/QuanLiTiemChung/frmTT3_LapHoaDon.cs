@@ -41,11 +41,9 @@ namespace QuanLiTiemChung
             hd.TaoHoaDon(date_ngayhen.Value);
 
             frmTT4_TaoPhieuHen taophieuhen = new frmTT4_TaoPhieuHen();
-            this.Visible = true;
             taophieuhen.LoadData(ChiTietHD, "MH");
             taophieuhen.NgayHen(date_ngayhen.Value);
             taophieuhen.Show();
-            this.Visible = false;
         }
 
         private void lb_thanhtien_Click(object sender, EventArgs e)
@@ -102,11 +100,9 @@ namespace QuanLiTiemChung
         private void bt_chiadottt_Click(object sender, EventArgs e)
         {
             frmTT2_ChiaDotThanhToan chiaDotThanhToan = new frmTT2_ChiaDotThanhToan();
-            this.Visible = true;
             chiaDotThanhToan.LoadData(ChiTietHD, LoaiHD);
             chiaDotThanhToan.LayNgayHen(date_ngayhen.Value);
             chiaDotThanhToan.Show();
-            this.Visible = false;
         }
     }
 }

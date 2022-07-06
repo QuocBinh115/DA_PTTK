@@ -28,11 +28,9 @@ namespace QuanLiTiemChung
             hd.TaoHoaDon(NgayHen);
 
             frmTT4_TaoPhieuHen taophieuhen = new frmTT4_TaoPhieuHen();
-            this.Visible = true;
             taophieuhen.LoadData(ChiTietHD, LoaiHD);
             taophieuhen.NgayHen(NgayHen);
             taophieuhen.Show();
-            this.Visible = false;
         }
 
         private void label1_Click(object sender, EventArgs e)
