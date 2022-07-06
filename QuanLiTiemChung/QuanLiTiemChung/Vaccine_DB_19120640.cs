@@ -120,5 +120,42 @@ namespace QuanLiTiemChung
             }
             return result;
         }
+        public static string LayTenVaccine(string MaVX)
+        {
+             
+            MySqlConnection conn = DBUtils.GetDBConnection();
+            conn.Open();
+            MySqlDataAdapter da = new MySqlDataAdapter();
+            DataTable dt = new DataTable();
+            string sql_cmd;
+            sql_cmd = "select TenVX from Vaccine where MaVX ='"+MaVX+"' ;";
+            string result ="";
+
+
+            try
+            {
+                MySqlCommand cmd = new MySqlCommand(sql_cmd, conn);
+                cmd.ExecuteNonQuery();
+                da.SelectCommand = cmd;
+                da.Fill(dt);
+                if(dt != null)
+                {
+                    result = dt.Rows[0][0].ToString();
+                }
+
+            }
+            catch (Exception error)
+            {
+                Console.WriteLine("Error: " + error);
+                Console.WriteLine(error.StackTrace);
+            }
+            finally
+            {
+                conn.Close();
+                conn.Dispose();
+            }
+            return result;
+        }
+
     }
 }
