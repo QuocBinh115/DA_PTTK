@@ -47,7 +47,7 @@ namespace QuanLiTiemChung
                 dRow[0] = count;
                 dRow[1] = Vaccine_DB_19120640.LayTenVaccine(ctdh.MaVX);
                 dRow[2] = ctdh.Soluong;
-                dRow[3] = Vaccine_DB_19120640.LayGiaVaccine(ctdh.MaVX).ToString("#,0.###") + " vnđ";
+                dRow[3] = Vaccine_DB_19120640.LayGiaVaccine(ctdh.MaVX);
                 dt.Rows.Add(dRow);
             }
             return dt;
