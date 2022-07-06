@@ -25,3 +25,10 @@ set i_MaGH = f_AutoMaKH();
 	INSERT INTO khachhang(MaKH, HoTenKH, NgaySinh, GioiTinh, DiaChi, CMND, SDT) VALUES(i_MaGH, i_HoTen, i_NgaySinh, i_GioiTinh, i_DiaChi, i_CMND, i_SDT);
 	INSERT INTO nguoigiamho(MaKH, NguoiGiamHo, QuanHe) VALUES (i_MaKH,i_MaGH, i_qh);
 END; $$
+
+drop procedure if exists `sp_CapNhatNgayHen`;
+DELIMITER $$
+CREATE PROCEDURE `sp_CapNhatNgayHen` (i_MaHD varchar(10), i_NgayHen date)
+BEGIN
+    Update HoaDon set Ngayhen=i_NgayHen where MaHD=i_MaHD;
+END; $$
