@@ -44,8 +44,7 @@ namespace QuanLiTiemChung
     }
     static class User
     {
-        public static KhachHang current;
-        // = new KhachHang("KH00000000");
+        public static KhachHang current = new KhachHang("KH00000000");
 
     }
 }
