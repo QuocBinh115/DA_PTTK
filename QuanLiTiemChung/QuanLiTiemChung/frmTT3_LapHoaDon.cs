@@ -41,11 +41,9 @@ namespace QuanLiTiemChung
             hd.TaoHoaDon(date_ngayhen.Value);
 
             frmTT4_TaoPhieuHen taophieuhen = new frmTT4_TaoPhieuHen();
-            this.Visible = true;
             taophieuhen.LoadData(ChiTietHD, "MH");
             taophieuhen.NgayHen(date_ngayhen.Value);
             taophieuhen.Show();
-            this.Visible = false;
         }
 
         private void lb_thanhtien_Click(object sender, EventArgs e)

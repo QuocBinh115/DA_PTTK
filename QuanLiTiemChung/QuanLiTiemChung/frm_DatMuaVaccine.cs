@@ -161,9 +161,9 @@ namespace QuanLiTiemChung
 
             frmTT3_LapHoaDon thanhtoan = new frmTT3_LapHoaDon();
             thanhtoan.LoadData(dt, "DH");
-            //this.Visible = false;
+            this.Visible = true;
             thanhtoan.Show();
-            //this.Visible = true;
+            this.Visible = false;
         }
 
         private void FormName_label_Click(object sender, EventArgs e)
@@ -171,6 +171,16 @@ namespace QuanLiTiemChung
 
             frmTT3_LapHoaDon lapHoaDon = new frmTT3_LapHoaDon();
             lapHoaDon.Show();
+        }
+
+        private void bt_huy_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void bt_DangXuat_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
     }
 }
