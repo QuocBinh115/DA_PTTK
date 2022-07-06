@@ -43,15 +43,5 @@ namespace QuanLiTiemChung
         {
             return HoaDonDB.DocDSHoaDon();
         }
-
-        public int TongTien()
-        {
-            int tongtien = 0;
-            if(LoaiHD == "DH")
-            {
-                tongtien = HoaDon_1912640.TongTien;
-            }
-            return tongtien;
-        }
     }
 }
