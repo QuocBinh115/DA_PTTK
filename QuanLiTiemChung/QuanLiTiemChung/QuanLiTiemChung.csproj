@@ -124,6 +124,12 @@
     <Compile Include="frm_DatMuaVaccine.Designer.cs">
       <DependentUpon>frm_DatMuaVaccine.cs</DependentUpon>
     </Compile>
+    <Compile Include="frm_DuyetDonDathang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_DuyetDonDathang.Designer.cs">
+      <DependentUpon>frm_DuyetDonDathang.cs</DependentUpon>
+    </Compile>
     <Compile Include="frm_ThemMoiVaccine.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -184,6 +190,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frm_DatMuaVaccine.resx">
       <DependentUpon>frm_DatMuaVaccine.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_DuyetDonDathang.resx">
+      <DependentUpon>frm_DuyetDonDathang.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frm_ThemMoiVaccine.resx">
       <DependentUpon>frm_ThemMoiVaccine.cs</DependentUpon>

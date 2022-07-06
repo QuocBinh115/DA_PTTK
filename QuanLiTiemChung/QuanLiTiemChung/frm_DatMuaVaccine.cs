@@ -11,8 +11,7 @@ namespace QuanLiTiemChung
         Dictionary<string, int> list_VX_selected = new Dictionary<string, int>();
         //danh sách chưa thêm
         Dictionary<string,string> list_VX_unselected = new Dictionary<string, string>();
-
-
+        
         public frm_DatMuaVaccine()
         {
             InitializeComponent();
@@ -151,13 +150,14 @@ namespace QuanLiTiemChung
                 newdonDatHang.list_ctDatHang.Add(newCT);
             }
             newdonDatHang.TinhTongTien();
-            HoaDon_1912640 newHoaDon = new HoaDon_1912640();
-            newHoaDon.MaKH = User.current.MaKH;
-            newHoaDon.LoaiHD = "DH";
-            newHoaDon.donDatHang = new DonDatHang();
-            newHoaDon.donDatHang = newdonDatHang;
-            newHoaDon.TongTien = newdonDatHang.TongTien;
-            //newHoaDon.TaoHoaDonMoi_Cho_DonHang();
+
+            HoaDon_1912640.MaKH = User.current.MaKH;
+            HoaDon_1912640.LoaiHD = "DH";
+            HoaDon_1912640.donDatHang = new DonDatHang();
+            HoaDon_1912640.donDatHang = newdonDatHang;
+            HoaDon_1912640.TongTien = newdonDatHang.TongTien;
+            HoaDon_1912640.TaoHoaDonMoi_Cho_DonHang();
+            
 
         }
     }
