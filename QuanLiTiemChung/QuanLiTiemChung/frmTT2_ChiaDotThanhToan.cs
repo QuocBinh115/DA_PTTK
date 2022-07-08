@@ -53,6 +53,8 @@ namespace QuanLiTiemChung
         private void bt_huy_Click(object sender, EventArgs e)
         {
             this.Close();
+            frmTT3_LapHoaDon laphoadon = new frmTT3_LapHoaDon();
+            laphoadon.ShowDialog();
         }
 
         private void cb_dtt_SelectedValueChanged(object sender, EventArgs e)

@@ -129,7 +129,7 @@ namespace QuanLiTiemChung
             int len = data.Rows.Count;
             if (len < 1)
             {
-                MessageBox.Show("Không có gì để xóa");
+                MessageBox.Show("Vui lòng chọn vaccine để thanh toán!","Thông báo!");
                 return;
             }
 
@@ -137,9 +137,9 @@ namespace QuanLiTiemChung
             thanhtoan.LoadData(data,"MH");
 
 
-            //this.Visible = false;
+            this.Visible = true;
             thanhtoan.Show();
-            //this.Visible = true;
+            this.Visible = false;
         }
 
         private void bt_DangXuat_Click(object sender, EventArgs e)
