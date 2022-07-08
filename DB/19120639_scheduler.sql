@@ -1,0 +1,7 @@
+DROP EVENT IF EXISTS ev_XepLich;
+DELIMITER $$
+CREATE EVENT ev_XepLich
+ON SCHEDULE EVERY 7 day
+STARTS '2022-07-10 00:00:00'
+DO
+call sp_XepLich(); $$
