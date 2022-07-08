@@ -42,5 +42,15 @@ namespace QuanLiTiemChung
         {
             this.Close();
         }
+
+        private void btnChuyenFrom_Click(object sender, EventArgs e)
+        {
+            frmDangKyLichRanh frmDangKyLichRanh = new frmDangKyLichRanh();
+            frmDangKyLichRanh.Show();
+            frmDangKyLichRanh.Closed += (s, args) => {
+                this.Show();
+            };
+            this.Hide();
+        }
     }
 }
