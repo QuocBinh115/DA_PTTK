@@ -54,9 +54,7 @@ namespace QuanLiTiemChung
         {
             this.Close();
             frmTT3_LapHoaDon laphoadon = new frmTT3_LapHoaDon();
-            this.Visible = false;
             laphoadon.ShowDialog();
-            this.Visible = true;
         }
 
         private void cb_dtt_SelectedValueChanged(object sender, EventArgs e)
