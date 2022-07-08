@@ -13,6 +13,7 @@ namespace QuanLiTiemChung
         DataTable ctHD;
         string LoaiHD;
         DateTime NgayHen;
+        int ThanhTien;
 
         public HoaDon(DataTable input,string type)
         {
@@ -33,8 +34,8 @@ namespace QuanLiTiemChung
             }
             else
             {
-                MaHD = HoaDonDB.ThemDH(NgayHen);
-
+                HoaDon_1912640.NgayHen = NgayHen;
+                MaHD = HoaDon_1912640.TaoHoaDonMoi_Cho_DonHang();
             }
             return true;
         }

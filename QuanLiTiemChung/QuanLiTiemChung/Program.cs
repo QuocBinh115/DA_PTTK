@@ -4,6 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using MySql.Data.MySqlClient;
+using QuanLiTiemChung.PhieuKhamSangLoc;
 using sqlConnect;
 
 namespace QuanLiTiemChung
@@ -32,7 +33,7 @@ namespace QuanLiTiemChung
             Console.Read();
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmChonVacXin());
+            Application.Run(new frmDangKyTiemChung());
             
         }
 

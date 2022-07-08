@@ -24,7 +24,7 @@ namespace QuanLiTiemChung
 
         private void frmDangKyVacXin_Load(object sender, EventArgs e)
         {
-            KhachHang.LayThongTin("KH00000000");
+            User.current.LayThongTin();
 
             lstDSGoiTiem.DataSource = GoiTiem.DocDSGoiTiem();
             lstDSGoiTiem.ValueMember = "MaGT";
@@ -48,14 +48,16 @@ namespace QuanLiTiemChung
         private void XemTTGoiTiem()
         {
             string MaGT = lstDSGoiTiem.SelectedValue.ToString();
-            gv_ChiTietGoi.DataSource = GoiTiem.DocTTGoiTiem(MaGT);
+            GoiTiem a = new GoiTiem(MaGT, 0);
+            gv_ChiTietGoi.DataSource = a.DocTTGoiTiem();
         }
 
         private void btnXoa_Click(object sender, EventArgs e)
         {
-            if(gv_DSChon.DataSource is null)
+            int len = data.Rows.Count;
+            if ( len<1)
             {
-                MessageBox.Show("Có gì đâu mà xóa");
+                MessageBox.Show("Không có gì để xóa");
                 return;
             }
             
@@ -79,16 +81,32 @@ namespace QuanLiTiemChung
             string MaGT = obj["MaGT"].ToString();
             string TenGT = obj["TenGT"].ToString();
             string DonGia = obj["DonGia"].ToString();
+            
 
             DataRow row = data.Rows.Find(MaGT);
 
             if (row==null)
             {
                 object[] o = { data.Rows.Count + 1, MaGT, TenGT, 1, DonGia };
+                GoiTiem a = new GoiTiem(MaGT, 1);
+                if (!a.KiemtraTTGoiTiem())
+                {
+                    MessageBox.Show("Chọn gói khác nhé!");
+                    return;
+                }
                 data.Rows.Add(o);
             }
             else
             {
+                int SoLuong = Int32.Parse(row["SoLuong"].ToString()) + 1;
+
+                GoiTiem a = new GoiTiem(MaGT, SoLuong);
+                if (!a.KiemtraTTGoiTiem())
+                {
+                    MessageBox.Show("Chọn gói khác nhé!");
+                    return;
+                }
+
                 row["SoLuong"] = Int32.Parse(row["SoLuong"].ToString())+1;
 
             }
@@ -105,21 +123,16 @@ namespace QuanLiTiemChung
             gv_DSChon.DataSource = data;
         }
 
-        private void btn_ThanhToan_Click(object sender, EventArgs e)
-        {
-            
-            HoaDon hd = new HoaDon(data,"MH");
-            frmTT1_Main frm = new frmTT1_Main();
-            frm.Show();
-        }
 
         private void bt_laphoadon_Click(object sender, EventArgs e)
         {
-            if (gv_DSChon.DataSource is null)
+            int len = data.Rows.Count;
+            if (len < 1)
             {
                 MessageBox.Show("Vui lòng chọn vaccine để thanh toán!","Thông báo!");
                 return;
             }
+
             frmTT3_LapHoaDon thanhtoan = new frmTT3_LapHoaDon();
             thanhtoan.LoadData(data,"MH");
 

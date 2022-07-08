@@ -12,11 +12,10 @@ namespace QuanLiTiemChung
 {
     public partial class frmTT1_Main : Form
     {
+        DataTable ChiTietHD;
         public frmTT1_Main()
         {
             InitializeComponent();
-            //this.Text = String.Empty;
-            //this.ControlBox = false;
         }
 
         private void lb_User_Click(object sender, EventArgs e)
@@ -67,9 +66,7 @@ namespace QuanLiTiemChung
 
         private void frmTT1_Main_Load(object sender, EventArgs e)
         {
-            cb_MHD.DataSource = HoaDon.LayDSHoaDon();
-            cb_MHD.DisplayMember = "MaHD";
-            cb_MHD.ValueMember = "MaHD";
+            txt_mahoadon.Text = "MaHD";
             XemCTHoaDon();
         }
 
@@ -79,7 +76,7 @@ namespace QuanLiTiemChung
         }
         private void XemCTHoaDon()
         {
-            string MaHD = cb_MHD.SelectedValue.ToString();
+            string MaHD = "HD00000011";
             gv_thongtindonhang.DataSource = ctHoaDon.LayCTHoaDon(MaHD);
         }
     }

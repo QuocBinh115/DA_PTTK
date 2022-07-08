@@ -578,10 +578,13 @@
         Qf4rwVWQ/nLAT8IjxPaI9v8BYYzkoAHiKBcAAAAASUVORK5CYII=
 </value>
   </data>
+  <metadata name="panel_main.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
   <data name="$this.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAeUAAADUCAIAAAAtA6yJAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        vgAADr4B6kKxwAAAAupJREFUeF7t1AEJACAQADH7tzLL8z2s4cFgGXbuLAD/8zVAg68BGnwN0OBrgAZf
+        vAAADrwBlbxySQAAAupJREFUeF7t1AEJACAQADH7tzLL8z2s4cFgGXbuLAD/8zVAg68BGnwN0OBrgAZf
         AzT4GqDB1wANvgZo8DVAg68BGnwN0OBrgAZfAzT4GqDB1wANvgZo8DVAg68BGnwN0OBrgAZfAzT4GqDB
         1wANvgZo8DVAg68BGnwN0OBrgAZfAzT4GqDB1wANvgZo8DVAg68BGnwN0OBrgAZfAzT4GqDB1wANvgZo
         8DVAg68BGnwN0OBrgAZfAzT4GqDB1wANvgZo8DVAg68BGnwN0OBrgAZfAzT4GqDB1wANvgZo8DVAg68B

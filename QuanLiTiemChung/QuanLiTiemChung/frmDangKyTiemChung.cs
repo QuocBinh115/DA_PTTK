@@ -12,6 +12,7 @@ namespace QuanLiTiemChung
 {
     public partial class frmDangKyTiemChung : Form
     {
+
         public frmDangKyTiemChung()
         {
             InitializeComponent();
@@ -19,6 +20,11 @@ namespace QuanLiTiemChung
 
         private void btnDangKy_Click(object sender, EventArgs e)
         {
+            if(!KhachHang.KiemtraThongTin(txtCMND.Text, txtSDT.Text))
+            {
+                MessageBox.Show("Vui lòng kiểm tra lại thông tin");
+                return;
+            }
             if (checkIsChild.Checked)
             {
                 frmDangKyGiamHo gh = new frmDangKyGiamHo();
@@ -30,21 +36,22 @@ namespace QuanLiTiemChung
                 frmChonVacXin ch = new frmChonVacXin();
                 ch.Show();
                 //this.Close();
-
             }
         }
 
         private void frmDangKyTiemChung_Load(object sender, EventArgs e)
         {
+            User.current = new KhachHang("KH00000000");
             //KhachHang kh = new KhachHang();
-            KhachHang.LayThongTin("KH00000000");
 
-            txtHoTen.Text = KhachHang.TenKH;
-            date_ngaySinh.Value = KhachHang.NgaySinh;
-            txtDiaChi.Text = KhachHang.DiaChi;
-            txtCMND.Text = KhachHang.CMND;
-            txtSDT.Text = KhachHang.SDT;
-            if (KhachHang.GioiTinh == true)
+            //KhachHang.LayThongTin("KH00000000");
+            User.current.LayThongTin();
+            txtHoTen.Text = User.current.TenKH;
+            date_ngaySinh.Value = User.current.NgaySinh;
+            txtDiaChi.Text = User.current.DiaChi;
+            txtCMND.Text = User.current.CMND;
+            txtSDT.Text = User.current.SDT;
+            if (User.current.GioiTinh == true)
             { checkNam.Checked = true; }
             else
             {
@@ -53,6 +60,25 @@ namespace QuanLiTiemChung
             }
 
 
+        }
+
+        private void bt_DangXuat_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void bt_huy_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void btn_DatVacxin_Click(object sender, EventArgs e)
+        {
+            
+            frm_DatMuaVaccine frm = new frm_DatMuaVaccine();
+            this.Visible = true;
+            frm.Show();
+            this.Visible = false;
         }
     }
 }

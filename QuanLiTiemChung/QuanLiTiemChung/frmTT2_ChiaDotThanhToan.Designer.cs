@@ -38,11 +38,9 @@
             this.panel_main = new System.Windows.Forms.Panel();
             this.lb_cdtt = new System.Windows.Forms.Label();
             this.panel_gv = new System.Windows.Forms.Panel();
-            this.txt_mahoadon = new System.Windows.Forms.TextBox();
             this.gv_thongtindonhang = new System.Windows.Forms.DataGridView();
             this.txt_tongcong = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.lb_mahoadon = new System.Windows.Forms.Label();
             this.lb_thanhtoandonhang = new System.Windows.Forms.Label();
             this.panel_button = new System.Windows.Forms.Panel();
             this.cb_dtt = new System.Windows.Forms.ComboBox();
@@ -162,34 +160,23 @@
             // panel_gv
             // 
             this.panel_gv.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel_gv.Controls.Add(this.txt_mahoadon);
             this.panel_gv.Controls.Add(this.gv_thongtindonhang);
             this.panel_gv.Controls.Add(this.txt_tongcong);
             this.panel_gv.Controls.Add(this.label2);
-            this.panel_gv.Controls.Add(this.lb_mahoadon);
             this.panel_gv.Location = new System.Drawing.Point(8, 45);
             this.panel_gv.Margin = new System.Windows.Forms.Padding(4);
             this.panel_gv.Name = "panel_gv";
             this.panel_gv.Size = new System.Drawing.Size(963, 250);
             this.panel_gv.TabIndex = 5;
             // 
-            // txt_mahoadon
-            // 
-            this.txt_mahoadon.Location = new System.Drawing.Point(124, 12);
-            this.txt_mahoadon.Name = "txt_mahoadon";
-            this.txt_mahoadon.ReadOnly = true;
-            this.txt_mahoadon.Size = new System.Drawing.Size(257, 22);
-            this.txt_mahoadon.TabIndex = 9;
-            this.txt_mahoadon.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            // 
             // gv_thongtindonhang
             // 
             this.gv_thongtindonhang.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.gv_thongtindonhang.Location = new System.Drawing.Point(4, 41);
+            this.gv_thongtindonhang.Location = new System.Drawing.Point(4, 4);
             this.gv_thongtindonhang.Margin = new System.Windows.Forms.Padding(4);
             this.gv_thongtindonhang.Name = "gv_thongtindonhang";
             this.gv_thongtindonhang.RowHeadersWidth = 51;
-            this.gv_thongtindonhang.Size = new System.Drawing.Size(952, 158);
+            this.gv_thongtindonhang.Size = new System.Drawing.Size(952, 195);
             this.gv_thongtindonhang.TabIndex = 2;
             // 
             // txt_tongcong
@@ -201,6 +188,7 @@
             this.txt_tongcong.ReadOnly = true;
             this.txt_tongcong.Size = new System.Drawing.Size(559, 27);
             this.txt_tongcong.TabIndex = 8;
+            this.txt_tongcong.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label2
             // 
@@ -212,17 +200,6 @@
             this.label2.Size = new System.Drawing.Size(111, 27);
             this.label2.TabIndex = 7;
             this.label2.Text = "Tổng cộng";
-            // 
-            // lb_mahoadon
-            // 
-            this.lb_mahoadon.AutoSize = true;
-            this.lb_mahoadon.Font = new System.Drawing.Font("Bahnschrift", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb_mahoadon.Location = new System.Drawing.Point(4, 10);
-            this.lb_mahoadon.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lb_mahoadon.Name = "lb_mahoadon";
-            this.lb_mahoadon.Size = new System.Drawing.Size(113, 24);
-            this.lb_mahoadon.TabIndex = 8;
-            this.lb_mahoadon.Text = "Mã hóa đơn";
             // 
             // lb_thanhtoandonhang
             // 
@@ -258,11 +235,20 @@
             // 
             this.cb_dtt.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cb_dtt.FormattingEnabled = true;
+            this.cb_dtt.Items.AddRange(new object[] {
+            "1 tháng",
+            "2 tháng",
+            "3 tháng",
+            "6 tháng",
+            "9 tháng",
+            "12 tháng"});
             this.cb_dtt.Location = new System.Drawing.Point(9, 38);
             this.cb_dtt.Margin = new System.Windows.Forms.Padding(4);
             this.cb_dtt.Name = "cb_dtt";
             this.cb_dtt.Size = new System.Drawing.Size(368, 24);
             this.cb_dtt.TabIndex = 10;
+            this.cb_dtt.SelectedIndexChanged += new System.EventHandler(this.cb_dtt_SelectedIndexChanged);
+            this.cb_dtt.SelectedValueChanged += new System.EventHandler(this.cb_dtt_SelectedValueChanged);
             // 
             // txt_mtt
             // 
@@ -273,6 +259,7 @@
             this.txt_mtt.ReadOnly = true;
             this.txt_mtt.Size = new System.Drawing.Size(557, 27);
             this.txt_mtt.TabIndex = 9;
+            this.txt_mtt.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // lb_mtt
             // 
@@ -318,6 +305,7 @@
             this.txt_thanhtien.ReadOnly = true;
             this.txt_thanhtien.Size = new System.Drawing.Size(557, 27);
             this.txt_thanhtien.TabIndex = 1;
+            this.txt_thanhtien.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // lb_thanhtien
             // 
@@ -403,7 +391,5 @@
         private System.Windows.Forms.Label lb_cdtt;
         private System.Windows.Forms.TextBox txt_tongcong;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label lb_mahoadon;
-        private System.Windows.Forms.TextBox txt_mahoadon;
     }
 }
