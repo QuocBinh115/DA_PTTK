@@ -35,6 +35,7 @@ namespace QuanLiTiemChung
             this.bt_huy = new System.Windows.Forms.Button();
             this.lb_Title = new System.Windows.Forms.Label();
             this.panel_main = new System.Windows.Forms.Panel();
+            this.btnChuyenFrom = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label7 = new System.Windows.Forms.Label();
             this.lb_thanhtoandonhang = new System.Windows.Forms.Label();
@@ -43,7 +44,6 @@ namespace QuanLiTiemChung
             this.panel_User = new System.Windows.Forms.Panel();
             this.pic_User = new System.Windows.Forms.PictureBox();
             this.lb_User = new System.Windows.Forms.Label();
-            this.btnChuyenFrom = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.gvLichLamViec)).BeginInit();
             this.panel_main.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -55,7 +55,7 @@ namespace QuanLiTiemChung
             // gvLichLamViec
             // 
             this.gvLichLamViec.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.gvLichLamViec.Location = new System.Drawing.Point(3, 42);
+            this.gvLichLamViec.Location = new System.Drawing.Point(8, 74);
             this.gvLichLamViec.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.gvLichLamViec.Name = "gvLichLamViec";
             this.gvLichLamViec.RowHeadersWidth = 62;
@@ -111,6 +111,17 @@ namespace QuanLiTiemChung
             this.panel_main.Name = "panel_main";
             this.panel_main.Size = new System.Drawing.Size(1109, 416);
             this.panel_main.TabIndex = 32;
+            // 
+            // btnChuyenFrom
+            // 
+            this.btnChuyenFrom.Font = new System.Drawing.Font("Bahnschrift", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnChuyenFrom.Location = new System.Drawing.Point(816, 14);
+            this.btnChuyenFrom.Name = "btnChuyenFrom";
+            this.btnChuyenFrom.Size = new System.Drawing.Size(280, 48);
+            this.btnChuyenFrom.TabIndex = 10;
+            this.btnChuyenFrom.Text = "Đăng ký lịch rảnh";
+            this.btnChuyenFrom.UseVisualStyleBackColor = true;
+            this.btnChuyenFrom.Click += new System.EventHandler(this.btnChuyenFrom_Click);
             // 
             // panel1
             // 
@@ -205,17 +216,6 @@ namespace QuanLiTiemChung
             this.lb_User.Size = new System.Drawing.Size(124, 29);
             this.lb_User.TabIndex = 2;
             this.lb_User.Text = "Username";
-            // 
-            // btnChuyenFrom
-            // 
-            this.btnChuyenFrom.Font = new System.Drawing.Font("Bahnschrift", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnChuyenFrom.Location = new System.Drawing.Point(816, 14);
-            this.btnChuyenFrom.Name = "btnChuyenFrom";
-            this.btnChuyenFrom.Size = new System.Drawing.Size(280, 48);
-            this.btnChuyenFrom.TabIndex = 10;
-            this.btnChuyenFrom.Text = "Đăng ký lịch rảnh";
-            this.btnChuyenFrom.UseVisualStyleBackColor = true;
-            this.btnChuyenFrom.Click += new System.EventHandler(this.btnChuyenFrom_Click);
             // 
             // frmXemLich
             // 
